@@ -1,0 +1,46 @@
+baseURL = "https://kontlk.github.io/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+title = "Test Site for KoNLTK and KoNLP"
+theme = "docdock"
+themesDir = "themes"
+publishDir = "docs"
+
+
+[params]
+editURL = "https://github.com/konltk/konltk.github.io/edit/master/web/content/"
+showVisitedLinks = true # default is false
+themeStyle = "original" # "original" or "flex" # default "original"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> konltk's Github repo"
+identifier = "ds"
+url = "https://github.com/konltk/konltk.github.io"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-camera'></i> Showcases"
+url = "/showcase"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
