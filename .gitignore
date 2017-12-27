@@ -1,0 +1,3 @@
+# ignore the directory named "docs" and files under "docs" dicrectory.
+# "docs" directory is just the resulting files of hugo for static website.
+docs
