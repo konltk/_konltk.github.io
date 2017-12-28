@@ -1,7 +1,7 @@
 ---
 title: "Konlp Document"
 date: 2017-12-28T08:58:25+09:00
-draft: true
+draft: false
 keywords: ["konltk", "document"]
 ---
 
