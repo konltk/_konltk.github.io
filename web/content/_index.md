@@ -1,5 +1,5 @@
 +++
-title = "DocDock Theme for Hugo"
+title = "Korean Natural Language Toolkit"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
 
