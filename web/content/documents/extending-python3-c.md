@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로"
 categories: 
  - extend-python

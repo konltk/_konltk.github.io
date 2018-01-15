@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>Konlp Document :: Test Site for KoNLTK and KoNLP</title>
+<title>파이썬 배포 할 때 파일을 포함하는 방법 :: Test Site for KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/document/">
+  <body data-url="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -93,9 +93,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/documents/" class="dd-item">
+    <li data-nav-id="/documents/" class="dd-item parent">
       <a href="/documents/">
-        <span>documents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
       <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
@@ -123,7 +124,7 @@
           <span>오픈소스에 contribution 하기</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/" class="dd-item">
+      <li data-nav-id="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/" class="dd-item active">
         <a href="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/">
           <span>파이썬 배포 할 때 파일을 포함하는 방법</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -198,7 +199,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/document.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ed%8c%8c%ec%9d%bc-%eb%b0%b0%ed%8f%ac.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -212,7 +213,17 @@
         <span class="links">
         
 
- Konlp Document
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/documents/'>documents</a> > 파이썬 배포 할 때 파일을 포함하는 방법
+
+ 
+
+ 
 
    
         </span>
@@ -223,32 +234,8 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#konlp-document">konlp Document</a></li>
-<li><a href="#konlp-detector-package">konlp.detector package</a>
-<ul>
-<li><a href="#module-contents">Module contents</a></li>
-<li><a href="#submodules">Submodules</a></li>
-<li><a href="#konlp-detector-detector-module">konlp.detector.detector module</a></li>
-</ul></li>
-<li><a href="#konlp-ngram-package">konlp.ngram package</a>
-<ul>
-<li><a href="#module-contents-1">Module contents</a></li>
-<li><a href="#submodules-1">SubModules</a></li>
-<li><a href="#konlp-ngram-ngram-module">konlp.ngram.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-wordcount-package">konlp.wordcount package</a>
-<ul>
-<li><a href="#module-contents-2">Module contents</a></li>
-<li><a href="#submodules-2">SubModules</a></li>
-<li><a href="#konlp-wordcount-ngram-module">konlp.wordcount.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-pos-package">konlp.pos package</a>
-<ul>
-<li><a href="#module-contents-3">Module contents</a></li>
-<li><a href="#submodules-3">SubModules</a></li>
-<li><a href="#konlp-pos-index-module">konlp.pos.index module</a></li>
-<li><a href="#konlp-pos-ham-module">konlp.pos.ham module</a></li>
-</ul></li>
+<li><a href="#파이썬-배포-할-때-파일을-포함하는-방법">파이썬 배포 할 때 파일을 포함하는 방법</a></li>
+<li><a href="#파일안의-모든-파일">파일안의 모든 파일</a></li>
 </ul>
 </nav>
         </div>
@@ -258,9 +245,17 @@
   </div>
 
 
+  <div id="tags">
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/python">python</a>
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/%EB%B0%B0%ED%8F%AC">배포</a>
+    
+  </div>
+
 <div id="body-inner">
   
-    <h1>Konlp Document</h1>
+    <h1>파이썬 배포 할 때 파일을 포함하는 방법</h1>
   
 
 
@@ -270,139 +265,53 @@
     
     
 
-<h1 id="konlp-document">konlp Document</h1>
+<h1 id="파이썬-배포-할-때-파일을-포함하는-방법">파이썬 배포 할 때 파일을 포함하는 방법</h1>
 
-<h1 id="konlp-detector-package">konlp.detector package</h1>
+<p>자신이 짠 파이썬 코드를 배포를 하고 싶을 때는 <code>distutiles.core</code>모듈을 사용하여서 배포가 가능한 형태로 만들 수가 있다.
+<code>disturils.code</code> 모듈의 <code>setup</code>함수를 사용하여서 배포할 패키지를 구성할 수 있다.
+<code>setup</code>함수에서 여러 구성요소는 <a href="https://docs.python.org/2/distutils/apiref.html">python docs 2.7</a>에서 확인할 수 있다.</p>
 
-<h2 id="module-contents">Module contents</h2>
+<p>여기서 <code>data_files</code>옵션을 이용하여서 파일도 포함하여 배포하는것을 볼 것이다.</p>
 
-<p>이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.</p>
-
-<h2 id="submodules">Submodules</h2>
-
-<h2 id="konlp-detector-detector-module">konlp.detector.detector module</h2>
-
-<p><em>class</em> konlp.detector.detector.<strong>Detect</strong>
-<pre>   <b>detect(text, max)</b>
-        <b>Parameters:
-            - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
-            - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
-        <b>Return:</b> &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
-        <b>Return Type:</b> string
-</pre></p>
-
-<h1 id="konlp-ngram-package">konlp.ngram package</h1>
-
-<h2 id="module-contents-1">Module contents</h2>
-
-<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
-
-<h2 id="submodules-1">SubModules</h2>
-
-<h2 id="konlp-ngram-ngram-module">konlp.ngram.ngram module</h2>
-
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.ngram import ngram
-&gt;&gt;&gt; n = ngram.Ngram()
-&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
-{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
+<pre><code>setup.py
+src/
+____data/
+________data1.dat
+________data2.dat
+________data3.dat
 </code></pre>
 
-<p><em>class</em> konlp.ngram.ngram.<strong>Ngram</strong>
-<pre>   <b>ngram(text, n)</b>
-        <b>Parameters:
-            - text(string or list array): n-gram 할 문자열 혹은 list array
-            - n(int): n-gram의 n
-        <b>Return:</b> n-gram된 dictionary
-        <b>Return Type:</b> dictionary</p>
+<p>위와 같이 파일 구조를 가지고 있는다면 <code>setup</code>함수 내에서 <code>data_files1</code>옵션을 아래와 같이 사용할 수 있다.</p>
 
-<pre><code>&lt;b&gt;word_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 나뉘어진 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
-
-&lt;b&gt;total_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 모든 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
-
-&lt;b&gt;probabillity&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 각 단어의 빈도 확률
-    &lt;b&gt;Return Type:&lt;/b&gt; dictionary
+<pre><code class="language-python">setup(
+name=&quot;cho&quot;
+...
+data_files=[(&quot;data&quot;, [&quot;src/data/data1.dat&quot;, &quot;src/data/data2.dat&quot;, &quot;src/data/data3.dat&quot;])]
+)#end setup
 </code></pre>
 
-<p></pre></p>
+<p><code>python3 setup.py install</code> 명령어를 실행 후 <code>/usr/local/</code>을 확인하면 <code>data</code>폴더가 생성되어서 파일복사가 잘 이뤄진것을 볼 수 있다.</p>
 
-<h1 id="konlp-wordcount-package">konlp.wordcount package</h1>
+<p>파일 복사의 위치는 순수 python은 <code>sys.prefix</code>, 확장 모듈을 포함하는 패키지의 경우는 <code>sys.exec_prefix</code>이다. <a href="https://docs.python.org/2/distutils/setupscript.html">python doc</a></p>
 
-<h2 id="module-contents-2">Module contents</h2>
+<h1 id="파일안의-모든-파일">파일안의 모든 파일</h1>
 
-<p>&hellip;.</p>
+<p>폴더안의 모든 파일을 넘기고 싶다면 아래 코드와 같이 <code>glob</code>모듈을 사용하여서 파일 리스트를 사용하면 된다.</p>
 
-<h2 id="submodules-2">SubModules</h2>
-
-<h2 id="konlp-wordcount-ngram-module">konlp.wordcount.ngram module</h2>
-
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.wordcount import wordcount
-&gt;&gt;&gt; wc = wordcount.WordCount()
-&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
-[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
+<pre><code class="language-python">import glob
+def find_data_files(srcdir):
+	temp = []
+    for f in glob.iglob(srcdir, recursive=True):
+    	temp.append(f)
+    return temp
 </code></pre>
 
-<p><em>class</em> konlp.wordcount.wordcount.<strong>WordCount</strong>
-<pre>   <b>wordcount(text)</b>
-        <b>Parameters:
-            - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
-        <b>Return:</b> 단어와 수가 튜플로 이루어진 list
-        <b>Return Type:</b> list
-</pre></p>
-
-<h1 id="konlp-pos-package">konlp.pos package</h1>
-
-<h2 id="module-contents-3">Module contents</h2>
-
-<p>&hellip;.</p>
-
-<h2 id="submodules-3">SubModules</h2>
-
-<h2 id="konlp-pos-index-module">konlp.pos.index module</h2>
-
-<pre><code class="language-python">....
+<pre><code class="language-python">setup(
+name=&quot;cho&quot;
+...
+data_files=[(&quot;data&quot;, find_data_files(&quot;/home/cho/sample/src/data/&quot;)]
+)#end setup
 </code></pre>
-
-<p><em>class</em> konlp.pos.index.<strong>Index</strong>
-<pre>   주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>index(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
-        <b>Return:</b> (원본, 명사 리스트) 튜플로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
-
-<h2 id="konlp-pos-ham-module">konlp.pos.ham module</h2>
-
-<pre><code class="language-python">....
-</code></pre>
-
-<p><em>class</em> konlp.pos.ham.<strong>Ham</strong>
-<pre>   형태소 분석기
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>morpha(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 형태소 분석을 할 문자열
-        <b>Return:</b> 튜플들로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
 
 
     
@@ -414,7 +323,8 @@
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/" title="오픈소스에 contribution 하기"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/index/" title="index" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

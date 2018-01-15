@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "오픈소스에 contribution 하기"
 categories: 
  - open source

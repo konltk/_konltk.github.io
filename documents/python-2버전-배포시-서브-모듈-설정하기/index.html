@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>Konlp Document :: Test Site for KoNLTK and KoNLP</title>
+<title>python 2버전 배포시 서브 모듈 설정하기 :: Test Site for KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/document/">
+  <body data-url="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -93,9 +93,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/documents/" class="dd-item">
+    <li data-nav-id="/documents/" class="dd-item parent">
       <a href="/documents/">
-        <span>documents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
       <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
@@ -113,7 +114,7 @@
           <span>Python extending with C class wrapping</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="dd-item">
+      <li data-nav-id="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="dd-item active">
         <a href="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
           <span>python 2버전 배포시 서브 모듈 설정하기</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -198,7 +199,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/document.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/python-2%eb%b2%84%ec%a0%84-%eb%b0%b0%ed%8f%ac%ec%8b%9c-%ec%84%9c%eb%b8%8c-%eb%aa%a8%eb%93%88-%ec%84%a4%ec%a0%95%ed%95%98%ea%b8%b0.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -212,7 +213,17 @@
         <span class="links">
         
 
- Konlp Document
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/documents/'>documents</a> > python 2버전 배포시 서브 모듈 설정하기
+
+ 
+
+ 
 
    
         </span>
@@ -223,32 +234,9 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#konlp-document">konlp Document</a></li>
-<li><a href="#konlp-detector-package">konlp.detector package</a>
-<ul>
-<li><a href="#module-contents">Module contents</a></li>
-<li><a href="#submodules">Submodules</a></li>
-<li><a href="#konlp-detector-detector-module">konlp.detector.detector module</a></li>
-</ul></li>
-<li><a href="#konlp-ngram-package">konlp.ngram package</a>
-<ul>
-<li><a href="#module-contents-1">Module contents</a></li>
-<li><a href="#submodules-1">SubModules</a></li>
-<li><a href="#konlp-ngram-ngram-module">konlp.ngram.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-wordcount-package">konlp.wordcount package</a>
-<ul>
-<li><a href="#module-contents-2">Module contents</a></li>
-<li><a href="#submodules-2">SubModules</a></li>
-<li><a href="#konlp-wordcount-ngram-module">konlp.wordcount.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-pos-package">konlp.pos package</a>
-<ul>
-<li><a href="#module-contents-3">Module contents</a></li>
-<li><a href="#submodules-3">SubModules</a></li>
-<li><a href="#konlp-pos-index-module">konlp.pos.index module</a></li>
-<li><a href="#konlp-pos-ham-module">konlp.pos.ham module</a></li>
-</ul></li>
+<li><a href="#python-2버전-배포시-서브-모듈-설정하기">python 2버전 배포시 서브 모듈 설정하기</a></li>
+<li><a href="#python-서브모듈">python 서브모듈</a></li>
+<li><a href="#python-extending-with-c-서브모듈-설정">python extending with c 서브모듈 설정</a></li>
 </ul>
 </nav>
         </div>
@@ -258,9 +246,17 @@
   </div>
 
 
+  <div id="tags">
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/python">python</a>
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/c">c</a>
+    
+  </div>
+
 <div id="body-inner">
   
-    <h1>Konlp Document</h1>
+    <h1>python 2버전 배포시 서브 모듈 설정하기</h1>
   
 
 
@@ -270,139 +266,41 @@
     
     
 
-<h1 id="konlp-document">konlp Document</h1>
+<h1 id="python-2버전-배포시-서브-모듈-설정하기">python 2버전 배포시 서브 모듈 설정하기</h1>
 
-<h1 id="konlp-detector-package">konlp.detector package</h1>
+<h1 id="python-서브모듈">python 서브모듈</h1>
 
-<h2 id="module-contents">Module contents</h2>
+<p>파이썬에서는 폴더별로 서브모듈이 나뉘어진다.</p>
 
-<p>이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.</p>
-
-<h2 id="submodules">Submodules</h2>
-
-<h2 id="konlp-detector-detector-module">konlp.detector.detector module</h2>
-
-<p><em>class</em> konlp.detector.detector.<strong>Detect</strong>
-<pre>   <b>detect(text, max)</b>
-        <b>Parameters:
-            - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
-            - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
-        <b>Return:</b> &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
-        <b>Return Type:</b> string
-</pre></p>
-
-<h1 id="konlp-ngram-package">konlp.ngram package</h1>
-
-<h2 id="module-contents-1">Module contents</h2>
-
-<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
-
-<h2 id="submodules-1">SubModules</h2>
-
-<h2 id="konlp-ngram-ngram-module">konlp.ngram.ngram module</h2>
-
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.ngram import ngram
-&gt;&gt;&gt; n = ngram.Ngram()
-&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
-{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
+<pre><code>foo
+|--tmp
+|  |--__init__.py
+|  |--tmp.py
+|
+|--foo.py
 </code></pre>
 
-<p><em>class</em> konlp.ngram.ngram.<strong>Ngram</strong>
-<pre>   <b>ngram(text, n)</b>
-        <b>Parameters:
-            - text(string or list array): n-gram 할 문자열 혹은 list array
-            - n(int): n-gram의 n
-        <b>Return:</b> n-gram된 dictionary
-        <b>Return Type:</b> dictionary</p>
+<p>위와 같이 파일구조로 되어있다면 실제로 파이썬에서는</p>
 
-<pre><code>&lt;b&gt;word_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 나뉘어진 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
-
-&lt;b&gt;total_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 모든 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
-
-&lt;b&gt;probabillity&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 각 단어의 빈도 확률
-    &lt;b&gt;Return Type:&lt;/b&gt; dictionary
+<pre><code class="language-python">import foo.tmp.tmp
 </code></pre>
 
-<p></pre></p>
+<p>디렉토리 구조로서 서브모듈을 접근이 가능하다.</p>
 
-<h1 id="konlp-wordcount-package">konlp.wordcount package</h1>
+<h1 id="python-extending-with-c-서브모듈-설정">python extending with c 서브모듈 설정</h1>
 
-<h2 id="module-contents-2">Module contents</h2>
+<p>서브모듈을 설정하기 위해서 우선 c code의 <code>InitModule</code>을 할 때 서브 모듈명을 명시를 해야한다.
+<code>Py_InitModule(&quot;foo.tmp.tmp&quot;, methods, &quot;&quot;)</code>
+서브 모듈명은 자신이 사용하고 싶은 모듈명을 명시하면 된다.</p>
 
-<p>&hellip;.</p>
+<p>파이썬3버전에서는 위의 단계만하여도 실제로 사용하는데에 있어서 문제가 없다.
+하지만 파이썬2버전에서 각 폴더에 <code>__init__.py</code>가 존재해야지 서브모듈로서 사용이 가능하다.</p>
 
-<h2 id="submodules-2">SubModules</h2>
+<p>python extending with c를 install을 하면 각 파이썬 파일이 python package위치에 복사가 된다. 여기서 <code>__init__.py</code>파일은 복사가 되지 않기 때문에 서브모듈이 적용이 안된다.</p>
 
-<h2 id="konlp-wordcount-ngram-module">konlp.wordcount.ngram module</h2>
+<p>서브 모듈을 적용 시키기 위해서 setup함수의 인자 중 <code>packages</code> 와 <code>package_dir</code>를 사용하면 <code>__init__.py</code>파일도 같이 복사가 된다.(아직 복사인지 생성인지 잘 모르겠다.)</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.wordcount import wordcount
-&gt;&gt;&gt; wc = wordcount.WordCount()
-&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
-[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
-</code></pre>
-
-<p><em>class</em> konlp.wordcount.wordcount.<strong>WordCount</strong>
-<pre>   <b>wordcount(text)</b>
-        <b>Parameters:
-            - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
-        <b>Return:</b> 단어와 수가 튜플로 이루어진 list
-        <b>Return Type:</b> list
-</pre></p>
-
-<h1 id="konlp-pos-package">konlp.pos package</h1>
-
-<h2 id="module-contents-3">Module contents</h2>
-
-<p>&hellip;.</p>
-
-<h2 id="submodules-3">SubModules</h2>
-
-<h2 id="konlp-pos-index-module">konlp.pos.index module</h2>
-
-<pre><code class="language-python">....
-</code></pre>
-
-<p><em>class</em> konlp.pos.index.<strong>Index</strong>
-<pre>   주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>index(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
-        <b>Return:</b> (원본, 명사 리스트) 튜플로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
-
-<h2 id="konlp-pos-ham-module">konlp.pos.ham module</h2>
-
-<pre><code class="language-python">....
-</code></pre>
-
-<p><em>class</em> konlp.pos.ham.<strong>Ham</strong>
-<pre>   형태소 분석기
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>morpha(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 형태소 분석을 할 문자열
-        <b>Return:</b> 튜플들로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
+<p>만약에 initmodule에서 명시한 서브모듈중에서 물리적으로 폴더가 존재하지 않는다면 물리적인 폴더를 생성하여서 같이 포함하면 된다.</p>
 
 
     
@@ -414,7 +312,8 @@
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/documents/python-extending-with-c-class-wrapping/" title="Python extending with C class wrapping"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/" title="오픈소스에 contribution 하기" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

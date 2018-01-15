@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "python 2버전 배포시 서브 모듈 설정하기"
 categories: 
  - extend-python

@@ -7,6 +7,13 @@
 	"content": "  Installing konltk Installing konltk\n konltk main KoNLTK Main\n "
 },
 {
+	"uri": "https://kontlk.github.io/documents/",
+	"title": "documents",
+	"tags": [],
+	"description": "",
+	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 \n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
+},
+{
 	"uri": "https://kontlk.github.io/index/",
 	"title": "index",
 	"tags": [],
@@ -18,7 +25,7 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  Konlp Document konlp Document konlp.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다. Submodules konlp.detector.detector module class konlp.detector.detector.Detect detect(text, max) Parameters: - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다. Return: \u0026ldquo;NONE\u0026rdquo;, \u0026ldquo;EUCKR\u0026rdquo;, \u0026ldquo;UTF8\u0026rdquo;, \u0026ldquo;UTF16BE\u0026rdquo;, \u0026ldquo;UTF16LE\u0026rdquo; 이 중 하나를 얻습니다. Return Type: string\n "
+	"content": "  Konlp Document \n "
 },
 {
 	"uri": "https://kontlk.github.io/search/",
@@ -103,13 +110,6 @@
 	"tags": [],
 	"description": "Hugo-built Sites with docdock theme",
 	"content": " https://invincible.site/ by @shazic https://bitfan.io/ by @vjeantet "
-},
-{
-	"uri": "https://kontlk.github.io/documents/",
-	"title": "Documents",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://kontlk.github.io/categories/extend-python/",

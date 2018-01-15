@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>Konlp Document :: Test Site for KoNLTK and KoNLP</title>
+<title>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 :: Test Site for KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/document/">
+  <body data-url="/documents/extending-python3-c/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -93,12 +93,13 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/documents/" class="dd-item">
+    <li data-nav-id="/documents/" class="dd-item parent">
       <a href="/documents/">
-        <span>documents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
+      <li data-nav-id="/documents/extending-python3-c/" class="dd-item active">
         <a href="/documents/extending-python3-c/">
           <span>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -198,7 +199,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/document.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/extending-python3-c.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -212,7 +213,17 @@
         <span class="links">
         
 
- Konlp Document
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/documents/'>documents</a> > C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로
+
+ 
+
+ 
 
    
         </span>
@@ -223,32 +234,9 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#konlp-document">konlp Document</a></li>
-<li><a href="#konlp-detector-package">konlp.detector package</a>
-<ul>
-<li><a href="#module-contents">Module contents</a></li>
-<li><a href="#submodules">Submodules</a></li>
-<li><a href="#konlp-detector-detector-module">konlp.detector.detector module</a></li>
-</ul></li>
-<li><a href="#konlp-ngram-package">konlp.ngram package</a>
-<ul>
-<li><a href="#module-contents-1">Module contents</a></li>
-<li><a href="#submodules-1">SubModules</a></li>
-<li><a href="#konlp-ngram-ngram-module">konlp.ngram.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-wordcount-package">konlp.wordcount package</a>
-<ul>
-<li><a href="#module-contents-2">Module contents</a></li>
-<li><a href="#submodules-2">SubModules</a></li>
-<li><a href="#konlp-wordcount-ngram-module">konlp.wordcount.ngram module</a></li>
-</ul></li>
-<li><a href="#konlp-pos-package">konlp.pos package</a>
-<ul>
-<li><a href="#module-contents-3">Module contents</a></li>
-<li><a href="#submodules-3">SubModules</a></li>
-<li><a href="#konlp-pos-index-module">konlp.pos.index module</a></li>
-<li><a href="#konlp-pos-ham-module">konlp.pos.ham module</a></li>
-</ul></li>
+<li><a href="#모듈-초기화">모듈 초기화</a></li>
+<li><a href="#메인">메인</a></li>
+<li><a href="#참조">참조</a></li>
 </ul>
 </nav>
         </div>
@@ -258,9 +246,17 @@
   </div>
 
 
+  <div id="tags">
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/python">python</a>
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/c">c</a>
+    
+  </div>
+
 <div id="body-inner">
   
-    <h1>Konlp Document</h1>
+    <h1>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로</h1>
   
 
 
@@ -270,139 +266,149 @@
     
     
 
-<h1 id="konlp-document">konlp Document</h1>
+<h1 id="모듈-초기화">모듈 초기화</h1>
 
-<h1 id="konlp-detector-package">konlp.detector package</h1>
+<p>파이썬 2버전을 확장할때에는 init+모듈이름 함수 이내에 &lsquo;Py_InitModule&rsquo; 과 같은 함수를 사용하여서 모듈을 초기화 했다.</p>
 
-<h2 id="module-contents">Module contents</h2>
+<p>파이썬 3버전에서는 &lsquo;PyModule_Create&rsquo; 함수를 사용해서 모듈을 초기화 한다.
+PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다.
+{% highlight c linenos=table %}
+static struct PyModuleDef moduledef = {
+    PyModuleDef_HEAD_INIT,
+    &ldquo;lib&rdquo;,   /* name of module <em>/
+    NULL, /</em> module documentation, may be NULL <em>/
+    -1,       /</em> size of per-interpreter state of the module,
+                 or -1 if the module keeps state in global variables. <em>/
+    methods /</em> method_list */
+};
+//main
+PyMODINIT_FUNC PyInit_lib(void){
+    return PyModule_Create(&amp;moduledef);
+}
+{% endhighlight %}</p>
 
-<p>이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.</p>
+<p>파이썬 2버전과 3버전을 같이 사용하고 싶으면 #if 를 사용한다.
+{% highlight c linenos=table %}
+#if PY_MAYJOR_VERSION &gt;= 3
+    static struct PyModuleDef moduledef = {
+        PyModuleDef_HEAD_INIT,
+        &ldquo;lib&rdquo;,   /* name of module <em>/
+        NULL, /</em> module documentation, may be NULL <em>/
+        -1,       /</em> size of per-interpreter state of the module,
+                     or -1 if the module keeps state in global variables. <em>/
+        methods /</em> method_list */
+    };
+#endif</p>
 
-<h2 id="submodules">Submodules</h2>
+<p>//main
+PyMODINIT_FUNC PyInit_lib(void){
+{
+    #if PY_MAJOR_VERSION &gt;= 3
+        m = PyModule_Create(&amp;moduledef);
+    #else
+        m = Py_InitModule3(&ldquo;lib&rdquo;, methods, &ldquo;모듈 설명&rdquo;);
+    #endif
+    return m;
+}
+{% endhighlight %}</p>
 
-<h2 id="konlp-detector-detector-module">konlp.detector.detector module</h2>
+<h1 id="메인">메인</h1>
 
-<p><em>class</em> konlp.detector.detector.<strong>Detect</strong>
-<pre>   <b>detect(text, max)</b>
-        <b>Parameters:
-            - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
-            - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
-        <b>Return:</b> &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
-        <b>Return Type:</b> string
-</pre></p>
+<p>파이썬 2버전에서는 아래와 같은 형식으로 메인 함수를 만들었다.
+&gt; void init&lt;모듈이름&gt;</p>
 
-<h1 id="konlp-ngram-package">konlp.ngram package</h1>
+<p>하지만 파이썬 3버전에서는 아래와 같이 한다.
+&gt; PyMODINIT<em>FUNC PyInit</em>&lt;모듈이름&gt;</p>
 
-<h2 id="module-contents-1">Module contents</h2>
+<p>파이썬 2버전과 3버전을 한꺼번에 되는 코드는 아래와 같이 할 수 있다.
+{% highlight c linenos=table %}
+PyMODINIT_FUNC
+#if PY_MAJOR<em>VERSION &gt;= 3
+PyInit</em>&lt;모듈이름&gt;()
+#else
+init&lt;모듈이름&gt;()
+#endif
+{
+&hellip;
+}
+{% endhighlight %}</p>
 
-<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
+<p>이것을 더 편히 간단히 한다면
+{% highlight c linenos=table %}
+#if PY_MAJOR_VERSION &gt;= 3
+    #define MOD_INIT(name) PyMODINIT<em>FUNC PyInit</em>##name()
+#else
+    #define MOD_INIT(name) PyMODINIT_FUNC init##name()</p>
 
-<h2 id="submodules-1">SubModules</h2>
+<p>MODINIT(모듈 이름){
+&hellip;
+}
+{% endhighlight %}</p>
 
-<h2 id="konlp-ngram-ngram-module">konlp.ngram.ngram module</h2>
+<p>위의 각각 정의한것을 합치게 되면
+{% highlight c linenos=table %}
+#if PY_MAJOR_VERSION &gt;= 3
+static struct PyModuleDef moduledef = {
+        PyModuleDef_HEAD_INIT,
+        &ldquo;lib&rdquo;,   /* name of module <em>/
+        NULL, /</em> module documentation, may be NULL <em>/
+        -1,       /</em> size of per-interpreter state of the module,
+                     or -1 if the module keeps state in global variables. */
+        methods
+        }
+#endif</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.ngram import ngram
-&gt;&gt;&gt; n = ngram.Ngram()
-&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
-{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
-</code></pre>
+<p>static PyObject* moduleinit(){
+    PyObject* m;</p>
 
-<p><em>class</em> konlp.ngram.ngram.<strong>Ngram</strong>
-<pre>   <b>ngram(text, n)</b>
-        <b>Parameters:
-            - text(string or list array): n-gram 할 문자열 혹은 list array
-            - n(int): n-gram의 n
-        <b>Return:</b> n-gram된 dictionary
-        <b>Return Type:</b> dictionary</p>
+<p>#if PY_MAJOR_VERSION &gt;= 3
+    m = PyModule_Create(&amp;moduledef);
+#else
+    m = Py_InitModule(&ldquo;lib&rdquo;, methods);
+#endif
+    &hellip;
+    return m;
+}</p>
 
-<pre><code>&lt;b&gt;word_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 나뉘어진 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
+<p>#if PY_MAJOR_VERSION &gt;= 3
+PyMODINIT_FUNC initlib(){
+    moduleinit();
+}
+#else
+PyMODINIT_FUNC PyInit_lib(){
+    return moduleinit();
+}
+#endif
+{% endhighlight %}</p>
 
-&lt;b&gt;total_len()&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 모든 단어의 수
-    &lt;b&gt;Return Type:&lt;/b&gt; int
+<p>좀 더 깔끔하게 한다면
+{% highlight c linenos=table %}
+#if PY_MAJOR_VERSION &gt;= 3
+    #define MOD_INIT(name) PyMODINIT<em>FUNC PyInt</em>##name()
+    #define MOD_DEF(ob, name, doc, methids) <br />
+            static PyModuleDef moduledef = { <br />
+            PyModuleDef_HEAD_INIT, name, doc, -1, methids};<br />
+            ob = PyModule_Create(&amp;moduledef);
+#else
+    #define MOD_INIT(name) void init##name()
+    #define MOD_DEF(ob, name, doc, methids) <br />
+            ob = Py_InitModule3(name, methods, doc);
+#endif</p>
 
-&lt;b&gt;probabillity&lt;/b&gt;
-    &lt;b&gt;Return:&lt;/b&gt; 각 단어의 빈도 확률
-    &lt;b&gt;Return Type:&lt;/b&gt; dictionary
-</code></pre>
+<p>MOD_INIT(lib){
+PyObject* m;</p>
 
-<p></pre></p>
+<p>MOD_DEF(m, &ldquo;lib&rdquo;, module<strong>doc</strong>, methids)</p>
 
-<h1 id="konlp-wordcount-package">konlp.wordcount package</h1>
+<p>&hellip;</p>
 
-<h2 id="module-contents-2">Module contents</h2>
+<p>return m;
+}
+{% endhighlight %}</p>
 
-<p>&hellip;.</p>
+<h1 id="참조">참조</h1>
 
-<h2 id="submodules-2">SubModules</h2>
-
-<h2 id="konlp-wordcount-ngram-module">konlp.wordcount.ngram module</h2>
-
-<pre><code class="language-python">&gt;&gt;&gt; from konlp.wordcount import wordcount
-&gt;&gt;&gt; wc = wordcount.WordCount()
-&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
-[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
-</code></pre>
-
-<p><em>class</em> konlp.wordcount.wordcount.<strong>WordCount</strong>
-<pre>   <b>wordcount(text)</b>
-        <b>Parameters:
-            - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
-        <b>Return:</b> 단어와 수가 튜플로 이루어진 list
-        <b>Return Type:</b> list
-</pre></p>
-
-<h1 id="konlp-pos-package">konlp.pos package</h1>
-
-<h2 id="module-contents-3">Module contents</h2>
-
-<p>&hellip;.</p>
-
-<h2 id="submodules-3">SubModules</h2>
-
-<h2 id="konlp-pos-index-module">konlp.pos.index module</h2>
-
-<pre><code class="language-python">....
-</code></pre>
-
-<p><em>class</em> konlp.pos.index.<strong>Index</strong>
-<pre>   주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>index(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
-        <b>Return:</b> (원본, 명사 리스트) 튜플로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
-
-<h2 id="konlp-pos-ham-module">konlp.pos.ham module</h2>
-
-<pre><code class="language-python">....
-</code></pre>
-
-<p><em>class</em> konlp.pos.ham.<strong>Ham</strong>
-<pre>   형태소 분석기
-    <b>dic_init(path)</b>
-        사전을 설정하는 함수입니다.
-        <b>Parameters:
-            - path(string): 설정할 사전의 위치
-        <b>Return:</b> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
-        <b>Return Type:</b> int
-    <b>morpha(data)</b>
-        이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
-        <b>Parameters:
-            - data(string): 형태소 분석을 할 문자열
-        <b>Return:</b> 튜플들로 이루어진 리스트
-        <b>Return Type:</b> list
-</pre></p>
+<p><a href="http://python3porting.com/cextensions.html">http://python3porting.com/cextensions.html</a></p>
 
 
     
@@ -414,7 +420,8 @@
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/documents/" title="documents"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/documents/python-extending-with-c/" title="Python extending with C" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

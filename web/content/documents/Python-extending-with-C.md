@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Python extending with C"
 categories: 
  - extend-python

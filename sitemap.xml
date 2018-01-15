@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://kontlk.github.io/documents/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kontlk.github.io/index/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url>
@@ -71,11 +76,6 @@
   
   <url>
     <loc>https://kontlk.github.io/showcase/</loc>
-  </url>
-  
-  <url>
-    <loc>https://kontlk.github.io/documents/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
