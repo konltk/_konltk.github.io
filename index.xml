@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DocDock Theme for Hugo on Test Site for KoNLTK and KoNLP</title>
+    <title>Korean Natural Language Toolkit on Test Site for KoNLTK and KoNLP</title>
     <link>https://kontlk.github.io/</link>
-    <description>Recent content in DocDock Theme for Hugo on Test Site for KoNLTK and KoNLP</description>
+    <description>Recent content in Korean Natural Language Toolkit on Test Site for KoNLTK and KoNLP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
@@ -12,114 +12,23 @@
     
     
     <item>
-      <title>Logo placeholder</title>
-      <link>https://kontlk.github.io/content-organisation/logo/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/content-organisation/logo/</guid>
-      <description>Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen).
-Tip : you can add a image, a combobox with links to other documentation&amp;hellip;. Tip 2 : look at extra static menu if you want to add links to other website in this sidebar </description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>https://kontlk.github.io/getting-start/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/getting-start/installation/</guid>
-      <description>&lt;div class=&#34;alert 
-alert-warning&#34;
- 
-role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.30&lt;/strong&gt; minimum required to use this theme&lt;/div&gt;
-
-
-&lt;p&gt;The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;great documentation for beginners&lt;/a&gt;.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Extra menu entries</title>
-      <link>https://kontlk.github.io/content-organisation/extramenu/</link>
-      <pubDate>Sat, 29 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/content-organisation/extramenu/</guid>
-      <description>You can define additional menu entries in the navigation menu without any link to content.
-Edit the website configuration config.toml and add a [[menu.shortcuts]] entry for each link your want to add.
-Example from the current website, note the pre param which allows you to insert HTML code and used here to separate content&amp;rsquo;s menu from this &amp;ldquo;static&amp;rdquo; menu
-[[menu.shortcuts]] pre = &amp;quot;&amp;lt;h3&amp;gt;More&amp;lt;/h3&amp;gt;&amp;quot; name = &amp;quot;&amp;lt;i class=&#39;fa fa-github&#39;&amp;gt;&amp;lt;/i&amp;gt; Github repo&amp;quot; identifier = &amp;quot;ds&amp;quot; url = &amp;quot;https://github.</description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>https://kontlk.github.io/getting-start/configuration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/getting-start/configuration/</guid>
-      <description>&lt;p&gt;When building the website, you can set a theme by using &lt;code&gt;--theme&lt;/code&gt; option. We suggest you to edit your configuration file and set the theme by default. Example with &lt;code&gt;config.toml&lt;/code&gt; format.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Konlp Document</title>
-      <link>https://kontlk.github.io/post/document/</link>
+      <link>https://kontlk.github.io/document/</link>
       <pubDate>Thu, 28 Dec 2017 08:58:25 +0900</pubDate>
       
-      <guid>https://kontlk.github.io/post/document/</guid>
+      <guid>https://kontlk.github.io/document/</guid>
       <description>konlp Document konlp.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
 Submodules konlp.detector.detector module class konlp.detector.detector.Detect  detect(text, max) Parameters: - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다. Return: &amp;ldquo;NONE&amp;rdquo;, &amp;ldquo;EUCKR&amp;rdquo;, &amp;ldquo;UTF8&amp;rdquo;, &amp;ldquo;UTF16BE&amp;rdquo;, &amp;ldquo;UTF16LE&amp;rdquo; 이 중 하나를 얻습니다.</description>
     </item>
     
     <item>
-      <title>First Post</title>
-      <link>https://kontlk.github.io/post/first-post/</link>
-      <pubDate>Thu, 07 Dec 2017 19:57:00 +0900</pubDate>
+      <title>Konlp Document</title>
+      <link>https://kontlk.github.io/modules/modules/</link>
+      <pubDate>Thu, 28 Dec 2017 08:58:25 +0900</pubDate>
       
-      <guid>https://kontlk.github.io/post/first-post/</guid>
-      <description>Hellow! This is my first post with some theme of Hugo, static site generator.
-Please come back some other time when I&amp;rsquo;ve written something worth your time.
-Thanks!
-한국어(韓國語) 또는 조선어(朝鮮語)은 제주도를 포함한 한반도 및 그 부속 도서와 한민족 거주 지역에서 쓰이는 언어로, 대한민국에서는 한국어, 한국말이라고 부르고, 조선민주주의인민공화국과 중화인민공화국에서는 조선어, 조선말이라고 부르며, 구 소련의 고려인들 사이에서는 고려말(高麗말)이라고 부른다.</description>
-    </item>
-    
-    <item>
-      <title>Home page</title>
-      <link>https://kontlk.github.io/create-page/homepage/</link>
-      <pubDate>Fri, 28 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/create-page/homepage/</guid>
-      <description>To tell Hugo-theme-docdock to consider a page as homepage&amp;rsquo;s content, just create a content file named _index.md in content folder.</description>
-    </item>
-    
-    <item>
-      <title>About images</title>
-      <link>https://kontlk.github.io/create-page/page-images/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/create-page/page-images/</guid>
-      <description> Images have a similar syntax to links but include a preceding exclamation point.
-![agence](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg)  Resizing image Add HTTP parameters width and/or height to the link image to resize the image. Values are CSS values (default is auto).
-![Hackathon](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?height=80px)  Add CSS classes Add a HTTP classes parameter to the link image to add CSS classes. shadow and border are available but you could define other ones.
-![s](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?classes=border,shadow)  </description>
-    </item>
-    
-    <item>
-      <title>My Slide ! fullscreen</title>
-      <link>https://kontlk.github.io/create-page/myslide/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/create-page/myslide/</guid>
-      <description> In the morning Getting up  Turn off alarm Get out of bed  Breakfast  Eat eggs Drink coffee  In the evening Dinner  Eat spaghetti Drink wine  Going to sleep  Get in bed Count sheep  </description>
-    </item>
-    
-    <item>
-      <title>Present a Slide</title>
-      <link>https://kontlk.github.io/create-page/page-slide/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://kontlk.github.io/create-page/page-slide/</guid>
-      <description>A basic md content page can be rendered as a reveal.js presentation full screen.
-You can, also, embed presentation in a page as a small box, using the revealjs shortcode in your md file. Formating Use your common Markdown syntax you use in Hugo, don&amp;rsquo;t forget, you can put html tags too.
-Special syntax (in html comment) is available for adding attributes to Markdown elements. This is useful for fragments, amongst other things.</description>
+      <guid>https://kontlk.github.io/modules/modules/</guid>
+      <description>konlp Document konlp.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
+Submodules konlp.detector.detector module class konlp.detector.detector.Detect detect(text, max) Parameters: - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다. Return: &amp;ldquo;NONE&amp;rdquo;, &amp;ldquo;EUCKR&amp;rdquo;, &amp;ldquo;UTF8&amp;rdquo;, &amp;ldquo;UTF16BE&amp;rdquo;, &amp;ldquo;UTF16LE&amp;rdquo; 이 중 하나를 얻습니다. Return Type: string</description>
     </item>
     
     <item>
@@ -146,17 +55,17 @@ Special syntax (in html comment) is available for adding attributes to Markdown 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kontlk.github.io/credits/</guid>
-      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @hyunyoung2 2 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester.</description>
+      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @hyunyoung2 2 commits   @YoungHunCho 1 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester.</description>
     </item>
     
     <item>
-      <title>Disable features</title>
-      <link>https://kontlk.github.io/content-organisation/customize-style/disable/</link>
+      <title>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로</title>
+      <link>https://kontlk.github.io/documents/extending-python3-c/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/content-organisation/customize-style/disable/</guid>
-      <description> You can disable feature in docdock by changing some params in config.toml
-hide Next / Prev Chevrons [params] disableNavChevron = true  hide Search box in side menu [params] disableSearch = true  hide the  icon in side bar [params] disableHomeIcon = true  </description>
+      <guid>https://kontlk.github.io/documents/extending-python3-c/</guid>
+      <description>모듈 초기화 파이썬 2버전을 확장할때에는 init+모듈이름 함수 이내에 &amp;lsquo;Py_InitModule&amp;rsquo; 과 같은 함수를 사용하여서 모듈을 초기화 했다.
+파이썬 3버전에서는 &amp;lsquo;PyModule_Create&amp;rsquo; 함수를 사용해서 모듈을 초기화 한다. PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다. {% highlight c linenos=table %} static struct PyModuleDef moduledef = { PyModuleDef_HEAD_INIT, &amp;ldquo;lib&amp;rdquo;, /* name of module / NULL, / module documentation, may be NULL / -1, / size of per-interpreter state of the module, or -1 if the module keeps state in global variables.</description>
     </item>
     
     <item>
@@ -169,163 +78,80 @@ hide Next / Prev Chevrons [params] disableNavChevron = true  hide Search box in 
     </item>
     
     <item>
-      <title>Theme styles</title>
-      <link>https://kontlk.github.io/content-organisation/customize-style/themestyle/</link>
+      <title>Installing konltk</title>
+      <link>https://kontlk.github.io/contents/installing-konltk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/content-organisation/customize-style/themestyle/</guid>
-      <description> In site configuration file, you can set a subtheme name of this theme to load a specific css.
-add a param themeStyle = &amp;quot;STYLE_NAME&amp;quot; in the [params] part of config.toml file.
-Style &amp;ldquo;original&amp;rdquo; [params] themeStyle = &amp;quot;original&amp;quot;  Style &amp;ldquo;flex&amp;rdquo; (work in progress) [params] themeStyle = &amp;quot;flex&amp;quot;  </description>
+      <guid>https://kontlk.github.io/contents/installing-konltk/</guid>
+      <description>Installing konltk</description>
     </item>
     
     <item>
-      <title>Theme variants</title>
-      <link>https://kontlk.github.io/content-organisation/customize-style/theme-variants/</link>
+      <title>Python extending with C</title>
+      <link>https://kontlk.github.io/documents/python-extending-with-c/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/content-organisation/customize-style/theme-variants/</guid>
-      <description> In site configuration file, you can set a variant name of this theme to load a specific css, with different color specifications.
-add a param themeVariant = &amp;quot;VARIANT_NAME&amp;quot; in the [params] part of config.toml file.
-Available variants change only colors at this moment Variant &amp;ldquo;gray&amp;rdquo; [params] themeVariant = &amp;quot;gray&amp;quot;  Variant &amp;ldquo;gold&amp;rdquo; [params] themeVariant = &amp;quot;gold&amp;quot;  Variant &amp;ldquo;green&amp;rdquo; [params] themeVariant = &amp;quot;green&amp;quot;`  </description>
+      <guid>https://kontlk.github.io/documents/python-extending-with-c/</guid>
+      <description>Kramdown table of contents {:toc .toc} This document is based on the Python 2.x version.  As a python extending language c Python work when load module 파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다. &amp;gt; * 기본 모듈(soket, time 등) &amp;gt; * c로 만들어진 dll 파일 &amp;gt; * 자체 제작한 파이썬 모듈
+예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다.</description>
     </item>
     
     <item>
-      <title>alert</title>
-      <link>https://kontlk.github.io/shortcodes/alert/</link>
+      <title>Python extending with C class wrapping</title>
+      <link>https://kontlk.github.io/documents/python-extending-with-c-class-wrapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/shortcodes/alert/</guid>
-      <description>The alert shortcode allow you to highlight information in your page. They create a colored box surrounding your text, like this:
-This is an alert ! Usage    Parameter Default Description     theme info success, info,warning,danger    Tips : setting only the theme as argument works too : {{%alert warning%}} instead of {{%alert theme=&amp;quot;warning&amp;quot;%}}
- Basic examples {{% alert theme=&amp;quot;info&amp;quot; %}}**this** is a text{{% /alert %}} {{% alert theme=&amp;quot;success&amp;quot; %}}**Yeahhh !</description>
+      <guid>https://kontlk.github.io/documents/python-extending-with-c-class-wrapping/</guid>
+      <description>intro 가끔 c로 작성한 코드가 python으로 작성한 코드보다 효율이 좋을때가 있습니다. 이럴때는 파이썬에서도 c로 작성한 코드를 사용할 수 있게 확장을 할 수 있습니다. 이 문서에서는 c로 작성된 코드를 사용하여서 파이썬에서 ‘class’로 사용하기 위해서 wrapping을 하는 방법을 정리한 것입니다.
+c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현 python extending with c 방식으로 c로 주요 함수만 구현 python에서 제공하는 python c extending을 이용하여서 주요 함수를 c로 구현을 한다.
+static PyObject* wordcount(PyObject* self, PyObject* args){ int is_add = 0, n_uniqwords, n_words; char* input, *output_file = OUTPUT; PyObject *dlist = PyDict_New(); PyObject *result_list = PyList_New(0); int i; FILE* temp_output_file; WORDCNT_STR Text={0}, *wp=&amp;amp;Text; if(!</description>
     </item>
     
     <item>
-      <title>attachments</title>
-      <link>https://kontlk.github.io/shortcodes/attachments/</link>
+      <title>konltk main</title>
+      <link>https://kontlk.github.io/contents/konltk-main/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/shortcodes/attachments/</guid>
-      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   BachGavotteShort.mp3  (357 kB)   Carroll_AliceAuPaysDesMerveilles.pdf  (175 kB)   adivorciarsetoca00cape.pdf  (361 kB)   hugo.png  (17 kB)   movieselectricsheep-flock-244-32500-2.mp4  (340 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
- If your page is a markdown file, attachements must be place in a folder named like your page and ending with .</description>
+      <guid>https://kontlk.github.io/contents/konltk-main/</guid>
+      <description>konltk main</description>
     </item>
     
     <item>
-      <title>button</title>
-      <link>https://kontlk.github.io/shortcodes/button/</link>
+      <title>python 2버전 배포시 서브 모듈 설정하기</title>
+      <link>https://kontlk.github.io/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/shortcodes/button/</guid>
-      <description>Display an actionable button in your page.
- This is a warning button   Usage    Parameter Default Description     href &amp;rdquo;&amp;rdquo; The location href to link to   align &amp;ldquo;center&amp;rdquo; horizontal align button on page   theme primary default, primary , success,info,warning,danger    The inner text you place in short code will be displayed as the button text</description>
+      <guid>https://kontlk.github.io/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <description>python 2버전 배포시 서브 모듈 설정하기 python 서브모듈 파이썬에서는 폴더별로 서브모듈이 나뉘어진다.
+foo |--tmp | |--__init__.py | |--tmp.py | |--foo.py  위와 같이 파일구조로 되어있다면 실제로 파이썬에서는
+import foo.tmp.tmp  디렉토리 구조로서 서브모듈을 접근이 가능하다.
+python extending with c 서브모듈 설정 서브모듈을 설정하기 위해서 우선 c code의 InitModule을 할 때 서브 모듈명을 명시를 해야한다. Py_InitModule(&amp;quot;foo.tmp.tmp&amp;quot;, methods, &amp;quot;&amp;quot;) 서브 모듈명은 자신이 사용하고 싶은 모듈명을 명시하면 된다.
+파이썬3버전에서는 위의 단계만하여도 실제로 사용하는데에 있어서 문제가 없다.</description>
     </item>
     
     <item>
-      <title>excerpt</title>
-      <link>https://kontlk.github.io/shortcodes/excerpt/</link>
+      <title>오픈소스에 contribution 하기</title>
+      <link>https://kontlk.github.io/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/shortcodes/excerpt/</guid>
-      <description>The Excerpt shortcode is used to mark a part of a page&amp;rsquo;s content for re-use. Defining an excerpt enables other shortcodes, such as the excerpt-include shortcode, to display the marked content elsewhere.
-You can only define one excerpt per page. In other words, you can only add the Excerpt shortcode once to a page. Usage    Parameter Default Description     hidden &amp;ldquo;false&amp;rdquo; Controls whether the page content contained in the Excerpt shortcode placeholder is displayed on the page.</description>
+      <guid>https://kontlk.github.io/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/</guid>
+      <description>github에서 오픈소스 컨트리뷰션 하기 프로젝트 fork하기 우선 컨트리뷰션하고 싶은 오픈소스의 깃허브에 들어가서 fork를 해야합니다.
+여기서는 konlp로 예시를 들어보겠습니다.
+konlp 여기에 들어가 우측 상단에 있는 fork버튼을 눌러 자신의 github 계정에 프로젝트를 복사를 한다.
+흐름 여기서는 브랜치를 따로 만들어서 하는것이라니라 master 브랜치에서 진행한 것을 예로 듭니다. 1. 내용을 수정하여서 커밋한다. 2. 자신의 GitHub 프로젝트에 Push를 한다. 3. Pull Request를 한다. 4. 프로젝트 소유자가 Requset를 Merge한다.
+흐름은 위와 같이 진행이 된다.
+Pull Request 하기 자기가 원하는 프로젝트를 fork하였다면 github.</description>
     </item>
     
     <item>
-      <title>excerpt-include</title>
-      <link>https://kontlk.github.io/shortcodes/excerpt-include/</link>
+      <title>파이썬 배포 할 때 파일을 포함하는 방법</title>
+      <link>https://kontlk.github.io/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/shortcodes/excerpt-include/</guid>
-      <description>The Excerpt Include shortcode is used to display &amp;lsquo;excerpted&amp;rsquo; (that is, a segment of) content from one page in another. Before you can use this shortcode, the excerpt must have been defined using the Excerpt shortcode. Note that you can have more than one Excerpt Include shortcode on a page (although you can have only one Excerpt shortcode on a page). Usage    Parameter Default Description     filename required Type the filename of the page that contains the excerpt to be displayed.</description>
-    </item>
-    
-    <item>
-      <title>expand</title>
-      <link>https://kontlk.github.io/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/expand/</guid>
-      <description>The Expand shortcode displays an expandable/collapsible section of text on your page. Here is an example
-  Expand me...   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description>
-    </item>
-    
-    <item>
-      <title>icon</title>
-      <link>https://kontlk.github.io/shortcodes/icon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/icon/</guid>
-      <description>Display an icon like   
-It uses :
- glyphicons library (bootstrap).more info here fontawesome library more info here  This icon shortcode will display an icon in your page.
-Usage    Parameter Default Description     name required name of icon (see bellow)   size none size of icon, medium, xx-small, x-small, small, large, x-large, xx-large, 11px, 2em, 20%&amp;hellip;.    Tips : setting only the name as argument works too : {{&amp;lt;icon film&amp;gt;}} instead of {{&amp;lt;icon name=&amp;quot;film&amp;quot;&amp;gt;}}</description>
-    </item>
-    
-    <item>
-      <title>mermaid</title>
-      <link>https://kontlk.github.io/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/mermaid/</guid>
-      <description>Flowchart example   Show code ...   {{&amp;lt;mermaid align=&amp;quot;left&amp;quot;&amp;gt;}} graph LR; A[Hard edge] --&amp;gt;|Link text| B(Round edge) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result one] C --&amp;gt;|Two| E[Result two] {{&amp;lt; /mermaid &amp;gt;}}    mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two] 
-Sequence example   Show code ...   {{&amp;lt;mermaid&amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you?</description>
-    </item>
-    
-    <item>
-      <title>notice</title>
-      <link>https://kontlk.github.io/shortcodes/notice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/notice/</guid>
-      <description>The notice shortcode shows 4 types of disclaimers to help you structure your page.
-Note {{% notice note %}} A notice disclaimer {{% /notice %}}  renders as
-A notice disclaimer
- Info {{% notice info %}} An information disclaimer {{% /notice %}}  renders as
-An information disclaimer
- Tip {{% notice tip %}} A tip disclaimer {{% /notice %}}  renders as
-A tip disclaimer
- Warning {{% notice warning %}} An warning disclaimer {{% /notice %}}  renders as</description>
-    </item>
-    
-    <item>
-      <title>page test</title>
-      <link>https://kontlk.github.io/shortcodes/children/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/children/test/</guid>
-      <description>This is a test demo child page</description>
-    </item>
-    
-    <item>
-      <title>page test 3</title>
-      <link>https://kontlk.github.io/shortcodes/children/children-2/test3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/children/children-2/test3/</guid>
-      <description>This is a test 3 demo child page</description>
-    </item>
-    
-    <item>
-      <title>panel</title>
-      <link>https://kontlk.github.io/shortcodes/panel/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/panel/</guid>
-      <description>The panel shortcode Allow you to highlight information or put it in a box. They create a colored box surrounding your text  Usage    Parameter Default Description     header none The title of the panel. If specified, this title will be displayed in its own header row.   footer none the footer of the panel. If specified, this text will be displayed in its own row   theme primary default,primary,info,success,warning,danger    Basic example By default :</description>
-    </item>
-    
-    <item>
-      <title>revealjs</title>
-      <link>https://kontlk.github.io/shortcodes/revealjs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kontlk.github.io/shortcodes/revealjs/</guid>
-      <description>This shortcode will format the enclosed markdow to render it with reveal.js at runtime (client-side)
-Read more on revealjs github repo.
-Usage revealjs can use the following named parameters :
- theme transition controls progress history center  Important Even if the enclosed content is a mardown, use &amp;lt; shortcode notation instead of the % notation  Content formating and slide delimiters read more on this here
-Demo  # In the morning ___ ## Getting up - Turn off alarm - Get out of bed ___ ## Breakfast - Eat eggs - Drink coffee --- # In the evening ___ ## Dinner - Eat spaghetti - Drink wine ___ ## Going to sleep - Get in bed - Count sheep       function initSlides() { Reveal.</description>
+      <guid>https://kontlk.github.io/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/</guid>
+      <description>파이썬 배포 할 때 파일을 포함하는 방법 자신이 짠 파이썬 코드를 배포를 하고 싶을 때는 distutiles.core모듈을 사용하여서 배포가 가능한 형태로 만들 수가 있다. disturils.code 모듈의 setup함수를 사용하여서 배포할 패키지를 구성할 수 있다. setup함수에서 여러 구성요소는 python docs 2.7에서 확인할 수 있다.
+여기서 data_files옵션을 이용하여서 파일도 포함하여 배포하는것을 볼 것이다.
+setup.py src/ ____data/ ________data1.dat ________data2.dat ________data3.dat  위와 같이 파일 구조를 가지고 있는다면 setup함수 내에서 data_files1옵션을 아래와 같이 사용할 수 있다.</description>
     </item>
     
   </channel>

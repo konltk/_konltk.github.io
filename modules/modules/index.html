@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>Credits :: Test Site for KoNLTK and KoNLP</title>
+<title>Konlp Document :: Test Site for KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/credits/">
+  <body data-url="/modules/modules/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -98,12 +98,13 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item">
+    <li data-nav-id="/modules/" class="dd-item parent">
       <a href="/modules/">
-        <span>modules</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span>modules</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/modules/modules/" class="dd-item">
+      <li data-nav-id="/modules/modules/" class="dd-item active">
         <a href="/modules/modules/">
           <span>Konlp Document</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -198,7 +199,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/credits.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/Modules.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -215,7 +216,12 @@
 
 
 
- <a href='/'>Korean Natural Language Toolkit</a> > Credits
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/modules/'>modules</a> > Konlp Document
+
+ 
 
  
 
@@ -228,14 +234,31 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#konlp-document">konlp Document</a></li>
+<li><a href="#konlp-detector-package">konlp.detector package</a>
 <ul>
-<li><a href="#github-contributors">github contributors</a>
-<ul>
-<li><a href="#other-contributors">Other contributors</a></li>
+<li><a href="#module-contents">Module contents</a></li>
+<li><a href="#submodules">Submodules</a></li>
+<li><a href="#konlp-detector-detector-module">konlp.detector.detector module</a></li>
 </ul></li>
-<li><a href="#packages-and-libraries">Packages and libraries</a></li>
-<li><a href="#tooling">Tooling</a></li>
+<li><a href="#konlp-ngram-package">konlp.ngram package</a>
+<ul>
+<li><a href="#module-contents-1">Module contents</a></li>
+<li><a href="#submodules-1">SubModules</a></li>
+<li><a href="#konlp-ngram-ngram-module">konlp.ngram.ngram module</a></li>
+</ul></li>
+<li><a href="#konlp-wordcount-package">konlp.wordcount package</a>
+<ul>
+<li><a href="#module-contents-2">Module contents</a></li>
+<li><a href="#submodules-2">SubModules</a></li>
+<li><a href="#konlp-wordcount-ngram-module">konlp.wordcount.ngram module</a></li>
+</ul></li>
+<li><a href="#konlp-pos-package">konlp.pos package</a>
+<ul>
+<li><a href="#module-contents-3">Module contents</a></li>
+<li><a href="#submodules-3">SubModules</a></li>
+<li><a href="#konlp-pos-index-module">konlp.pos.index module</a></li>
+<li><a href="#konlp-pos-ham-module">konlp.pos.ham module</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -248,7 +271,7 @@
 
 <div id="body-inner">
   
-    <h1>Credits</h1>
+    <h1>Konlp Document</h1>
   
 
 
@@ -258,81 +281,132 @@
     
     
 
-<h2 id="github-contributors">github contributors</h2>
+<h1 id="konlp-document">konlp Document</h1>
 
-<style type="text/css">
-.ghContributors{
-display:flex;
-flex-flow:  wrap;
-align-content: flex-start
-}
+<h1 id="konlp-detector-package">konlp.detector package</h1>
 
-.ghContributors > div{
-width: 50% ;
-display: inline-flex;
-margin-bottom: 5px;
-}
-.ghContributors > div label{
-padding-left: 4px ;
-}
-.ghContributors > div span{
-font-size: x-small;
-padding-left: 4px ;
-}
+<h2 id="module-contents">Module contents</h2>
 
-</style>
-<div class="ghContributors">
-  
-  
-  <div>
-    <img src="https://avatars0.githubusercontent.com/u/6804321?v=4" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label><a href="https://github.com/hyunyoung2">@hyunyoung2</a></label>
-    <span class="contributions">2 commits</span>
-  </div>
-  
-  <div>
-    <img src="https://avatars2.githubusercontent.com/u/11873473?v=4" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label><a href="https://github.com/YoungHunCho">@YoungHunCho</a></label>
-    <span class="contributions">1 commits</span>
-  </div>
-  
-</div>
+<p>이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.</p>
 
-<h3 id="other-contributors">Other contributors</h3>
+<h2 id="submodules">Submodules</h2>
 
-<div class="ghContributors">
-    <div>
-      <img src="https://avatars2.githubusercontent.com/hyunyoung2" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-      <label>@<a href="https://github.com/hyunyoung2">hyunyoung2</a></label>
-      <span class="contributions">supports and advices</span>
-    </div>
-</div>
+<h2 id="konlp-detector-detector-module">konlp.detector.detector module</h2>
 
-<h2 id="packages-and-libraries">Packages and libraries</h2>
+<p><em>class</em> konlp.detector.detector.<strong>Detect</strong>
+detect(text, max)
+Parameters:
+- text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
+- max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
+<em>Return:</em> &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
+<em>Return Type:</em> string</p>
 
-<ul>
-<li><a href="http://getbootstrap.com">Bootstrap</a> - front-end framework</li>
-<li><a href="https://knsv.github.io/mermaid">mermaid</a> - generation of diagram and flowchart from text in a similar manner as markdown</li>
-<li><a href="http://fontawesome.io/">font awesome</a> - the iconic font and CSS framework</li>
-<li><a href="https://jquery.com">jQuery</a> - The Write Less, Do More, JavaScript Library</li>
-<li><a href="https://lunrjs.com">lunr</a> - Lunr enables you to provide a great search experience without the need for external, server-side, search services&hellip;</li>
-<li><a href="https://github.com/Pixabay/JavaScript-autoComplete">JavaScript-autoComplete</a> - An extremely lightweight and powerful vanilla JavaScript completion suggester.</li>
-<li><a href="https://zenorocha.github.io/clipboard.js">clipboard.js</a> - copy text to clipboard</li>
-<li><a href="https://highlightjs.org">highlight.js</a> - Javascript syntax highlighter</li>
-<li><a href="https://modernizr.com">modernizr</a> - A JavaScript toolkit that allows web developers to use new CSS3 and HTML5 features while maintaining a fine level of control over browsers that don&rsquo;t support</li>
-<li><a href="http://lab.hakim.se/reveal-js">reveal-js</a> - The HTML Presentation Framework</li>
-</ul>
+<h1 id="konlp-ngram-package">konlp.ngram package</h1>
 
-<h2 id="tooling">Tooling</h2>
+<h2 id="module-contents-1">Module contents</h2>
 
-<ul>
-<li><a href="https://www.netlify.com">Netlify</a> - Continuous deployement and hosting of this documentation</li>
-<li><a href="https://gohugo.io/">Hugo</a> 
+<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
 
-<span class="fa fa-smile-o" aria-hidden="true"></span>
+<h2 id="submodules-1">SubModules</h2>
 
-</li>
-</ul>
+<h2 id="konlp-ngram-ngram-module">konlp.ngram.ngram module</h2>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konlp.ngram import ngram
+&gt;&gt;&gt; n = ngram.Ngram()
+&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
+{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
+</code></pre>
+
+<p><em>class</em> konlp.ngram.ngram.<strong>Ngram</strong>
+<em>ngram(text, n)</em>
+Parameters:
+- text(string or list array): n-gram 할 문자열 혹은 list array
+- n(int): n-gram의 n
+<em>Return:</em> n-gram된 dictionary
+<em>Return Type:</em> dictionary</p>
+
+<p><em>word_len()</em>
+<em>Return:</em> 나뉘어진 단어의 수
+<em>Return Type:</em> int</p>
+
+<p><em>total_len()</em>
+<em>Return:</em> 모든 단어의 수
+<em>Return Type:</em> int</p>
+
+<p><em>probabillity</em>
+<em>Return:</em> 각 단어의 빈도 확률
+<em>Return Type:</em> dictionary</p>
+
+<h1 id="konlp-wordcount-package">konlp.wordcount package</h1>
+
+<h2 id="module-contents-2">Module contents</h2>
+
+<p>&hellip;.</p>
+
+<h2 id="submodules-2">SubModules</h2>
+
+<h2 id="konlp-wordcount-ngram-module">konlp.wordcount.ngram module</h2>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konlp.wordcount import wordcount
+&gt;&gt;&gt; wc = wordcount.WordCount()
+&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
+[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
+</code></pre>
+
+<p><em>class</em> konlp.wordcount.wordcount.<strong>WordCount</strong>
+<em>wordcount(text)</em>
+Parameters:
+- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
+<em>Return:</em> 단어와 수가 튜플로 이루어진 list
+<em>Return Type:</em> list</p>
+
+<h1 id="konlp-pos-package">konlp.pos package</h1>
+
+<h2 id="module-contents-3">Module contents</h2>
+
+<p>&hellip;.</p>
+
+<h2 id="submodules-3">SubModules</h2>
+
+<h2 id="konlp-pos-index-module">konlp.pos.index module</h2>
+
+<pre><code class="language-python">....
+</code></pre>
+
+<p><em>class</em> konlp.pos.index.<strong>Index</strong>
+주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
+<em>dic_init(path)</em>
+사전을 설정하는 함수입니다.
+Parameters:
+- path(string): 설정할 사전의 위치
+<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
+<em>Return Type:</em> int
+<em>index(data)</em>
+이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
+Parameters:
+- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
+<em>Return:</em> (원본, 명사 리스트) 튜플로 이루어진 리스트
+<em>Return Type:</em> list</p>
+
+<h2 id="konlp-pos-ham-module">konlp.pos.ham module</h2>
+
+<pre><code class="language-python">....
+</code></pre>
+
+<p><em>class</em> konlp.pos.ham.<strong>Ham</strong>
+형태소 분석기
+<em>dic_init(path)</em>
+사전을 설정하는 함수입니다.
+*Parameters:
+- path(string): 설정할 사전의 위치
+<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
+<em>Return Type:</em> int
+<em>morpha(data)</em>
+이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
+*Parameters:
+- data(string): 형태소 분석을 할 문자열
+<em>Return:</em> 튜플들로 이루어진 리스트
+<em>Return Type:</em> list</p>
 
 
     
@@ -344,7 +418,8 @@ padding-left: 4px ;
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/modules/" title="modules"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/search/" title="About the Search Engine" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
