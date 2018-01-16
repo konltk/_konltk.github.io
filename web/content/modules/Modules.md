@@ -1,21 +1,21 @@
 ---
-title: "Konlp Document"
+title: "konltk modules"
 date: 2017-12-28T08:58:25+09:00
 draft: false
-keywords: ["konltk", "document"]
+keywords: ["konltk", "moduls"]
 ---
 
-konlp Document
+konltk Document
 ============
 
 
-# konlp.detector package
+# konltk.detector package
 
 ## Module contents
 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
 ## Submodules
-## konlp.detector.detector module
-*class* konlp.detector.detector.**Detect**
+## konltk.detector.detector module
+*class* konltk.detector.detector.**Detect**
 detect(text, max)
 Parameters:
 - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
@@ -24,18 +24,18 @@ Parameters:
 *Return Type:* string
 
 
-# konlp.ngram package
+# konltk.ngram package
 ## Module contents
 문자열 혹은 리스트 배열을 n-gram.....
 ## SubModules
-## konlp.ngram.ngram module
+## konltk.ngram.ngram module
 ```python
->>> from konlp.ngram import ngram
+>>> from konltk.ngram import ngram
 >>> n = ngram.Ngram()
 >>> n.ngram("abcd", 2)
 {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
 ```
-*class* konlp.ngram.ngram.**Ngram**
+*class* konltk.ngram.ngram.**Ngram**
 *ngram(text, n)*
 Parameters:
 - text(string or list array): n-gram 할 문자열 혹은 list array
@@ -56,18 +56,18 @@ Parameters:
 *Return Type:* dictionary
 
 
-# konlp.wordcount package
+# konltk.wordcount package
 ## Module contents
 ....
 ## SubModules
-## konlp.wordcount.ngram module
+## konltk.wordcount.ngram module
 ```python
->>> from konlp.wordcount import wordcount
+>>> from konltk.wordcount import wordcount
 >>> wc = wordcount.WordCount()
 >>> wc.wordcount("a b c d ef")
 [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
 ```
-*class* konlp.wordcount.wordcount.**WordCount**
+*class* konltk.wordcount.wordcount.**WordCount**
 *wordcount(text)*
 Parameters:
 - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
@@ -75,15 +75,15 @@ Parameters:
 *Return Type:* list
 
 
-# konlp.pos package
+# konltk.pos package
 ## Module contents
 ....
 ## SubModules
-## konlp.pos.index module
+## konltk.pos.index module
 ```python
 ....
 ```
-*class* konlp.pos.index.**Index**
+*class* konltk.pos.index.**Index**
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
 *dic_init(path)*
 사전을 설정하는 함수입니다.
@@ -99,11 +99,11 @@ Parameters:
 *Return Type:* list
 
 
-## konlp.pos.ham module
+## konltk.pos.ham module
 ```python
 ....
 ```
-*class* konlp.pos.ham.**Ham**
+*class* konltk.pos.ham.**Ham**
 형태소 분석기
 *dic_init(path)*
 사전을 설정하는 함수입니다.
