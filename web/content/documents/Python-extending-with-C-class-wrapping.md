@@ -1,16 +1,15 @@
----
-title: "Python extending with C class wrapping"
-categories: 
- - extend-python
-tags: [python, c]
----
-# intro
++++
+title="Python extending with C class wrapping"
+categories="extend-python"
+tags=["python", "c"]
++++
+## intro
 가끔 c로 작성한 코드가 python으로 작성한 코드보다 효율이 좋을때가 있습니다. 
 이럴때는 파이썬에서도 c로 작성한 코드를 사용할 수 있게 확장을 할 수 있습니다. 
 이 문서에서는 c로 작성된 코드를 사용하여서 파이썬에서 ‘class’로 사용하기 위해서 wrapping을 하는 방법을 정리한 것입니다.
 
-# c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현
-## python extending with c 방식으로 c로 주요 함수만 구현
+## c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현
+### python extending with c 방식으로 c로 주요 함수만 구현
 python에서 제공하는 python c extending을 이용하여서 주요 함수를 c로 구현을 한다. 
 
 ```
@@ -150,7 +149,7 @@ create_string_buffer () 함수는 이전 ctypes 릴리즈의 c_string () 함수�
 
 위의 대한 설명은 [https://docs.python.org/3/library/ctypes.html](https://docs.python.org/3/library/ctypes.html) 에 더 나와 있습니다.
 
-#c에서 ptyhon class까지 구현
+##c에서 ptyhon class까지 구현
 python c extending 문법에서 python에서 class 처럼 사용가능하게 Define new types 기능(?)을 제공한다.
 아래의 코드가 Define new types을 하기위한 작업입니다.
 

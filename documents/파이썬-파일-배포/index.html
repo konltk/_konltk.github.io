@@ -234,8 +234,11 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#파이썬-배포-할-때-파일을-포함하는-방법">파이썬 배포 할 때 파일을 포함하는 방법</a></li>
 <li><a href="#파일안의-모든-파일">파일안의 모든 파일</a></li>
+</ul></li>
 </ul>
 </nav>
         </div>
@@ -265,7 +268,7 @@
     
     
 
-<h1 id="파이썬-배포-할-때-파일을-포함하는-방법">파이썬 배포 할 때 파일을 포함하는 방법</h1>
+<h2 id="파이썬-배포-할-때-파일을-포함하는-방법">파이썬 배포 할 때 파일을 포함하는 방법</h2>
 
 <p>자신이 짠 파이썬 코드를 배포를 하고 싶을 때는 <code>distutiles.core</code>모듈을 사용하여서 배포가 가능한 형태로 만들 수가 있다.
 <code>disturils.code</code> 모듈의 <code>setup</code>함수를 사용하여서 배포할 패키지를 구성할 수 있다.
@@ -294,7 +297,7 @@ data_files=[(&quot;data&quot;, [&quot;src/data/data1.dat&quot;, &quot;src/data/d
 
 <p>파일 복사의 위치는 순수 python은 <code>sys.prefix</code>, 확장 모듈을 포함하는 패키지의 경우는 <code>sys.exec_prefix</code>이다. <a href="https://docs.python.org/2/distutils/setupscript.html">python doc</a></p>
 
-<h1 id="파일안의-모든-파일">파일안의 모든 파일</h1>
+<h2 id="파일안의-모든-파일">파일안의 모든 파일</h2>
 
 <p>폴더안의 모든 파일을 넘기고 싶다면 아래 코드와 같이 <code>glob</code>모듈을 사용하여서 파일 리스트를 사용하면 된다.</p>
 

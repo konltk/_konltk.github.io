@@ -249,7 +249,8 @@
     </header>
     <section class="post-excerpt">
         <p>모듈 초기화 파이썬 2버전을 확장할때에는 init+모듈이름 함수 이내에 &lsquo;Py_InitModule&rsquo; 과 같은 함수를 사용하여서 모듈을 초기화 했다.
-파이썬 3버전에서는 &lsquo;PyModule_Create&rsquo; 함수를 사용해서 모듈을 초기화 한다. PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다. {% highlight c linenos=table %} static struct PyModuleDef moduledef = { PyModuleDef_HEAD_INIT, &ldquo;lib&rdquo;, /* name of module / NULL, / module documentation, may be NULL / -1, / size of per-interpreter state of the module, or -1 if the module keeps state in global variables. <a class="read-more" href="/documents/extending-python3-c/">&raquo;</a></p>
+파이썬 3버전에서는 &lsquo;PyModule_Create&rsquo; 함수를 사용해서 모듈을 초기화 한다. PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다.
+static struct PyModuleDef moduledef = { PyModuleDef_HEAD_INIT, &quot;lib&quot;, /* name of module */ NULL, /* module documentation, may be NULL */ -1, /* size of per-interpreter state of the module, or -1 if the module keeps state in global variables. <a class="read-more" href="/documents/extending-python3-c/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -272,8 +273,10 @@
         <h2 class="post-title"><a href="/documents/python-extending-with-c/">Python extending with C</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>Kramdown table of contents {:toc .toc} This document is based on the Python 2.x version.  As a python extending language c Python work when load module 파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다. &gt; * 기본 모듈(soket, time 등) &gt; * c로 만들어진 dll 파일 &gt; * 자체 제작한 파이썬 모듈
-예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다. <a class="read-more" href="/documents/python-extending-with-c/">&raquo;</a></p>
+        <p>This document is based on the Python 2.x version.
+As a python extending language c Python work when load module 파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다. &gt; * 기본 모듈(soket, time 등) &gt; * c로 만들어진 dll 파일 &gt; * 자체 제작한 파이썬 모듈
+예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다.
+Create module using language c c언어로 된 코드를 파이썬에서 로드하기 위해서는 c code에 대한 라이브러리 파일이 필요하다. <a class="read-more" href="/documents/python-extending-with-c/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

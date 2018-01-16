@@ -234,10 +234,13 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#intro">intro</a></li>
 <li><a href="#c에서는-함수부분만-정의-나머지-작업은-python-내에서-구현">c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현</a>
 <ul>
 <li><a href="#python-extending-with-c-방식으로-c로-주요-함수만-구현">python extending with c 방식으로 c로 주요 함수만 구현</a></li>
+</ul></li>
 <li><a href="#c의-라이브러리파일을-python에서-호출">c의 라이브러리파일을 python에서 호출</a></li>
 </ul></li>
 </ul>
@@ -269,15 +272,15 @@
     
     
 
-<h1 id="intro">intro</h1>
+<h2 id="intro">intro</h2>
 
 <p>가끔 c로 작성한 코드가 python으로 작성한 코드보다 효율이 좋을때가 있습니다.
 이럴때는 파이썬에서도 c로 작성한 코드를 사용할 수 있게 확장을 할 수 있습니다.
 이 문서에서는 c로 작성된 코드를 사용하여서 파이썬에서 ‘class’로 사용하기 위해서 wrapping을 하는 방법을 정리한 것입니다.</p>
 
-<h1 id="c에서는-함수부분만-정의-나머지-작업은-python-내에서-구현">c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현</h1>
+<h2 id="c에서는-함수부분만-정의-나머지-작업은-python-내에서-구현">c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현</h2>
 
-<h2 id="python-extending-with-c-방식으로-c로-주요-함수만-구현">python extending with c 방식으로 c로 주요 함수만 구현</h2>
+<h3 id="python-extending-with-c-방식으로-c로-주요-함수만-구현">python extending with c 방식으로 c로 주요 함수만 구현</h3>
 
 <p>python에서 제공하는 python c extending을 이용하여서 주요 함수를 c로 구현을 한다.</p>
 
@@ -523,7 +526,7 @@ rv = p.foo(p)
 
 <p>위의 대한 설명은 <a href="https://docs.python.org/3/library/ctypes.html">https://docs.python.org/3/library/ctypes.html</a> 에 더 나와 있습니다.</p>
 
-<p>#c에서 ptyhon class까지 구현
+<p>##c에서 ptyhon class까지 구현
 python c extending 문법에서 python에서 class 처럼 사용가능하게 Define new types 기능(?)을 제공한다.
 아래의 코드가 Define new types을 하기위한 작업입니다.</p>
 

@@ -234,9 +234,12 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#python-2버전-배포시-서브-모듈-설정하기">python 2버전 배포시 서브 모듈 설정하기</a></li>
 <li><a href="#python-서브모듈">python 서브모듈</a></li>
 <li><a href="#python-extending-with-c-서브모듈-설정">python extending with c 서브모듈 설정</a></li>
+</ul></li>
 </ul>
 </nav>
         </div>
@@ -266,9 +269,9 @@
     
     
 
-<h1 id="python-2버전-배포시-서브-모듈-설정하기">python 2버전 배포시 서브 모듈 설정하기</h1>
+<h2 id="python-2버전-배포시-서브-모듈-설정하기">python 2버전 배포시 서브 모듈 설정하기</h2>
 
-<h1 id="python-서브모듈">python 서브모듈</h1>
+<h2 id="python-서브모듈">python 서브모듈</h2>
 
 <p>파이썬에서는 폴더별로 서브모듈이 나뉘어진다.</p>
 
@@ -287,7 +290,7 @@
 
 <p>디렉토리 구조로서 서브모듈을 접근이 가능하다.</p>
 
-<h1 id="python-extending-with-c-서브모듈-설정">python extending with c 서브모듈 설정</h1>
+<h2 id="python-extending-with-c-서브모듈-설정">python extending with c 서브모듈 설정</h2>
 
 <p>서브모듈을 설정하기 위해서 우선 c code의 <code>InitModule</code>을 할 때 서브 모듈명을 명시를 해야한다.
 <code>Py_InitModule(&quot;foo.tmp.tmp&quot;, methods, &quot;&quot;)</code>

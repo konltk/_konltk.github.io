@@ -1,31 +1,27 @@
----
-title: "Python extending with C"
-categories: 
- - extend-python
-tags: [python, c]
----
-
-* Kramdown table of contents
-{:toc .toc}
++++
+title="Python extending with C"
+categories="extend-python"
+tags=["python", "c"]
++++
 This document is based on the Python 2.x version.
 
-# As a python extending language c
-## Python work when load module
+## As a python extending language c
+### Python work when load module
 파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다.
 > * 기본 모듈(soket, time 등)
 > * c로 만들어진 dll 파일
 > * 자체 제작한 파이썬 모듈
 
 예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다.
-## Create module using language c
+### Create module using language c
 c언어로 된 코드를 파이썬에서 로드하기 위해서는 c code에 대한 라이브러리 파일이 필요하다. Python extendion에서는 .so(리눅스)라이브러리 파일과 .pyd(윈도우) 라이브러리 파일이 필요하게 된다. .so 파일이나 .pyd파일을 파이썬이 설치된 디렉토리의 'Lib/site-package' 폴더에 복사를 하면 된다.
 간단히 정리를 하면
 > 1. c code를 컴파일하여 .so or .pyd 라이브러리 파일로 빌드를 한다
 > 2. 빌드하여 나온 라이브러리 파일을 파이썬이 설치된 폴더의 Lib/site-package 폴더에 복사를 한다.
 
 위의 두 과정으로 진행된다.
-## Sample code
-{% highlight c linenos=table %}
+### Sample code
+```
 //mylib.c
 #include "Python.h"
 #include <stdio.h>
@@ -60,14 +56,14 @@ void initmylib()
 
     ErrorObject = Py_BuildValue("s", "error");
 }
-{% endhighlight %}
+```
 
 파이썬이 c 모듈을 import 하게되면 초기화를 위해 'init+모듈이름'으로 된 함수를 호출한다. 모듈이름이 mylib이면 initmylib()을 호출한다.
 
 즉, c의 main함수의 역할이 'init_모듈이름'으로 된 함수이다.
 
 이 c파일을 컴파일하기 위해서 파이썬 파일이 필요하다.
-{% highlight python linenos=table %}
+```
 # setup.py
 from distutils.core import setup, Extension
  
@@ -80,14 +76,14 @@ setup(name = "mylib",
         ext_modules = [Extension("mylib", ["mylib.c"])]
         )
 
-{% endhighlight %}
+```
 
-## Compile
+### Compile
 위에서 만든 c파일과 python파일을 같은 디렉토리에 넣러두고 아래의 명령어를 통하여서 컴파일을 하게된다.
 > python setup.py install
 
 위의 명령어를 입력하면 자동적으로 컴파일 후 .so파일이나 .pyd파일을 'Lib/site-package' 폴더에 복사가 된다. 컴파일을 할때는 리눅스에서는 gcc를 호출하고 윈도우에서는 visual c컴파일러를 호출한다.
-### compile on window
+#### compile on window
 파이썬에서는 c를 컴파일할 때 vc++를 호출하기 때문에 컴퓨터에 비주얼 스튜디오가 설치되어 있어야하며, 설치된 비주얼스튜디로의 버전을 맞춰야한다.
 > python\Lib\distutils\msvs9compiler.py
 
@@ -101,7 +97,7 @@ setup(name = "mylib",
 > visual C++ 2012 (11.0)
 > visual C++ 2010 (10.0)
 
-### compule option
+#### compule option
 Setup.py를 install할때 파일안에서 정의한 c파일을 컴파일을 하는데 컴파일 옵션을 사용 할 수 있다.
 평소 gcc를 사용할 때 쓰는 “-w –o –Wall” 등 여러 컴파일 옵션을 사용하는데 이 옵션들을 python extending에서도 사용할 수 있다.
 
@@ -124,7 +120,7 @@ setup(name = "konlp",
 위는 setup.py 예제 소스이다.
 중간에 보면 `extra_compile_args`가 있는데 이 부분을 통하여서 각각의 컴파일 옵션을 줄 수 있다.
 
-### compile link
+#### compile link
 위 1.5.1 의 내용처럼 각각의 c파일에 대하여서 컴파일 링크를 할 수 있다.
 
 ```python
@@ -146,7 +142,7 @@ setup(name = "konlp",
 위와 동일한 setup.py 예제이다.
 중간에 보면 `extra_link_args`가 있는데 이 부분을 통하여서 각각의 컴파일 링크를 할 수 있다.
 
-## Example
+### Example
 c 파일과 파이썬 파일을 한 디렉토리에 위치한다.
 `python setup.py install`
 위의 명령어를 실행한다.
@@ -158,7 +154,7 @@ c 파일과 파이썬 파일을 한 디렉토리에 위치한다.
 c import test
 ```
 
-## sub module or sub package
+### sub module or sub package
 파이썬에서는 폴더를 기준으로 sub module 혹은 sub package 가 정해진다.
 
 ```
@@ -191,7 +187,7 @@ m = Py_InitModule3("konlp.c.wordcount", "wordcount c code", methods);
 
 위의 예제의 `konlp.c.wordcount` 처럼 사용하고 싶은 pacakge명을 입력을 하면 된다.
 
-# Built-in method
+## Built-in method
 initmylib에서 Py_initMoudle 할 때 인자로 PyMethidDef 구조페 배열을 넘긴다.
 이 구조체 배열을 method table로서 파이썬에서 호출될 메서드들의 목록을 나타낸다.
 구조는 {"메서드", 구현된 메서드, 호출규약, "설명"}으로 되어있다.
@@ -213,15 +209,15 @@ static PyObject* method(PyObject *self, PyObject *args){
 ```
 위와 같이 되어있다.
 
-## Parameter
+### Parameter
 함수를 호출할 때 인자를 사용하는데 인자는 PyArg_ParseTuple를 이용하여 파싱한다.
 
 사용법 예시로는
-{% highlight c linenos=table %}
+```
 if(!PyArg_ParseTuple(args,"s|s", &input_file, &output_file))
         return NULL;
 }
-{% endhighlight %}
+```
 
 위처럼 사용 할 수 있다.
 
@@ -248,8 +244,8 @@ if(!PyArg_ParseTuple(args, "ss", &input, &output)){
 
 
 
-## Parameter example
-{% highlight c linenos=table %}
+### Parameter example
+```
 int ok;
 int i, j;
 long k, l;
@@ -291,9 +287,9 @@ ok = PyArg_ParseTuple(args, "(ii)s#", &i, &j, &s, &size);
     /* a complex, also providing a function name for errors */
     /* Possible Python call: myfunction(1+2j) */
 }
-{% endhighlight %}
-## Variable
-{% highlight c linenos=table %}
+```
+### Variable
+```
 int ok;
 int i, j;
 long k, l;
@@ -335,9 +331,9 @@ ok = PyArg_ParseTuple(args, "(ii)s#", &i, &j, &s, &size);
     /* a complex, also providing a function name for errors */
     /* Possible Python call: myfunction(1+2j) */
 }
-{% endhighlight %}
+```
 
-## List
+### List
 PyObject 배열을 만들기 위해서는 PyList_New를 사용하여 만든다.
 `PyObject *dlist = PyList_New(length);`
 리스트를 만든후 PyList_SetItem 으로 원하는 인덱스의 변수를 수정할 수 있다.	
@@ -362,7 +358,7 @@ PyList_Append(dlist, Py_BuildValue("(is)", num, msg));
 ```
 이 예제처럼 하게되며, 튜플형식으로 만들어진다.
 
-## Defining New Types
+### Defining New Types
 Python extendion에는 C에 없는 클래스를 구현가능하게 되어있다.
 
 ```
@@ -398,12 +394,12 @@ static PyTypeObject noddy_NoddyType = {
 
 위 처럼 모듈을 오브젝트를 추가하면 파이썬에서 클래스처럼 사용이 가능하다.
 
-{% highlight c linenos=table %}
+``` python
 import mylib
 c1 = mylib.Noddy()
-{% endhighlight %}
+```
 
-### Member variable
+#### Member variable
 ```
 typedef struct{
 	PyObeject_HEAD
@@ -416,14 +412,14 @@ typedef struct{
 
 위와 같은 구조체의 건언으로 변수처럼 사용가능하다.
 
-{% highlight python linenos=table %}
+``` python
 import mylib
 c1 = mylib.Noddy()
 c1.type = 1
 c1.input = "input"
-{% endhighlight %}
+```
 
-### Member method
+#### Member method
 ```
 satic PyMethodDef Noddy_methods[] = {
 	{"setOption", (PyCFunction)setOption, METH_VARARGS},
@@ -480,7 +476,7 @@ static PyTypeObject NoddyType = {
 
 PyTypeObject 구조체를 선언할 때 tp_methods 부분에 구조체배열을 입력한다.
 
-# 참조
+## 참조
 http://egloos.zum.com/batsu05/v/839472
 http://qwefgh90.github.io/sphinx/python/translating_extending.html
 https://docs.python.org/2/extending/extending.html

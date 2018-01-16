@@ -1,11 +1,10 @@
----
-title: "python 2버전 배포시 서브 모듈 설정하기"
-categories: 
- - extend-python
-tags: [python, c]
----
-# python 2버전 배포시 서브 모듈 설정하기
-# python 서브모듈
++++
+title="python 2버전 배포시 서브 모듈 설정하기"
+categories="extend-python"
+tags=["python", "c"]
++++
+## python 2버전 배포시 서브 모듈 설정하기
+## python 서브모듈
 파이썬에서는 폴더별로 서브모듈이 나뉘어진다.
 ```
 foo
@@ -21,7 +20,7 @@ import foo.tmp.tmp
 ```
 디렉토리 구조로서 서브모듈을 접근이 가능하다.
 
-# python extending with c 서브모듈 설정
+## python extending with c 서브모듈 설정
 서브모듈을 설정하기 위해서 우선 c code의 `InitModule`을 할 때 서브 모듈명을 명시를 해야한다.
 `Py_InitModule("foo.tmp.tmp", methods, "")`
 서브 모듈명은 자신이 사용하고 싶은 모듈명을 명시하면 된다.
