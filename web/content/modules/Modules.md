@@ -4,17 +4,13 @@ date=2017-12-28T08:58:25+09:00
 draft=false
 keywords=["konltk", "moduls"]
 +++
+konltk moduels
+## konltk.detector package
 
-konltk Document
-============
-
-
-# konltk.detector package
-
-## Module contents
+### Module contents
 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
-## Submodules
-## konltk.detector.detector module
+### Submodules
+### konltk.detector.detector module
 *class* konltk.detector.detector.**Detect**
 detect(text, max)
 Parameters:
@@ -24,11 +20,11 @@ Parameters:
 *Return Type:* string
 
 
-# konltk.ngram package
-## Module contents
+## konltk.ngram package
+### Module contents
 문자열 혹은 리스트 배열을 n-gram.....
-## SubModules
-## konltk.ngram.ngram module
+### SubModules
+### konltk.ngram.ngram module
 ```python
 >>> from konltk.ngram import ngram
 >>> n = ngram.Ngram()
@@ -56,11 +52,11 @@ Parameters:
 *Return Type:* dictionary
 
 
-# konltk.wordcount package
-## Module contents
+## konltk.wordcount package
+### Module contents
 ....
-## SubModules
-## konltk.wordcount.ngram module
+### SubModules
+### konltk.wordcount.ngram module
 ```python
 >>> from konltk.wordcount import wordcount
 >>> wc = wordcount.WordCount()
@@ -75,11 +71,11 @@ Parameters:
 *Return Type:* list
 
 
-# konltk.pos package
-## Module contents
+## konltk.pos package
+### Module contents
 ....
-## SubModules
-## konltk.pos.index module
+### SubModules
+### konltk.pos.index module
 ```python
 ....
 ```
@@ -99,7 +95,7 @@ Parameters:
 *Return Type:* list
 
 
-## konltk.pos.ham module
+### konltk.pos.ham module
 ```python
 ....
 ```
