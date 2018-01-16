@@ -1,7 +1,10 @@
-# Web Directory 
+# [KoNLP or KoNLTK](http://konltk.github.io/konlp.github.com/)
 
-This directory manage the markdown, javascript, css and so on. 
+This repository is for KoNLP or KoNLTK. 
 
-When you generate hugo statics site, you must use this directory with hugo.
+Currently, we are under setting up this website.
 
-and then copy all of files under docs diretory into root directory.
+Later on, you can see how to use KoNLP or KoNLTK on this website.
+
+See you later
+

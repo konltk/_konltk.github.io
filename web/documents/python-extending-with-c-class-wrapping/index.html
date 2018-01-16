@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Site for KoNLTK and KoNLP</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<title>Python extending with C class wrapping :: Test Site for KoNLTK and KoNLP</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+    
+  </head>
+  <body data-url="/documents/python-extending-with-c-class-wrapping/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p>Test Site for KoNLP and KoNLTK</p>
+
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "https:\/\/kontlk.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/contents/" class="dd-item">
+      <a href="/contents/">
+        <span>contents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/contents/installing-konltk/" class="dd-item">
+        <a href="/contents/installing-konltk/">
+          <span>Installing konltk</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/contents/konltk-main/" class="dd-item">
+        <a href="/contents/konltk-main/">
+          <span>konltk main</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documents/" class="dd-item parent">
+      <a href="/documents/">
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
+        <a href="/documents/extending-python3-c/">
+          <span>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-extending-with-c/" class="dd-item">
+        <a href="/documents/python-extending-with-c/">
+          <span>Python extending with C</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-extending-with-c-class-wrapping/" class="dd-item active">
+        <a href="/documents/python-extending-with-c-class-wrapping/">
+          <span>Python extending with C class wrapping</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="dd-item">
+        <a href="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
+          <span>python 2버전 배포시 서브 모듈 설정하기</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/" class="dd-item">
+        <a href="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/">
+          <span>오픈소스에 contribution 하기</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/" class="dd-item">
+        <a href="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/">
+          <span>파이썬 배포 할 때 파일을 포함하는 방법</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/index/" class="dd-item">
+      <a href="/index/">
+        <span>index</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/modules/" class="dd-item">
+      <a href="/modules/">
+        <span>modules</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/modules/modules/" class="dd-item">
+        <a href="/modules/modules/">
+          <span>Konlp Document</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item">
+      <a href="/search/">
+        <span>About the Search Engine</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/konltk/konltk.github.io" target="_blank" rel="noopener"><i class='fa fa-github'></i> konltk's Github repo</a></li>
+                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i> Showcases</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Documentation</a></li>
+                <li class="" role=""><a href="/credits" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> Credits</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer"><center>
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download kontlk/kontlk.github.io on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io/" data-icon="octicon-star" data-show-count="false" aria-label="Star kontlk/kontlk.github.io on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io//fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork kontlk/kontlk.github.io/ on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/Python-extending-with-C-class-wrapping.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/documents/'>documents</a> > Python extending with C class wrapping
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#intro">intro</a></li>
+<li><a href="#c에서는-함수부분만-정의-나머지-작업은-python-내에서-구현">c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현</a>
+<ul>
+<li><a href="#python-extending-with-c-방식으로-c로-주요-함수만-구현">python extending with c 방식으로 c로 주요 함수만 구현</a></li>
+</ul></li>
+<li><a href="#c의-라이브러리파일을-python에서-호출">c의 라이브러리파일을 python에서 호출</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/python">python</a>
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/c">c</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>Python extending with C class wrapping</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<h2 id="intro">intro</h2>
+
+<p>가끔 c로 작성한 코드가 python으로 작성한 코드보다 효율이 좋을때가 있습니다.
+이럴때는 파이썬에서도 c로 작성한 코드를 사용할 수 있게 확장을 할 수 있습니다.
+이 문서에서는 c로 작성된 코드를 사용하여서 파이썬에서 ‘class’로 사용하기 위해서 wrapping을 하는 방법을 정리한 것입니다.</p>
+
+<h2 id="c에서는-함수부분만-정의-나머지-작업은-python-내에서-구현">c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현</h2>
+
+<h3 id="python-extending-with-c-방식으로-c로-주요-함수만-구현">python extending with c 방식으로 c로 주요 함수만 구현</h3>
+
+<p>python에서 제공하는 python c extending을 이용하여서 주요 함수를 c로 구현을 한다.</p>
+
+<pre><code>static PyObject* wordcount(PyObject* self, PyObject*  args){
+    int is_add = 0, n_uniqwords, n_words;
+    char* input, *output_file = OUTPUT;
+    PyObject *dlist = PyDict_New();
+    PyObject *result_list = PyList_New(0);
+    int i;
+    FILE* temp_output_file;
+    WORDCNT_STR Text={0}, *wp=&amp;Text;
+    if(!PyArg_ParseTuple(args, &quot;si&quot;, &amp;input, &amp;is_add))
+        return NULL;
+    if(checkInputType(input) == TY_TEXT){
+        FILE *temp_intput_file = fopen(TEMP, &quot;w&quot;);
+        fprintf(temp_intput_file, &quot;%s&quot;, input);
+        fclose(temp_intput_file);
+        input = TEMP;
+    }
+    
+    if(is_add)
+        delete_accumulated_data();
+    
+    n_uniqwords = word_count(input, wp, 0/*word unit*/, 0/*dont show dot*/);
+    for(i = 0; i &lt; wp-&gt;n_uniqwords; i++){
+        int temp = wp-&gt;sidx[i];
+        PyObject *obj = PyTuple_New(2);
+        PyTuple_SET_ITEM(obj, 0, PY_STRING(wp-&gt;words[temp]));
+        PyTuple_SET_ITEM(obj, 1, PY_INT(wp-&gt;count[temp]));
+        PyList_Append(result_list, obj);
+    }    
+    return result_list;
+}
+//methods list
+static struct PyMethodDef methods[] ={
+    {&quot;wordcount&quot;, wordcount, METH_VARARGS},
+    {NULL, NULL}
+};
+//main
+MOD_INIT(wordcount){
+    PyObject* m;
+    MOD_DEF(m, &quot;konlp.c.wordcount&quot;, &quot;wordcount c code&quot;, methods);
+    
+    if(m == NULL)
+        return MOD_ERROR_VAL;
+    
+    return MOD_SUCCESS_VAL(m);
+}
+</code></pre>
+
+<p>위의 코드와 같이 구현을 할 수 있다. 자세히 구현하는 부분에 있어서는 “다른 문서”에 기술 되어있다.
+위의 코드처럼 구현을 하면 python에서는 konlp.c.wordcount 의 패키지를 import를 하고 konlp.c.wordcount.wordcount()를 호출함으로써 주요 함수를 사용 할 수 있다.
+이제 주요 함수를 호출 할 수 있으니 python에서 class를 만들어서 다른 함수를 구현하면 된다.</p>
+
+<pre><code class="language-python">import konlp.c.wordcount
+import os
+class WordCount:
+    def __init__(self):
+        self.result_list = []
+    def wordcount(self, input = &quot;&quot;):
+        self.input = input
+        self.result_list = konlp.c.wordcount.wordcount(self.input, 1)
+        return self.result_list
+</code></pre>
+
+<p>위의 코드처럼 다른 작업은 python으로 구현을 하고 중간에 보면 <code>konlp.c.wordcount.wordcount</code> 를 호출하였는데 이것이 c에서 작업한 함수를 호출한 부분이다.</p>
+
+<h2 id="c의-라이브러리파일을-python에서-호출">c의 라이브러리파일을 python에서 호출</h2>
+
+<p>위의 ‘python extending c방식으로 c로 주요 함수만 구현’ 에서는 c의 주요 함수를 python c extending의 문법에 맞춰서 c코드를 작성한 것이다. 하지만 python c extending 문법에 맞춰 c를 구현할 필요 없이 so파일이나 dll파일을 사용하여서 함수를 호출하여서 사용이 가능하다.</p>
+
+<p>아래의 python의 사용 예제를 들어가기전에 python 사용 예제에서 쓰인 so 파일의 c code이다.</p>
+
+<pre><code>//my_lib.c
+#include &quot;my_lib.h&quot;
+void foo(char * str){
+    printf(&quot;%d %s\n&quot;, 11, str);
+}
+
+
+//my_lib.c
+#include &quot;my_lib.h&quot;
+void foo(char * str){
+    printf(&quot;%d %s\n&quot;, 11, str);
+}
+</code></pre>
+
+<p>python3에서는 ctypes 모듈을 사용한다. ctypes의 CDLL 함수를 이용하여 라이브러리 파일을 load를 한다.
+간단한 예제는 아래와 같다.</p>
+
+<pre><code class="language-python">import ctypes
+lib = ctypes.CDLL(&quot;libmy_lib.so&quot;)
+rv = lib.foo()
+</code></pre>
+
+<p>foo 함수에서는 매개변수로 문자열을 받는다. 파이썬에서 c의 문자열을 사용하기 위해서는 ctypes에 있는 c data types를 사용한다.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">ctypes type</th>
+<th align="left">C Type</th>
+<th align="left">python type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">c_bool</td>
+<td align="left">_Bool</td>
+<td align="left">bool(1)</td>
+</tr>
+
+<tr>
+<td align="left">c_char</td>
+<td align="left">char</td>
+<td align="left">1-character bytes object</td>
+</tr>
+
+<tr>
+<td align="left">c_wchar</td>
+<td align="left">wchar_t</td>
+<td align="left">1-character string</td>
+</tr>
+
+<tr>
+<td align="left">c_byte</td>
+<td align="left">char</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_ubyte</td>
+<td align="left">unsigned char</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_short</td>
+<td align="left">c_short</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_ushort</td>
+<td align="left">unsigned short</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_int</td>
+<td align="left">int</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_uint</td>
+<td align="left">unsigned int</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_long</td>
+<td align="left">long</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_ulong</td>
+<td align="left">unsigned long</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_longlong</td>
+<td align="left">__int64 or long long</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_size_t</td>
+<td align="left">size_t</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_ssize_t</td>
+<td align="left">ssize_t ot Py_ssize_t</td>
+<td align="left">int</td>
+</tr>
+
+<tr>
+<td align="left">c_float</td>
+<td align="left">float</td>
+<td align="left">float</td>
+</tr>
+
+<tr>
+<td align="left">c_double</td>
+<td align="left">double</td>
+<td align="left">float</td>
+</tr>
+
+<tr>
+<td align="left">c_longdouble</td>
+<td align="left">long double</td>
+<td align="left">float</td>
+</tr>
+
+<tr>
+<td align="left">c_char_p</td>
+<td align="left">char * (NUL terminated)</td>
+<td align="left">bytes object or None</td>
+</tr>
+
+<tr>
+<td align="left">c_wchar_p</td>
+<td align="left">wchar_t * (NUL terminated)</td>
+<td align="left">string or None</td>
+</tr>
+
+<tr>
+<td align="left">c_void_p</td>
+<td align="left">void *</td>
+<td align="left">int or None</td>
+</tr>
+</tbody>
+</table>
+
+<p>위의 표는 python에서 c 데이터 형식을 사용하기 위해서 사용하는 함수들입니다. 위의 표의 형식을 사용하여 위의 예제를 계속 진행하면,</p>
+
+<pre><code class="language-python">import ctypes
+lib = ctypes.CDLL(&quot;libmy_lib.so&quot;)
+str = &quot;input text&quot;
+p = ctypes.create_string_buffer(str.encode())
+rv = p.foo(p)
+</code></pre>
+
+<p>위와 같은 코드가 된다.
+그러나 변경 가능한 메모리에 대한 포인터를 예상하는 함수에 전달하지 않도록주의해야합니다. 변경 가능한 메모리 블록이 필요하면 ctypes에는 create_string_buffer () 함수가있어 다양한 방법으로이를 생성합니다.</p>
+
+<p>create_string_buffer () 함수는 이전 ctypes 릴리즈의 c_string () 함수뿐만 아니라 c_buffer () 함수 (여전히 별칭으로 사용 가능)를 대체합니다. C 유형 wchar_t의 유니 코드 문자를 포함하는 변경 가능한 메모리 블록을 작성하려면 create_unicode_buffer () 함수를 사용하십시오.</p>
+
+<p>위의 대한 설명은 <a href="https://docs.python.org/3/library/ctypes.html">https://docs.python.org/3/library/ctypes.html</a> 에 더 나와 있습니다.</p>
+
+<p>##c에서 ptyhon class까지 구현
+python c extending 문법에서 python에서 class 처럼 사용가능하게 Define new types 기능(?)을 제공한다.
+아래의 코드가 Define new types을 하기위한 작업입니다.</p>
+
+<pre><code>static PyTypeObject NoddyType = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    &quot;noddy.Noddy&quot;,             /* tp_name */
+    sizeof(Noddy),             /* tp_basicsize */
+    0,                         /* tp_itemsize */
+    (destructor)Noddy_dealloc, /* tp_dealloc */
+    0,                         /* tp_print */
+    0,                         /* tp_getattr */
+    0,                         /* tp_setattr */
+    0,                         /* tp_compare */
+    0,                         /* tp_repr */
+    0,                         /* tp_as_number */
+    0,                         /* tp_as_sequence */
+    0,                         /* tp_as_mapping */
+    0,                         /* tp_hash */
+    0,                         /* tp_call */
+    0,                         /* tp_str */
+    0,                         /* tp_getattro */
+    0,                         /* tp_setattro */
+    0,                         /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT |
+        Py_TPFLAGS_BASETYPE,   /* tp_flags */
+    &quot;Noddy objects&quot;,           /* tp_doc */
+    0,                         /* tp_traverse */
+    0,                         /* tp_clear */
+    0,                         /* tp_richcompare */
+    0,                         /* tp_weaklistoffset */
+    0,                         /* tp_iter */
+    0,                         /* tp_iternext */
+    Noddy_methods,             /* tp_methods */
+    Noddy_members,             /* tp_members */
+    0,                         /* tp_getset */
+    0,                         /* tp_base */
+    0,                         /* tp_dict */
+    0,                         /* tp_descr_get */
+    0,                         /* tp_descr_set */
+    0,                         /* tp_dictoffset */
+    (initproc)Noddy_init,      /* tp_init */
+    0,                         /* tp_alloc */
+    Noddy_new,                 /* tp_new */
+};
+</code></pre>
+
+<p>멤버 함수는 위 코드의 tp_methos 부분에 PyMethodDef 구조체 배열을 인자로서 넘긴다.</p>
+
+<pre><code>static PyMethodDef Noddy_methods[] = {
+    {&quot;setOption&quot;, (PyCFunction)setOption, METH_VARARGS},
+    {&quot;setFile&quot;, (PyCFunction)setFile, METH_VARARGS},
+    {&quot;setString&quot;, (PyCFunction)setString, METH_VARARGS},
+    {&quot;setOutputFile&quot;, (PyCFunction)setOutputFile, METH_VARARGS},
+    {&quot;start&quot;, (PyCFunction)start, METH_VARARGS},
+    {NULL}  /* Sentinel */
+};
+</code></pre>
+
+<p>멤버 변수는 tp_members 부분에 구조체를 배열을 인자로서 넘긴다.</p>
+
+<pre><code>typedef struct {
+    PyObject_HEAD
+    PyObject* input;
+    PyObject* output;
+    PyObject* option;
+    int type;
+} Noddy;
+</code></pre>
+
+<p>위 처럼 코드를 작성한 후 파이썬에서 일반 클래스 처럼 사용이 가능하다.</p>
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+<a class="nav nav-prev" href="/documents/python-extending-with-c/" title="Python extending with C"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" title="python 2버전 배포시 서브 모듈 설정하기" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

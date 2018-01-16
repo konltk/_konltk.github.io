@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Site for KoNLTK and KoNLP</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<title>Python extending with C :: Test Site for KoNLTK and KoNLP</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+    
+  </head>
+  <body data-url="/documents/python-extending-with-c/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p>Test Site for KoNLP and KoNLTK</p>
+
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "https:\/\/kontlk.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/contents/" class="dd-item">
+      <a href="/contents/">
+        <span>contents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/contents/installing-konltk/" class="dd-item">
+        <a href="/contents/installing-konltk/">
+          <span>Installing konltk</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/contents/konltk-main/" class="dd-item">
+        <a href="/contents/konltk-main/">
+          <span>konltk main</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documents/" class="dd-item parent">
+      <a href="/documents/">
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
+        <a href="/documents/extending-python3-c/">
+          <span>C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-extending-with-c/" class="dd-item active">
+        <a href="/documents/python-extending-with-c/">
+          <span>Python extending with C</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-extending-with-c-class-wrapping/" class="dd-item">
+        <a href="/documents/python-extending-with-c-class-wrapping/">
+          <span>Python extending with C class wrapping</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="dd-item">
+        <a href="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
+          <span>python 2버전 배포시 서브 모듈 설정하기</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/" class="dd-item">
+        <a href="/documents/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-contribution-%ED%95%98%EA%B8%B0/">
+          <span>오픈소스에 contribution 하기</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/" class="dd-item">
+        <a href="/documents/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC/">
+          <span>파이썬 배포 할 때 파일을 포함하는 방법</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/index/" class="dd-item">
+      <a href="/index/">
+        <span>index</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/modules/" class="dd-item">
+      <a href="/modules/">
+        <span>modules</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/modules/modules/" class="dd-item">
+        <a href="/modules/modules/">
+          <span>Konlp Document</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/search/" class="dd-item">
+      <a href="/search/">
+        <span>About the Search Engine</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/konltk/konltk.github.io" target="_blank" rel="noopener"><i class='fa fa-github'></i> konltk's Github repo</a></li>
+                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i> Showcases</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Documentation</a></li>
+                <li class="" role=""><a href="/credits" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> Credits</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer"><center>
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download kontlk/kontlk.github.io on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io/" data-icon="octicon-star" data-show-count="false" aria-label="Star kontlk/kontlk.github.io on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/kontlk/kontlk.github.io//fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork kontlk/kontlk.github.io/ on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/Python-extending-with-C.md" target="blank">
+        <i class="fa fa-code-fork"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/documents/'>documents</a> > Python extending with C
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#as-a-python-extending-language-c">As a python extending language c</a>
+<ul>
+<li><a href="#python-work-when-load-module">Python work when load module</a></li>
+<li><a href="#create-module-using-language-c">Create module using language c</a></li>
+<li><a href="#sample-code">Sample code</a></li>
+<li><a href="#compile">Compile</a>
+<ul>
+<li><a href="#compile-on-window">compile on window</a></li>
+<li><a href="#compule-option">compule option</a></li>
+<li><a href="#compile-link">compile link</a></li>
+</ul></li>
+<li><a href="#example">Example</a></li>
+<li><a href="#sub-module-or-sub-package">sub module or sub package</a></li>
+</ul></li>
+<li><a href="#built-in-method">Built-in method</a>
+<ul>
+<li><a href="#parameter">Parameter</a></li>
+<li><a href="#parameter-example">Parameter example</a></li>
+<li><a href="#variable">Variable</a></li>
+<li><a href="#list">List</a></li>
+<li><a href="#defining-new-types">Defining New Types</a>
+<ul>
+<li><a href="#member-variable">Member variable</a></li>
+<li><a href="#member-method">Member method</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#참조">참조</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+  <div id="tags">
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/python">python</a>
+    
+      <a class="label label-default" href="https://kontlk.github.io/tags/c">c</a>
+    
+  </div>
+
+<div id="body-inner">
+  
+    <h1>Python extending with C</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<p>This document is based on the Python 2.x version.</p>
+
+<h2 id="as-a-python-extending-language-c">As a python extending language c</h2>
+
+<h3 id="python-work-when-load-module">Python work when load module</h3>
+
+<p>파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다.
+&gt; * 기본 모듈(soket, time 등)
+&gt; * c로 만들어진 dll 파일
+&gt; * 자체 제작한 파이썬 모듈</p>
+
+<p>예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다.</p>
+
+<h3 id="create-module-using-language-c">Create module using language c</h3>
+
+<p>c언어로 된 코드를 파이썬에서 로드하기 위해서는 c code에 대한 라이브러리 파일이 필요하다. Python extendion에서는 .so(리눅스)라이브러리 파일과 .pyd(윈도우) 라이브러리 파일이 필요하게 된다. .so 파일이나 .pyd파일을 파이썬이 설치된 디렉토리의 &lsquo;Lib/site-package&rsquo; 폴더에 복사를 하면 된다.
+간단히 정리를 하면
+&gt; 1. c code를 컴파일하여 .so or .pyd 라이브러리 파일로 빌드를 한다
+&gt; 2. 빌드하여 나온 라이브러리 파일을 파이썬이 설치된 폴더의 Lib/site-package 폴더에 복사를 한다.</p>
+
+<p>위의 두 과정으로 진행된다.</p>
+
+<h3 id="sample-code">Sample code</h3>
+
+<pre><code>//mylib.c
+#include &quot;Python.h&quot;
+#include &lt;stdio.h&gt;
+
+static PyObject* ErrorObject;
+
+// 실제 동작하는 함수
+static PyObject* write_log(PyObject *self, PyObject *args) // 인자는 이와같이 고정된다.
+{
+char* msg;
+    
+   if(!PyArg_ParseTuple(args, &quot;s&quot;, &amp;msg))
+   	return NULL;
+
+    printf(“c import test\n”);    
+    return Py_BuildValue(&quot;i&quot;, 0);    
+}
+ 
+/* methods 구조체 배열에 지정되는 정보는 {&quot;실제사용할 메쏘드명&quot;, 메쏘드명에 대응하는 실제 동작하는 함수명, 인자 종류} */
+static struct PyMethodDef methods[] =
+{
+    {&quot;wlog&quot;, write_log, METH_VARARGS},
+    {NULL, NULL}
+};
+
+void initmylib()
+{
+    PyObject* m;
+    
+// Py_InitModule(&quot;모듈명&quot;, 이모듈에 적용된 메쏘드들을 담을 구조체배열 포인터)
+    m = Py_InitModule(&quot;mylib&quot;, methods); 
+
+    ErrorObject = Py_BuildValue(&quot;s&quot;, &quot;error&quot;);
+}
+</code></pre>
+
+<p>파이썬이 c 모듈을 import 하게되면 초기화를 위해 &lsquo;init+모듈이름&rsquo;으로 된 함수를 호출한다. 모듈이름이 mylib이면 initmylib()을 호출한다.</p>
+
+<p>즉, c의 main함수의 역할이 &lsquo;init_모듈이름&rsquo;으로 된 함수이다.</p>
+
+<p>이 c파일을 컴파일하기 위해서 파이썬 파일이 필요하다.</p>
+
+<pre><code># setup.py
+from distutils.core import setup, Extension
+ 
+setup(name = &quot;mylib&quot;,
+        version = &quot;1.0&quot;,
+        description = &quot;print log&quot;,
+        author = &quot;sample&quot;,
+        author_email = &quot;sample@sample.com&quot;,
+        url = &quot;google.com&quot;,
+        ext_modules = [Extension(&quot;mylib&quot;, [&quot;mylib.c&quot;])]
+        )
+
+</code></pre>
+
+<h3 id="compile">Compile</h3>
+
+<p>위에서 만든 c파일과 python파일을 같은 디렉토리에 넣러두고 아래의 명령어를 통하여서 컴파일을 하게된다.
+&gt; python setup.py install</p>
+
+<p>위의 명령어를 입력하면 자동적으로 컴파일 후 .so파일이나 .pyd파일을 &lsquo;Lib/site-package&rsquo; 폴더에 복사가 된다. 컴파일을 할때는 리눅스에서는 gcc를 호출하고 윈도우에서는 visual c컴파일러를 호출한다.</p>
+
+<h4 id="compile-on-window">compile on window</h4>
+
+<p>파이썬에서는 c를 컴파일할 때 vc++를 호출하기 때문에 컴퓨터에 비주얼 스튜디오가 설치되어 있어야하며, 설치된 비주얼스튜디로의 버전을 맞춰야한다.
+&gt; python\Lib\distutils\msvs9compiler.py</p>
+
+<p>위의 path는 파이썬이 설치된 디렉토리이며 파이썬 파일은 파이썬 버전별로 달리질 수 있다.</p>
+
+<p>파이썬 파일을 연 후 get_build_version 함수의 리턴값을 현재의 vc 버전에 맞춰서 적는다.
+<a href="https://ko.wikipedia.org/wiki/%EB%B9%84%EC%A3%BC%EC%96%BC_C%2B%2B">vc 버전 정보</a></p>
+
+<blockquote>
+<p>visual C++ 2015 (14.0)
+visual C++ 2013 (12.0)
+visual C++ 2012 (11.0)
+visual C++ 2010 (10.0)</p>
+</blockquote>
+
+<h4 id="compule-option">compule option</h4>
+
+<p>Setup.py를 install할때 파일안에서 정의한 c파일을 컴파일을 하는데 컴파일 옵션을 사용 할 수 있다.
+평소 gcc를 사용할 때 쓰는 “-w –o –Wall” 등 여러 컴파일 옵션을 사용하는데 이 옵션들을 python extending에서도 사용할 수 있다.</p>
+
+<pre><code class="language-python">import os
+import sys
+from distutils.core import setup, Extension
+# from setuptools import setup, Extension
+ 
+setup(name = &quot;konlp&quot;,
+        version = &quot;1.0&quot;,
+        
+        py_modules=[&quot;konlp.detector.detector&quot;, &quot;konlp.ngram.ngram&quot;, &quot;konlp.pos.index&quot;, &quot;konlp.wordcount.wordcount&quot;],
+        ext_modules = [Extension(&quot;konlp.c.codescan&quot;, extra_compile_args=[&quot;-w&quot;], sources=[&quot;konlp/detector/pydetector.c&quot;]),
+        Extension(&quot;konlp.c.wordcount&quot;, extra_compile_args=[&quot;-w&quot;], sources=[&quot;konlp/wordcount/pywordcount.c&quot;, &quot;konlp/wordcount/wordcount.c&quot;, &quot;konlp/wordcount/wordcount-main.c&quot;, &quot;konlp/wordcount/wordcount-sort.c&quot;]),
+	Extension(&quot;konlp.c.index&quot;, extra_compile_args=[&quot;-Wall&quot;], extra_link_args=[&quot;-L.&quot;, &quot;-lindex&quot;], sources=[&quot;konlp/pos/pyindex.c&quot;])]
+)
+</code></pre>
+
+<p>위는 setup.py 예제 소스이다.
+중간에 보면 <code>extra_compile_args</code>가 있는데 이 부분을 통하여서 각각의 컴파일 옵션을 줄 수 있다.</p>
+
+<h4 id="compile-link">compile link</h4>
+
+<p>위 1.5.1 의 내용처럼 각각의 c파일에 대하여서 컴파일 링크를 할 수 있다.</p>
+
+<pre><code class="language-python">import os
+import sys
+from distutils.core import setup, Extension
+# from setuptools import setup, Extension
+ 
+setup(name = &quot;konlp&quot;,
+        version = &quot;1.0&quot;,
+        
+        py_modules=[&quot;konlp.detector.detector&quot;, &quot;konlp.ngram.ngram&quot;, &quot;konlp.pos.index&quot;, &quot;konlp.wordcount.wordcount&quot;],
+        ext_modules = [Extension(&quot;konlp.c.codescan&quot;, extra_compile_args=[&quot;-w&quot;], sources=[&quot;konlp/detector/pydetector.c&quot;]),
+        Extension(&quot;konlp.c.wordcount&quot;, extra_compile_args=[&quot;-w&quot;], sources=[&quot;konlp/wordcount/pywordcount.c&quot;, &quot;konlp/wordcount/wordcount.c&quot;, &quot;konlp/wordcount/wordcount-main.c&quot;, &quot;konlp/wordcount/wordcount-sort.c&quot;]),
+	Extension(&quot;konlp.c.index&quot;, extra_compile_args=[&quot;-Wall&quot;], extra_link_args=[&quot;-L.&quot;, &quot;-lindex&quot;], sources=[&quot;konlp/pos/pyindex.c&quot;])]
+)
+</code></pre>
+
+<p>위와 동일한 setup.py 예제이다.
+중간에 보면 <code>extra_link_args</code>가 있는데 이 부분을 통하여서 각각의 컴파일 링크를 할 수 있다.</p>
+
+<h3 id="example">Example</h3>
+
+<p>c 파일과 파이썬 파일을 한 디렉토리에 위치한다.
+<code>python setup.py install</code>
+위의 명령어를 실행한다.</p>
+
+<p>그 후, 파이썬을 실행하여 확인한다.</p>
+
+<pre><code>&gt;&gt; import mylib
+&gt;&gt; mylib.wlog(&quot;&quot;)
+c import test
+</code></pre>
+
+<h3 id="sub-module-or-sub-package">sub module or sub package</h3>
+
+<p>파이썬에서는 폴더를 기준으로 sub module 혹은 sub package 가 정해진다.</p>
+
+<pre><code>dir
+ |
+ +-- test.py
+ |
+ +-- package
+      |
+      +-- __init__.py
+      |
+      +-- subpackage
+           |
+           +-- __init__.py
+           |
+           +-- module.py
+</code></pre>
+
+<p>파이썬에서 위와 같은 디렉토리 구조를 가지고 있다면 <code>test.py</code>에서 package/subpackage/module를 import하고 싶다면
+<code>import package.subpackage.module</code>
+위처럼 . 으로서 디렉토리를 하위 모듈 혹은 패키지를 접근이 가능하다.</p>
+
+<p>하지만 c extending을 사용을 한다면 디렉토리 구조로서 하위 모듈 혹은 패키지를 사용을 못한다. 그러므로 c code 중 <code>Py_InitModule</code> 을 할때 자기가 사용하고 싶은 package명을 입력을 하면된다.</p>
+
+<pre><code>...
+m = Py_InitModule3(&quot;konlp.c.wordcount&quot;, &quot;wordcount c code&quot;, methods);
+...
+</code></pre>
+
+<p>위의 예제의 <code>konlp.c.wordcount</code> 처럼 사용하고 싶은 pacakge명을 입력을 하면 된다.</p>
+
+<h2 id="built-in-method">Built-in method</h2>
+
+<p>initmylib에서 Py_initMoudle 할 때 인자로 PyMethidDef 구조페 배열을 넘긴다.
+이 구조체 배열을 method table로서 파이썬에서 호출될 메서드들의 목록을 나타낸다.
+구조는 {&ldquo;메서드&rdquo;, 구현된 메서드, 호출규약, &ldquo;설명&rdquo;}으로 되어있다.
+구조체 배열의 마지막 변수는 sentinel로서 {NULL, NULL}를 넣어준다.</p>
+
+<p>구조체 배열은 아래와 같이 작성을 하면 된다.</p>
+
+<pre><code>static struct PyMethodDef methods[] ={
+	{&quot;get&quot;, get_sample_text, METH_VARARGS},
+	{&quot;wordcountToFile&quot;, wordCountToFile, METH_VARARGS},
+	{NULL, NULL}
+}
+</code></pre>
+
+<p>함수의 형식은</p>
+
+<pre><code>static PyObject* method(PyObject *self, PyObject *args){
+    return Py_BuildValue(&quot;&quot;);    
+}
+</code></pre>
+
+<p>위와 같이 되어있다.</p>
+
+<h3 id="parameter">Parameter</h3>
+
+<p>함수를 호출할 때 인자를 사용하는데 인자는 PyArg_ParseTuple를 이용하여 파싱한다.</p>
+
+<p>사용법 예시로는</p>
+
+<pre><code>if(!PyArg_ParseTuple(args,&quot;s|s&quot;, &amp;input_file, &amp;output_file))
+        return NULL;
+}
+</code></pre>
+
+<p>위처럼 사용 할 수 있다.</p>
+
+<p><code>PyArg_ParseTuple</code>를 사용할 때 두번째 인자로 전해받을 인자의 형식을 정하는데 보통 <code>s - string, i - integer, f - float, d - double</code> 등의 여러 형식이 있다.</p>
+
+<pre><code>char *options_string, *input, *output = &quot;output.txt&quot;;
+char **argument;
+int i = 0;
+int num_of_input = 0;
+if(!PyArg_ParseTuple(args, &quot;sss&quot;, &amp;option_string, &amp;input, &amp;output)){
+	return NULL;
+}
+</code></pre>
+
+<pre><code>char *input, *output = &quot;output.txt&quot;;
+char *argument_list[3] = {0};
+if(!PyArg_ParseTuple(args, &quot;ss&quot;, &amp;input, &amp;output)){
+	return NULL;
+}
+</code></pre>
+
+<p>형식의 리스트는 <a href="https://docs.python.org/2/c-api/arg.html">c-api</a> 여기서 볼 수 있다.</p>
+
+<h3 id="parameter-example">Parameter example</h3>
+
+<pre><code>int ok;
+int i, j;
+long k, l;
+const char *s;
+int size;
+ 
+ok = PyArg_ParseTuple(args, &quot;&quot;); /* No arguments */
+    /* Python call: f() */
+ok = PyArg_ParseTuple(args, &quot;s&quot;, &amp;s); /* A string */
+    /* Possible Python call: f('whoops!') */
+ok = PyArg_ParseTuple(args, &quot;lls&quot;, &amp;k, &amp;l, &amp;s); /* Two longs and a string */
+    /* Possible Python call: f(1, 2, 'three') */
+ok = PyArg_ParseTuple(args, &quot;(ii)s#&quot;, &amp;i, &amp;j, &amp;s, &amp;size);
+    /* A pair of ints and a string, whose size is also returned */
+    /* Possible Python call: f((1, 2), 'three') */
+
+{
+    const char *file;
+    const char *mode = &quot;r&quot;;
+    int bufsize = 0;
+    ok = PyArg_ParseTuple(args, &quot;s|si&quot;, &amp;file, &amp;mode, &amp;bufsize);
+    /* A string, and optionally another string and an integer */
+    /* Possible Python calls:
+       f('spam')
+       f('spam', 'w')
+       f('spam', 'wb', 100000) */
+}
+{
+    int left, top, right, bottom, h, v;
+    ok = PyArg_ParseTuple(args, &quot;((ii)(ii))(ii)&quot;,
+             &amp;left, &amp;top, &amp;right, &amp;bottom, &amp;h, &amp;v);
+    /* A rectangle and a point */
+    /* Possible Python call:
+       f(((0, 0), (400, 300)), (10, 10)) */
+}
+{
+    Py_complex c;
+    ok = PyArg_ParseTuple(args, &quot;D:myfunction&quot;, &amp;c);
+    /* a complex, also providing a function name for errors */
+    /* Possible Python call: myfunction(1+2j) */
+}
+</code></pre>
+
+<h3 id="variable">Variable</h3>
+
+<pre><code>int ok;
+int i, j;
+long k, l;
+const char *s;
+int size;
+ 
+ok = PyArg_ParseTuple(args, &quot;&quot;); /* No arguments */
+    /* Python call: f() */
+ok = PyArg_ParseTuple(args, &quot;s&quot;, &amp;s); /* A string */
+    /* Possible Python call: f('whoops!') */
+ok = PyArg_ParseTuple(args, &quot;lls&quot;, &amp;k, &amp;l, &amp;s); /* Two longs and a string */
+    /* Possible Python call: f(1, 2, 'three') */
+ok = PyArg_ParseTuple(args, &quot;(ii)s#&quot;, &amp;i, &amp;j, &amp;s, &amp;size);
+    /* A pair of ints and a string, whose size is also returned */
+    /* Possible Python call: f((1, 2), 'three') */
+
+{
+    const char *file;
+    const char *mode = &quot;r&quot;;
+    int bufsize = 0;
+    ok = PyArg_ParseTuple(args, &quot;s|si&quot;, &amp;file, &amp;mode, &amp;bufsize);
+    /* A string, and optionally another string and an integer */
+    /* Possible Python calls:
+       f('spam')
+       f('spam', 'w')
+       f('spam', 'wb', 100000) */
+}
+{
+    int left, top, right, bottom, h, v;
+    ok = PyArg_ParseTuple(args, &quot;((ii)(ii))(ii)&quot;,
+             &amp;left, &amp;top, &amp;right, &amp;bottom, &amp;h, &amp;v);
+    /* A rectangle and a point */
+    /* Possible Python call:
+       f(((0, 0), (400, 300)), (10, 10)) */
+}
+{
+    Py_complex c;
+    ok = PyArg_ParseTuple(args, &quot;D:myfunction&quot;, &amp;c);
+    /* a complex, also providing a function name for errors */
+    /* Possible Python call: myfunction(1+2j) */
+}
+</code></pre>
+
+<h3 id="list">List</h3>
+
+<p>PyObject 배열을 만들기 위해서는 PyList_New를 사용하여 만든다.
+<code>PyObject *dlist = PyList_New(length);</code>
+리스트를 만든후 PyList_SetItem 으로 원하는 인덱스의 변수를 수정할 수 있다.<br />
+<code>PyList_SetItem(dlist, i, PyString_FromString(msg));</code>
+리스트의 변수를 추가를 하고 싶다면 PyList_Append를 이용하여 item을 추가 할 수 있다.
+<code>PyList_Append(dlist, PyString_FromString(msg));</code></p>
+
+<pre><code>PyObjecy *dlist = PyList_New(0);
+int i = 0;
+while(1){
+	char msg[1000];
+	fscanf(sample_file, &quot;%s&quot;, msg);
+	if(i++ == 1000 || feof(sample_file)) break;
+	PyList_Append(dlist, PyString_FromString(msg));
+}
+return dlist;
+
+
+
+PyList_Append(dlist, Py_BuildValue(&quot;(is)&quot;, num, msg));
+</code></pre>
+
+<p>이 예제처럼 하게되며, 튜플형식으로 만들어진다.</p>
+
+<h3 id="defining-new-types">Defining New Types</h3>
+
+<p>Python extendion에는 C에 없는 클래스를 구현가능하게 되어있다.</p>
+
+<pre><code>static PyTypeObject noddy_NoddyType = {
+	PyVarobject_HEAD_INIT(NULL, 0),
+	&quot;noddy.Noddy&quot;,
+	sizeof(noddy_NoddyObject),	/* tp_name */
+	0,							/* tp_basicsize */
+	0, 							/* tp_itemsize */
+	0, 							/* tp_dealloc */
+	0, 							/* tp_print */
+	0, 							/* tp_getattr */
+	0, 							/* tp_setattr */
+	0, 							/* tp_compare */
+	0, 							/* tp_repr */
+	0, 							/* tp_as_number */
+	0, 							/* tp_as_sequence */
+	0, 							/* tp_as_mapping */
+	0, 							/* tp_hash */
+	0,							/* tp_call */
+	0, 							/* tp_str */
+	0, 							/* tp_getattro */
+	0, 							/* tp_setattro */
+	0,							/* tp_as_buffer */
+	0,							/* tp_flags */
+	Py_TPFLAGS_DEFAULT,			/* tp_flags */
+	&quot;Noddy objects&quot;,			/* tp_doc */
+};
+</code></pre>
+
+<p>위 사진과 같은 PyTypeObject 변수를 선언한다. 이 변수는 pymodule레 object를 추가하는데 있어서 사용된다.
+<code>PyModule_AddObject(m, &quot;Noddy&quot;, (PyObject*) &amp;noddy_NoddyType);</code></p>
+
+<p>위 처럼 모듈을 오브젝트를 추가하면 파이썬에서 클래스처럼 사용이 가능하다.</p>
+
+<pre><code class="language-python">import mylib
+c1 = mylib.Noddy()
+</code></pre>
+
+<h4 id="member-variable">Member variable</h4>
+
+<pre><code>typedef struct{
+	PyObeject_HEAD
+	PyObject* input;
+	PyObject* output;
+	PyObject* option;
+	int type;
+}	Noddy;
+</code></pre>
+
+<p>위와 같은 구조체의 건언으로 변수처럼 사용가능하다.</p>
+
+<pre><code class="language-python">import mylib
+c1 = mylib.Noddy()
+c1.type = 1
+c1.input = &quot;input&quot;
+</code></pre>
+
+<h4 id="member-method">Member method</h4>
+
+<pre><code>satic PyMethodDef Noddy_methods[] = {
+	{&quot;setOption&quot;, (PyCFunction)setOption, METH_VARARGS},
+	{&quot;setFile&quot;, (PyCFunction)setFile, METH_VARARGS},
+	{&quot;setString&quot;, (PyCFunction)setString, METH_VARARGS},
+	{NULL}
+}
+</code></pre>
+
+<p>PyMethodDef 배열을 만든 후,</p>
+
+<pre><code>static PyTypeObject NoddyType = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    &quot;noddy.Noddy&quot;,             /* tp_name */
+    sizeof(Noddy),             /* tp_basicsize */
+    0,                         /* tp_itemsize */
+    (destructor)Noddy_dealloc, /* tp_dealloc */
+    0,                         /* tp_print */
+    0,                         /* tp_getattr */
+    0,                         /* tp_setattr */
+    0,                         /* tp_compare */
+    0,                         /* tp_repr */
+    0,                         /* tp_as_number */
+    0,                         /* tp_as_sequence */
+    0,                         /* tp_as_mapping */
+    0,                         /* tp_hash */
+    0,                         /* tp_call */
+    0,                         /* tp_str */
+    0,                         /* tp_getattro */
+    0,                         /* tp_setattro */
+    0,                         /* tp_as_buffer */
+    Py_TPFLAGS_DEFAULT |
+        Py_TPFLAGS_BASETYPE,   /* tp_flags */
+    &quot;Noddy objects&quot;,           /* tp_doc */
+    0,                         /* tp_traverse */
+    0,                         /* tp_clear */
+    0,                         /* tp_richcompare */
+    0,                         /* tp_weaklistoffset */
+    0,                         /* tp_iter */
+    0,                         /* tp_iternext */
+    Noddy_methods,             /* tp_methods */
+    Noddy_members,             /* tp_members */
+    0,                         /* tp_getset */
+    0,                         /* tp_base */
+    0,                         /* tp_dict */
+    0,                         /* tp_descr_get */
+    0,                         /* tp_descr_set */
+    0,                         /* tp_dictoffset */
+    (initproc)Noddy_init,      /* tp_init */
+    0,                         /* tp_alloc */
+    Noddy_new,                 /* tp_new */
+};
+</code></pre>
+
+<p>PyTypeObject 구조체를 선언할 때 tp_methods 부분에 구조체배열을 입력한다.</p>
+
+<h2 id="참조">참조</h2>
+
+<p><a href="http://egloos.zum.com/batsu05/v/839472">http://egloos.zum.com/batsu05/v/839472</a>
+<a href="http://qwefgh90.github.io/sphinx/python/translating_extending.html">http://qwefgh90.github.io/sphinx/python/translating_extending.html</a>
+<a href="https://docs.python.org/2/extending/extending.html">https://docs.python.org/2/extending/extending.html</a>
+<a href="https://docs.python.org/2/c-api/string.html">https://docs.python.org/2/c-api/string.html</a>
+<a href="https://docs.python.org/2/extending/newtypes.html">https://docs.python.org/2/extending/newtypes.html</a></p>
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+<a class="nav nav-prev" href="/documents/extending-python3-c/" title="C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/documents/python-extending-with-c-class-wrapping/" title="Python extending with C class wrapping" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
