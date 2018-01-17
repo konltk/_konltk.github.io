@@ -11,7 +11,7 @@
 	"title": "documents",
 	"tags": [],
 	"description": "",
-	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 \n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
+	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 \n Python extending with C This document is based on the Python 2.x version. As a python extending language c Python work when load module 파이썬에서 모듈을 로드를 할 때에 아래와 같은 순서로 모듈을 찾게 된다. \u0026gt; * 기본 모듈(soket, time 등) \u0026gt; * c로 만들어진 dll 파일 \u0026gt; * 자체 제작한 파이썬 모듈 예시로 만약 파이썬에서 import mylib을 수행한다면, 파이썬에서는 sys.module과 sys.path의 디렉토리를 검색하여 mylib이라는 모듈을 찾는다. Create module using language c c언어로 된 코드를 파이썬에서 로드하기 위해서는 c code에 대한 라이브러리 파일이 필요하다.\n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
 },
 {
 	"uri": "https://kontlk.github.io/index/",
@@ -25,7 +25,7 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  konltk modules \n "
+	"content": "  konltk modules konltk moduels konltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다. Submodules konltk.detector.detector module class konltk.detector.detector.Detect detect(text, max) Parameters: - text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path - max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다. Return: \u0026ldquo;NONE\u0026rdquo;, \u0026ldquo;EUCKR\u0026rdquo;, \u0026ldquo;UTF8\u0026rdquo;, \u0026ldquo;UTF16BE\u0026rdquo;, \u0026ldquo;UTF16LE\u0026rdquo; 이 중 하나를 얻습니다. Return Type: string\n "
 },
 {
 	"uri": "https://kontlk.github.io/search/",
@@ -130,7 +130,7 @@
 	"title": "Installing konltk",
 	"tags": [],
 	"description": "Installing konltk",
-	"content": "Installing konltk\n"
+	"content": " Installing konltk konltk는 맥을 제외한 리눅스 계열에서 사용이 가능합니다.\n코드 다운받기 명령어로 코드를 다운받는 방법 git clone https://github.com/konltk/konltk  Github페이지로 들어가서 코드를 다운받는 방법 konltk github 주소에 접속하여 코드를 다운 받습니다. 설치하기 설치는 터미널의 명령어로 진행을 합니다. 설치전 python-dev(파이썬 3.xx 버전을 사용시 python3-dev)이 설치가 되어 있어야 합니다.\n코드를 다운 받은 후(Github 페이지에서 다운을 받았으면 unzip도 해야합니다) 가장 최상위 폴더로 이동을 합니다. 이동 후 sudo python setup.py install(파이썬 3.xx 버전을 사용시 sudo python3 setup.py install) 명령어를 통해서 설치를 진행합니다.\n$ cd konltk konltk$ sudo python setup.py install  사용하기전 설치하고 나서 바로 사용하실경우 source /etc/profile.d 명령어를 터미널에서 실행을 한 후 사용하시면 문제없이 사용이 가능합니다. 이 명령어는 피씨를 재부팅을 하면 다시 하실 필요 없습니다. 다만 재부팅을 하지 않을 경우는 사용할 터미널에서 위의 명령어를 실행 후 사용해야합니다.\n"
 },
 {
 	"uri": "https://kontlk.github.io/tags/open-source/",
