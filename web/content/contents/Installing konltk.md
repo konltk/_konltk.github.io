@@ -13,7 +13,7 @@ git clone https://github.com/konltk/konltk
 
 ### Github페이지로 들어가서 코드를 다운받는 방법
 [konltk github 주소](https://github.com/konltk/konltk)에 접속하여 코드를 다운 받습니다.
-![konltk](www.konltk.org/static/installing/1.png)
+![konltk](http://www.konltk.org/static/installing/1.png)
 
 ## 설치하기
 설치는 터미널의 명령어로 진행을 합니다.
