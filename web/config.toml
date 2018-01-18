@@ -2,7 +2,7 @@ baseURL = "https://kontlk.github.io/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 
-title = "Test Site for KoNLTK and KoNLP"
+title = "KoNLTK and KoNLP"
 theme = "docdock"
 themesDir = "themes"
 publishDir = "docs"
@@ -26,13 +26,8 @@ home = [ "HTML", "RSS", "JSON"]
 pre = "<h3>More</h3>"
 name = "<i class='fa fa-github'></i> konltk's Github repo"
 identifier = "ds"
-url = "https://github.com/konltk/konltk.github.io"
+url = "https://github.com/konltk/konltk"
 weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-camera'></i> Showcases"
-url = "/showcase"
-weight = 11
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-bookmark'></i> Hugo Documentation"

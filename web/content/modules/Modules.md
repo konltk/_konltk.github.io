@@ -1,6 +1,5 @@
 +++
 title="konltk modules"
-date=2017-12-28T08:58:25+09:00
 draft=false
 keywords=["konltk", "moduls"]
 +++
