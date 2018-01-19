@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>footer :: KoNLTK and KoNLP</title>
+<title>konltk.pos package :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/_footer/">
+  <body data-url="/modules/konltk/pos/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -136,13 +136,13 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/" class="dd-item parent alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/" class="dd-item parent alwaysopen">
       <a href="/modules/konltk/">
         <span>konltk</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -153,7 +153,7 @@
           <span>konltk.detector package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/modules/konltk/pos/" class="dd-item">
+      <li data-nav-id="/modules/konltk/pos/" class="dd-item active">
         <a href="/modules/konltk/pos/">
           <span>konltk.pos package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -217,7 +217,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/_footer.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/konltk/pos.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -234,7 +234,17 @@
 
 
 
- <a href='/'>Korean Natural Language Toolkit</a> > footer
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/modules/'>modules</a> > <a href='/modules/konltk/'>konltk</a> > konltk.pos package
+
+ 
+
+ 
 
  
 
@@ -245,7 +255,20 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#konltk-pos-package">konltk.pos package</a>
+<ul>
+<li><a href="#module-contents">Module contents</a></li>
+<li><a href="#submodules">SubModules</a></li>
+<li><a href="#konltk-pos-index-module">konltk.pos.index module</a></li>
+<li><a href="#konltk-pos-ham-module">konltk.pos.ham module</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
         </div>
     </div>
     
@@ -255,7 +278,7 @@
 
 <div id="body-inner">
   
-    <h1>footer</h1>
+    <h1>konltk.pos package</h1>
   
 
 
@@ -263,12 +286,57 @@
     
     
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+
+<p>konltk pos module</p>
+
+<h2 id="konltk-pos-package">konltk.pos package</h2>
+
+<h3 id="module-contents">Module contents</h3>
+
+<p>&hellip;.</p>
+
+<h3 id="submodules">SubModules</h3>
+
+<h3 id="konltk-pos-index-module">konltk.pos.index module</h3>
+
+<pre><code class="language-python">....
+</code></pre>
+
+<p><em>class</em> konltk.pos.index.<strong>Index</strong>
+주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
+<em>dic_init(path)</em>
+사전을 설정하는 함수입니다.
+Parameters:
+- path(string): 설정할 사전의 위치
+<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
+<em>Return Type:</em> int
+<em>index(data)</em>
+이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
+Parameters:
+- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
+<em>Return:</em> (원본, 명사 리스트) 튜플로 이루어진 리스트
+<em>Return Type:</em> list</p>
+
+<h3 id="konltk-pos-ham-module">konltk.pos.ham module</h3>
+
+<pre><code class="language-python">....
+</code></pre>
+
+<p><em>class</em> konltk.pos.ham.<strong>Ham</strong>
+형태소 분석기
+<em>dic_init(path)</em>
+사전을 설정하는 함수입니다.
+*Parameters:
+- path(string): 설정할 사전의 위치
+<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
+<em>Return Type:</em> int
+<em>morpha(data)</em>
+이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.
+*Parameters:
+- data(string): 형태소 분석을 할 문자열
+<em>Return:</em> 튜플들로 이루어진 리스트
+<em>Return Type:</em> list</p>
 
 
     
@@ -280,7 +348,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/modules/konltk/detector/" title="konltk.detector package"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/modules/konltk/tokenzier/" title="konltk.tokenzier package" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

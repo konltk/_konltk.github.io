@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>footer :: KoNLTK and KoNLP</title>
+<title>konltk.detector package :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/_footer/">
+  <body data-url="/modules/konltk/detector/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -136,19 +136,19 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/" class="dd-item parent alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/" class="dd-item parent alwaysopen">
       <a href="/modules/konltk/">
         <span>konltk</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/modules/konltk/detector/" class="dd-item">
+      <li data-nav-id="/modules/konltk/detector/" class="dd-item active">
         <a href="/modules/konltk/detector/">
           <span>konltk.detector package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -217,7 +217,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/_footer.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/konltk/detector.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -234,7 +234,17 @@
 
 
 
- <a href='/'>Korean Natural Language Toolkit</a> > footer
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/modules/'>modules</a> > <a href='/modules/konltk/'>konltk</a> > konltk.detector package
+
+ 
+
+ 
 
  
 
@@ -245,7 +255,19 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#konltk-detector-package">konltk.detector package</a>
+<ul>
+<li><a href="#module-contents">Module contents</a></li>
+<li><a href="#submodules">Submodules</a></li>
+<li><a href="#konltk-detector-detector-module">konltk.detector.detector module</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
         </div>
     </div>
     
@@ -255,7 +277,7 @@
 
 <div id="body-inner">
   
-    <h1>footer</h1>
+    <h1>konltk.detector package</h1>
   
 
 
@@ -263,12 +285,33 @@
     
     
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+
+<p>konltk detector module</p>
+
+<h2 id="konltk-detector-package">konltk.detector package</h2>
+
+<h3 id="module-contents">Module contents</h3>
+
+<p>이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.</p>
+
+<h3 id="submodules">Submodules</h3>
+
+<h3 id="konltk-detector-detector-module">konltk.detector.detector module</h3>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body"><p><em>class</em> konltk.detector.detector.<strong>Detect</strong><br>
+detect(text, max)<br>
+Parameters:<br>
+text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path<br>
+max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.<br>
+<em>Return:</em> &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.<br>
+<em>Return Type:</em> string<br></p>
+</div>
+	
+</div>
+
 
 
     
@@ -280,7 +323,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/modules/konltk/" title="konltk"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/modules/konltk/pos/" title="konltk.pos package" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

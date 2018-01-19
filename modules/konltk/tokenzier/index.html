@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>footer :: KoNLTK and KoNLP</title>
+<title>konltk.tokenzier package :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/_footer/">
+  <body data-url="/modules/konltk/tokenzier/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -136,13 +136,13 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/" class="dd-item parent alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/" class="dd-item parent alwaysopen">
       <a href="/modules/konltk/">
         <span>konltk</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -158,7 +158,7 @@
           <span>konltk.pos package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/modules/konltk/tokenzier/" class="dd-item">
+      <li data-nav-id="/modules/konltk/tokenzier/" class="dd-item active">
         <a href="/modules/konltk/tokenzier/">
           <span>konltk.tokenzier package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -217,7 +217,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/_footer.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/konltk/tokenzier.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -234,7 +234,17 @@
 
 
 
- <a href='/'>Korean Natural Language Toolkit</a> > footer
+
+
+
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/modules/'>modules</a> > <a href='/modules/konltk/'>konltk</a> > konltk.tokenzier package
+
+ 
+
+ 
 
  
 
@@ -245,7 +255,20 @@
     
     <div class="progress">
         <div class="wrapper">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#konltk-tokenizer-package">konltk.tokenizer package</a>
+<ul>
+<li><a href="#module-contents">Module contents</a></li>
+<li><a href="#submodules">SubModules</a></li>
+<li><a href="#konltk-ngram-ngram-module">konltk.ngram.ngram module</a></li>
+<li><a href="#konltk-wordcount-ngram-module">konltk.wordcount.ngram module</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
         </div>
     </div>
     
@@ -255,7 +278,7 @@
 
 <div id="body-inner">
   
-    <h1>footer</h1>
+    <h1>konltk.tokenzier package</h1>
   
 
 
@@ -263,12 +286,60 @@
     
     
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+
+<p>konltk tokenzier module</p>
+
+<h2 id="konltk-tokenizer-package">konltk.tokenizer package</h2>
+
+<h3 id="module-contents">Module contents</h3>
+
+<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
+
+<h3 id="submodules">SubModules</h3>
+
+<h3 id="konltk-ngram-ngram-module">konltk.ngram.ngram module</h3>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.ngram import ngram
+&gt;&gt;&gt; n = ngram.Ngram()
+&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
+{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
+</code></pre>
+
+<p><em>class</em> konltk.ngram.ngram.<strong>Ngram</strong>
+<em>ngram(text, n)</em>
+Parameters:
+- text(string or list array): n-gram 할 문자열 혹은 list array
+- n(int): n-gram의 n
+<em>Return:</em> n-gram된 dictionary
+<em>Return Type:</em> dictionary</p>
+
+<p><em>word_len()</em>
+<em>Return:</em> 나뉘어진 단어의 수
+<em>Return Type:</em> int</p>
+
+<p><em>total_len()</em>
+<em>Return:</em> 모든 단어의 수
+<em>Return Type:</em> int</p>
+
+<p><em>probabillity</em>
+<em>Return:</em> 각 단어의 빈도 확률
+<em>Return Type:</em> dictionary</p>
+
+<h3 id="konltk-wordcount-ngram-module">konltk.wordcount.ngram module</h3>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.wordcount import wordcount
+&gt;&gt;&gt; wc = wordcount.WordCount()
+&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
+[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
+</code></pre>
+
+<p><em>class</em> konltk.wordcount.wordcount.<strong>WordCount</strong>
+<em>wordcount(text)</em>
+Parameters:
+- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수
+<em>Return:</em> 단어와 수가 튜플로 이루어진 list
+<em>Return Type:</em> list</p>
 
 
     
@@ -280,7 +351,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/modules/konltk/pos/" title="konltk.pos package"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/search/" title="About the Search Engine" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

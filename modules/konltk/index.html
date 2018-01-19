@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>footer :: KoNLTK and KoNLP</title>
+<title>konltk :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     
   </head>
-  <body data-url="/_footer/">
+  <body data-url="/modules/konltk/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -136,13 +136,13 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/" class="dd-item parent alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/" class="dd-item parent active alwaysopen">
       <a href="/modules/konltk/">
         <span>konltk</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -217,7 +217,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/_footer.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/konltk/_index.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -234,7 +234,12 @@
 
 
 
- <a href='/'>Korean Natural Language Toolkit</a> > footer
+
+
+
+ <a href='/'>Korean Natural Language Toolkit</a> > <a href='/modules/'>modules</a> > konltk
+
+ 
 
  
 
@@ -255,7 +260,7 @@
 
 <div id="body-inner">
   
-    <h1>footer</h1>
+    <h1>konltk</h1>
   
 
 
@@ -263,12 +268,93 @@
     
     
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+<div class="extra-pagination inner">
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
+</div>
+
+
+   <article class="post modules">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/modules/konltk/detector/">konltk.detector package</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>konltk detector module
+konltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
+Submodules konltk.detector.detector module class konltk.detector.detector.Detect
+detect(text, max)
+Parameters:
+text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
+max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
+Return: &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
+Return Type: string <a class="read-more" href="/modules/konltk/detector/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+        
+
+    </footer>
+</article>
+
+   <article class="post modules">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/modules/konltk/pos/">konltk.pos package</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>konltk pos module
+konltk.pos package Module contents &hellip;.
+SubModules konltk.pos.index module ....  class konltk.pos.index.Index 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다. dic_init(path) 사전을 설정하는 함수입니다. Parameters: - path(string): 설정할 사전의 위치 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다. Return Type: int index(data) 이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다. Parameters: - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 Return Type: list <a class="read-more" href="/modules/konltk/pos/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+        
+
+    </footer>
+</article>
+
+   <article class="post modules">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/modules/konltk/tokenzier/">konltk.tokenzier package</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>konltk tokenzier module
+konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram&hellip;..
+SubModules konltk.ngram.ngram module &gt;&gt;&gt; from konltk.ngram import ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary
+word_len() Return: 나뉘어진 단어의 수 Return Type: int <a class="read-more" href="/modules/konltk/tokenzier/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+
+        
+        
+
+    </footer>
+</article>
+
+
+<div style="margin-bottom:2rem"></div>
+
+<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
+
 
 
     
@@ -280,7 +366,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/contents/" title="contents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/modules/" title="modules"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/modules/konltk/detector/" title="konltk.detector package" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

@@ -136,16 +136,34 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item parent active">
+    <li data-nav-id="/modules/" class="dd-item parent active alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/modules/modules/" class="dd-item">
-        <a href="/modules/modules/">
-          <span>konltk modules</span><i class="fa fa-circle-thin read-icon"></i>
+    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+      <a href="/modules/konltk/">
+        <span>konltk</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/modules/konltk/detector/" class="dd-item">
+        <a href="/modules/konltk/detector/">
+          <span>konltk.detector package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+      <li data-nav-id="/modules/konltk/pos/" class="dd-item">
+        <a href="/modules/konltk/pos/">
+          <span>konltk.pos package</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/modules/konltk/tokenzier/" class="dd-item">
+        <a href="/modules/konltk/tokenzier/">
+          <span>konltk.tokenzier package</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -248,9 +266,26 @@
 
 
 
-<ul class="children children-h2"><h2>
-	<a href="/modules/modules/" >konltk modules</a></h2>
+<ul class="children children-li"><li>
+	<a href="/modules/konltk/" >konltk</a></li>
 <p></p>
+<ul><li>
+	<a href="/modules/konltk/detector/" >konltk.detector package</a></li>
+<p></p>
+<ul>
+</ul><li>
+	<a href="/modules/konltk/pos/" >konltk.pos package</a></li>
+<p></p>
+<ul>
+</ul><li>
+	<a href="/modules/konltk/tokenzier/" >konltk.tokenzier package</a></li>
+<p>konltk tokenzier module
+konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram&hellip;..
+SubModules konltk.ngram.ngram module &gt;&gt;&gt; from konltk.ngram import ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary
+word_len() Return: 나뉘어진 단어의 수 Return Type: int</p>
+<ul>
+</ul>
+</ul>
 </ul>
 
 
@@ -270,7 +305,7 @@
 
 <div id="navigation">
 <a class="nav nav-prev" href="/index/" title="index"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/modules/modules/" title="konltk modules" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/modules/konltk/" title="konltk" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
