@@ -11,7 +11,7 @@
 	"title": "documents",
 	"tags": [],
 	"description": "",
-	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 모듈 초기화 파이썬 2버전을 확장할때에는 init+모듈이름 함수 이내에 \u0026lsquo;Py_InitModule\u0026rsquo; 과 같은 함수를 사용하여서 모듈을 초기화 했다. 파이썬 3버전에서는 \u0026lsquo;PyModule_Create\u0026rsquo; 함수를 사용해서 모듈을 초기화 한다. PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다. static struct PyModuleDef moduledef = { PyModuleDef_HEAD_INIT, \u0026quot;lib\u0026quot;, /* name of module */ NULL, /* module documentation, may be NULL */ -1, /* size of per-interpreter state of the module, or -1 if the module keeps state in global variables.\n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
+	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 \n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 파이썬 배포 할 때 파일을 포함하는 방법 자신이 짠 파이썬 코드를 배포를 하고 싶을 때는 distutiles.core모듈을 사용하여서 배포가 가능한 형태로 만들 수가 있다. disturils.code 모듈의 setup함수를 사용하여서 배포할 패키지를 구성할 수 있다. setup함수에서 여러 구성요소는 python docs 2.7에서 확인할 수 있다. 여기서 data_files옵션을 이용하여서 파일도 포함하여 배포하는것을 볼 것이다. setup.py src/ ____data/ ________data1.dat ________data2.dat ________data3.dat 위와 같이 파일 구조를 가지고 있는다면 setup함수 내에서 data_files1옵션을 아래와 같이 사용할 수 있다.\n "
 },
 {
 	"uri": "https://kontlk.github.io/index/",
@@ -25,7 +25,7 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  konltk \n konltk.detector package \n  konltk.pos package \n  konltk.tokenzier package konltk tokenzier module konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram\u0026hellip;.. SubModules konltk.ngram.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.ngram import ngram \u0026gt;\u0026gt;\u0026gt; n = ngram.Ngram() \u0026gt;\u0026gt;\u0026gt; n.ngram(\u0026quot;abcd\u0026quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1} class konltk.ngram.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary word_len() Return: 나뉘어진 단어의 수 Return Type: int\n    "
+	"content": "  konltk \n konltk.detector package \n  konltk.pos package \n  konltk.tokenzier package \n    "
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/",
@@ -186,21 +186,21 @@
 	"title": "konltk.detector package",
 	"tags": [],
 	"description": "",
-	"content": " konltk detector module\nkonltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.\nSubmodules konltk.detector.detector module class konltk.detector.detector.Detect\ndetect(text, max)\nParameters:\ntext(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path\nmax(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.\nReturn: \u0026ldquo;NONE\u0026rdquo;, \u0026ldquo;EUCKR\u0026rdquo;, \u0026ldquo;UTF8\u0026rdquo;, \u0026ldquo;UTF16BE\u0026rdquo;, \u0026ldquo;UTF16LE\u0026rdquo; 이 중 하나를 얻습니다.\nReturn Type: string\n  "
+	"content": " konltk detector module\nkonltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.\nSubmodules konltk.detector.detector module class konltk.detector.detector.Detect\ndef detect(text, max)\nParameters:\n- text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path\n- max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.\nReturn: \u0026ldquo;NONE\u0026rdquo;, \u0026ldquo;EUCKR\u0026rdquo;, \u0026ldquo;UTF8\u0026rdquo;, \u0026ldquo;UTF16BE\u0026rdquo;, \u0026ldquo;UTF16LE\u0026rdquo; 이 중 하나를 얻습니다.\nReturn Type: string\n  "
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/pos/",
 	"title": "konltk.pos package",
 	"tags": [],
 	"description": "",
-	"content": " konltk pos module\nkonltk.pos package Module contents \u0026hellip;.\nSubModules konltk.pos.index module ....  class konltk.pos.index.Index 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다. dic_init(path) 사전을 설정하는 함수입니다. Parameters: - path(string): 설정할 사전의 위치 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다. Return Type: int index(data) 이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다. Parameters: - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 Return Type: list\nkonltk.pos.ham module ....  class konltk.pos.ham.Ham 형태소 분석기 dic_init(path) 사전을 설정하는 함수입니다. *Parameters: - path(string): 설정할 사전의 위치 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다. Return Type: int morpha(data) 이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다. *Parameters: - data(string): 형태소 분석을 할 문자열 Return: 튜플들로 이루어진 리스트 Return Type: list\n"
+	"content": " konltk pos module\nkonltk.pos package Module contents \u0026hellip;.\nSubModules konltk.pos.index module ....  class konltk.pos.index.KltIndex\n주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.\ndef dic_init(path)\n사전을 설정하는 함수입니다.\nParameters:\n- path(string): 설정할 사전의 위치\nReturn: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.\nReturn Type: int\ndef index(data)\n이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.\nParameters:\n- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path\nReturn: (원본, 명사 리스트) 튜플로 이루어진 리스트\nReturn Type: list\n  konltk.pos.ham module ....  class konltk.pos.ham.KltHam\n형태소 분석기\ndic_init(path)\n사전을 설정하는 함수입니다.\n*Parameters:\n- path(string): 설정할 사전의 위치\nReturn: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.\nReturn Type: int\nmorpha(data)\n이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.\n*Parameters:\n- data(string): 형태소 분석을 할 문자열\nReturn: 튜플들로 이루어진 리스트\nReturn Type: list\n  "
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/tokenzier/",
 	"title": "konltk.tokenzier package",
 	"tags": [],
 	"description": "",
-	"content": " konltk tokenzier module\nkonltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram\u0026hellip;..\nSubModules konltk.ngram.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.ngram import ngram \u0026gt;\u0026gt;\u0026gt; n = ngram.Ngram() \u0026gt;\u0026gt;\u0026gt; n.ngram(\u0026quot;abcd\u0026quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary\nword_len() Return: 나뉘어진 단어의 수 Return Type: int\ntotal_len() Return: 모든 단어의 수 Return Type: int\nprobabillity Return: 각 단어의 빈도 확률 Return Type: dictionary\nkonltk.wordcount.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.wordcount import wordcount \u0026gt;\u0026gt;\u0026gt; wc = wordcount.WordCount() \u0026gt;\u0026gt;\u0026gt; wc.wordcount(\u0026quot;a b c d ef\u0026quot;) [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]  class konltk.wordcount.wordcount.WordCount wordcount(text) Parameters: - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수 Return: 단어와 수가 튜플로 이루어진 list Return Type: list\n"
+	"content": " konltk tokenzier module\nkonltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram\u0026hellip;..\nSubModules konltk.ngram.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.ngram import ngram \u0026gt;\u0026gt;\u0026gt; n = ngram.Ngram() \u0026gt;\u0026gt;\u0026gt; n.ngram(\u0026quot;abcd\u0026quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram\nngram(text, n)\nParameters:\n- text(string or list array): n-gram 할 문자열 혹은 list array\n- n(int): n-gram의 n\nReturn: n-gram된 dictionary\nReturn Type: dictionary\nword_len()\nReturn: 나뉘어진 단어의 수\nReturn Type: int\ntotal_len()\nReturn: 모든 단어의 수\nReturn Type: int\nprobabillity\nReturn: 각 단어의 빈도 확률\nReturn Type: dictionary\n  konltk.wordcount.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.wordcount import wordcount \u0026gt;\u0026gt;\u0026gt; wc = wordcount.WordCount() \u0026gt;\u0026gt;\u0026gt; wc.wordcount(\u0026quot;a b c d ef\u0026quot;) [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]  class konltk.wordcount.wordcount.WordCount\nwordcount(text)\nParameters:\n- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수\nReturn: 단어와 수가 튜플로 이루어진 list\nReturn Type: list\n  "
 },
 {
 	"uri": "https://kontlk.github.io/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/",

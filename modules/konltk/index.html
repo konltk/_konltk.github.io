@@ -289,12 +289,11 @@
         <p>konltk detector module
 konltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
 Submodules konltk.detector.detector module class konltk.detector.detector.Detect
-detect(text, max)
+def detect(text, max)
 Parameters:
-text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
-max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
-Return: &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다.
-Return Type: string <a class="read-more" href="/modules/konltk/detector/">&raquo;</a></p>
+- text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path
+- max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.
+Return: &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF16BE&rdquo;, &ldquo;UTF16LE&rdquo; 이 중 하나를 얻습니다. <a class="read-more" href="/modules/konltk/detector/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -313,7 +312,19 @@ Return Type: string <a class="read-more" href="/modules/konltk/detector/">&raquo
     <section class="post-excerpt">
         <p>konltk pos module
 konltk.pos package Module contents &hellip;.
-SubModules konltk.pos.index module ....  class konltk.pos.index.Index 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다. dic_init(path) 사전을 설정하는 함수입니다. Parameters: - path(string): 설정할 사전의 위치 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다. Return Type: int index(data) 이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다. Parameters: - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 Return Type: list <a class="read-more" href="/modules/konltk/pos/">&raquo;</a></p>
+SubModules konltk.pos.index module ....  class konltk.pos.index.KltIndex
+주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
+def dic_init(path)
+사전을 설정하는 함수입니다.
+Parameters:
+- path(string): 설정할 사전의 위치
+Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
+Return Type: int
+def index(data)
+이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.
+Parameters:
+- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
+Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 <a class="read-more" href="/modules/konltk/pos/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -332,8 +343,16 @@ SubModules konltk.pos.index module ....  class konltk.pos.index.Index 주어진 
     <section class="post-excerpt">
         <p>konltk tokenzier module
 konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram&hellip;..
-SubModules konltk.ngram.ngram module &gt;&gt;&gt; from konltk.ngram import ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary
-word_len() Return: 나뉘어진 단어의 수 Return Type: int <a class="read-more" href="/modules/konltk/tokenzier/">&raquo;</a></p>
+SubModules konltk.ngram.ngram module &gt;&gt;&gt; from konltk.ngram import ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram
+ngram(text, n)
+Parameters:
+- text(string or list array): n-gram 할 문자열 혹은 list array
+- n(int): n-gram의 n
+Return: n-gram된 dictionary
+Return Type: dictionary
+word_len()
+Return: 나뉘어진 단어의 수
+Return Type: int <a class="read-more" href="/modules/konltk/tokenzier/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
