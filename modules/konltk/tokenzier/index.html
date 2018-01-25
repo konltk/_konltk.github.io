@@ -153,9 +153,9 @@
           <span>konltk.detector package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/modules/konltk/pos/" class="dd-item">
-        <a href="/modules/konltk/pos/">
-          <span>konltk.pos package</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/modules/konltk/tag/" class="dd-item">
+        <a href="/modules/konltk/tag/">
+          <span>konltk.tag package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/modules/konltk/tokenzier/" class="dd-item active">
@@ -263,8 +263,8 @@
 <ul>
 <li><a href="#module-contents">Module contents</a></li>
 <li><a href="#submodules">SubModules</a></li>
-<li><a href="#konltk-ngram-ngram-module">konltk.ngram.ngram module</a></li>
-<li><a href="#konltk-wordcount-ngram-module">konltk.wordcount.ngram module</a></li>
+<li><a href="#konltk-tokenizer-ngram-module">konltk.tokenizer.ngram module</a></li>
+<li><a href="#konltk-tokenizer-wordcount-module">konltk.tokenizer.wordcount module</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -294,13 +294,11 @@
 
 <h3 id="module-contents">Module contents</h3>
 
-<p>문자열 혹은 리스트 배열을 n-gram&hellip;..</p>
-
 <h3 id="submodules">SubModules</h3>
 
-<h3 id="konltk-ngram-ngram-module">konltk.ngram.ngram module</h3>
+<h3 id="konltk-tokenizer-ngram-module">konltk.tokenizer.ngram module</h3>
 
-<pre><code class="language-python">&gt;&gt;&gt; from konltk.ngram import ngram
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.tokenizer.ngram import Ngram
 &gt;&gt;&gt; n = ngram.Ngram()
 &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
 {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
@@ -308,7 +306,7 @@
 
 <div class="panel panel-primary">
 	
-	<div class="panel-body"><p><strong>class</strong> konltk.ngram.ngram.<strong>Ngram</strong><br>
+	<div class="panel-body"><p><strong>class</strong> konltk.tokenizer.ngram.<strong>Ngram</strong><br>
 <em>ngram(text, n)</em><br>
 Parameters:<br>
 - text(string or list array): n-gram 할 문자열 혹은 list array<br>
@@ -332,9 +330,9 @@ Parameters:<br>
 </div>
 
 
-<h3 id="konltk-wordcount-ngram-module">konltk.wordcount.ngram module</h3>
+<h3 id="konltk-tokenizer-wordcount-module">konltk.tokenizer.wordcount module</h3>
 
-<pre><code class="language-python">&gt;&gt;&gt; from konltk.wordcount import wordcount
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.tokenizer.wordcount import WordCount
 &gt;&gt;&gt; wc = wordcount.WordCount()
 &gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
 [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
@@ -342,7 +340,7 @@ Parameters:<br>
 
 <p><div class="panel panel-primary">
 	
-	<div class="panel-body"><p><strong>class</strong> konltk.wordcount.wordcount.<strong>WordCount</strong><br>
+	<div class="panel-body"><p><strong>class</strong> konltk.tokenizer.wordcount.<strong>WordCount</strong><br>
 <em>wordcount(text)</em><br>
 Parameters:<br>
 - text(string or list array): whitespace 기준으로 나뉘는 단어들의 수<br>
@@ -363,7 +361,7 @@ Parameters:<br>
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/modules/konltk/pos/" title="konltk.pos package"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-prev" href="/modules/konltk/tag/" title="konltk.tag package"> <i class="fa fa-chevron-left"></i></a>
     <a class="nav nav-next" href="/search/" title="About the Search Engine" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>

@@ -45,7 +45,7 @@ Submodules konlp.detector.detector module class konlp.detector.detector.Detect  
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kontlk.github.io/credits/</guid>
-      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @hyunyoung2 2 commits   @YoungHunCho 1 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester.</description>
+      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @YoungHunCho 18 commits   @hyunyoung2 2 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester.</description>
     </item>
     
     <item>
@@ -128,14 +128,14 @@ Return: &amp;ldquo;NONE&amp;rdquo;, &amp;ldquo;EUCKR&amp;rdquo;, &amp;ldquo;UTF8
     </item>
     
     <item>
-      <title>konltk.pos package</title>
-      <link>https://kontlk.github.io/modules/konltk/pos/</link>
+      <title>konltk.tag package</title>
+      <link>https://kontlk.github.io/modules/konltk/tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/modules/konltk/pos/</guid>
+      <guid>https://kontlk.github.io/modules/konltk/tag/</guid>
       <description>konltk pos module
 konltk.pos package Module contents &amp;hellip;.
-SubModules konltk.pos.index module ....  class konltk.pos.index.KltIndex
+SubModules konltk.tag.index module from konltk.pos.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(&amp;quot;나는 학교에 간다&amp;quot;)  class konltk.tag.index.KltIndex
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
 def dic_init(path)
 사전을 설정하는 함수입니다.
@@ -144,10 +144,7 @@ Parameters:
 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
 Return Type: int
 def index(data)
-이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.
-Parameters:
-- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
-Return: (원본, 명사 리스트) 튜플로 이루어진 리스트</description>
+이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.</description>
     </item>
     
     <item>
@@ -157,8 +154,7 @@ Return: (원본, 명사 리스트) 튜플로 이루어진 리스트</description
       
       <guid>https://kontlk.github.io/modules/konltk/tokenzier/</guid>
       <description>konltk tokenzier module
-konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram&amp;hellip;..
-SubModules konltk.ngram.ngram module &amp;gt;&amp;gt;&amp;gt; from konltk.ngram import ngram &amp;gt;&amp;gt;&amp;gt; n = ngram.Ngram() &amp;gt;&amp;gt;&amp;gt; n.ngram(&amp;quot;abcd&amp;quot;, 2) {(&#39;a&#39;, &#39;b&#39;): 1, (&#39;b&#39;, &#39;c&#39;): 1, (&#39;c&#39;, &#39;d&#39;): 1}  class konltk.ngram.ngram.Ngram
+konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &amp;gt;&amp;gt;&amp;gt; from konltk.tokenizer.ngram import Ngram &amp;gt;&amp;gt;&amp;gt; n = ngram.Ngram() &amp;gt;&amp;gt;&amp;gt; n.ngram(&amp;quot;abcd&amp;quot;, 2) {(&#39;a&#39;, &#39;b&#39;): 1, (&#39;b&#39;, &#39;c&#39;): 1, (&#39;c&#39;, &#39;d&#39;): 1}  class konltk.tokenizer.ngram.Ngram
 ngram(text, n)
 Parameters:
 - text(string or list array): n-gram 할 문자열 혹은 list array
@@ -167,7 +163,9 @@ Return: n-gram된 dictionary
 Return Type: dictionary
 word_len()
 Return: 나뉘어진 단어의 수
-Return Type: int</description>
+Return Type: int
+total_len()
+Return: 모든 단어의 수</description>
     </item>
     
     <item>

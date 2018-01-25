@@ -153,9 +153,9 @@
           <span>konltk.detector package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/modules/konltk/pos/" class="dd-item">
-        <a href="/modules/konltk/pos/">
-          <span>konltk.pos package</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/modules/konltk/tag/" class="dd-item">
+        <a href="/modules/konltk/tag/">
+          <span>konltk.tag package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/modules/konltk/tokenzier/" class="dd-item">
@@ -307,12 +307,12 @@ Return: &ldquo;NONE&rdquo;, &ldquo;EUCKR&rdquo;, &ldquo;UTF8&rdquo;, &ldquo;UTF1
 
    <article class="post modules">
     <header class="post-header">
-        <h2 class="post-title"><a href="/modules/konltk/pos/">konltk.pos package</a></h2>
+        <h2 class="post-title"><a href="/modules/konltk/tag/">konltk.tag package</a></h2>
     </header>
     <section class="post-excerpt">
         <p>konltk pos module
 konltk.pos package Module contents &hellip;.
-SubModules konltk.pos.index module ....  class konltk.pos.index.KltIndex
+SubModules konltk.tag.index module from konltk.pos.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(&quot;나는 학교에 간다&quot;)  class konltk.tag.index.KltIndex
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
 def dic_init(path)
 사전을 설정하는 함수입니다.
@@ -321,10 +321,7 @@ Parameters:
 Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.
 Return Type: int
 def index(data)
-이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.
-Parameters:
-- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path
-Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 <a class="read-more" href="/modules/konltk/pos/">&raquo;</a></p>
+이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다. <a class="read-more" href="/modules/konltk/tag/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -342,8 +339,7 @@ Return: (원본, 명사 리스트) 튜플로 이루어진 리스트 <a class="re
     </header>
     <section class="post-excerpt">
         <p>konltk tokenzier module
-konltk.tokenizer package Module contents 문자열 혹은 리스트 배열을 n-gram&hellip;..
-SubModules konltk.ngram.ngram module &gt;&gt;&gt; from konltk.ngram import ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.ngram.ngram.Ngram
+konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &gt;&gt;&gt; from konltk.tokenizer.ngram import Ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.tokenizer.ngram.Ngram
 ngram(text, n)
 Parameters:
 - text(string or list array): n-gram 할 문자열 혹은 list array
@@ -352,7 +348,9 @@ Return: n-gram된 dictionary
 Return Type: dictionary
 word_len()
 Return: 나뉘어진 단어의 수
-Return Type: int <a class="read-more" href="/modules/konltk/tokenzier/">&raquo;</a></p>
+Return Type: int
+total_len()
+Return: 모든 단어의 수 <a class="read-more" href="/modules/konltk/tokenzier/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

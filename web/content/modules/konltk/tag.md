@@ -1,5 +1,5 @@
 +++
-title="konltk.pos package"
+title="konltk.tag package"
 +++
 konltk pos module
 
@@ -7,12 +7,16 @@ konltk pos module
 ### Module contents
 ....
 ### SubModules
-### konltk.pos.index module
+### konltk.tag.index module
 ```python
-....
+from konltk.pos.index import KltIndex
+
+idx = KltIndex()
+rc = idx.dic_init()
+index_list = idx.index("나는 학교에 간다")
 ```
 {{% panel %}}
-**class** konltk.pos.index.**KltIndex**<br>
+**class** konltk.tag.index.**KltIndex**<br>
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.<br>
 **def** dic_init(path)<br>
 사전을 설정하는 함수입니다.<br>
@@ -26,15 +30,22 @@ Parameters:<br>
 - data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path<br>
 *Return:* (원본, 명사 리스트) 튜플로 이루어진 리스트<br>
 *Return Type:* list<br>
+
+**def** noun_comp(data)<br>
+이 함수를 사용하기전에 `dic_init` 함수를 사용하여서 사전을 설정을 해야합니다.<br>
+Parameters:<br>
+- data(string): 분해하고 싶은 복합명사
+*Return:* 분해된 명사들의 list
+*Return Type:* list<br>
 {{% /panel %}}
 
-### konltk.pos.ham module
+### konltk.tag.ham module
 ```python
 ....
 ```
 
 {{% panel %}}
-**class** konltk.pos.ham.**KltHam**<br>
+**class** konltk.tag.ham.**KltHam**<br>
 형태소 분석기<br>
 *dic_init(path)*<br>
 사전을 설정하는 함수입니다.<br>
