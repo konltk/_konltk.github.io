@@ -11,7 +11,7 @@
 	"title": "documents",
 	"tags": [],
 	"description": "",
-	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 모듈 초기화 파이썬 2버전을 확장할때에는 init+모듈이름 함수 이내에 \u0026lsquo;Py_InitModule\u0026rsquo; 과 같은 함수를 사용하여서 모듈을 초기화 했다. 파이썬 3버전에서는 \u0026lsquo;PyModule_Create\u0026rsquo; 함수를 사용해서 모듈을 초기화 한다. PyModule_Create 함수를 호출할 때에는 PyModuleDef 구조체를 인자로 넘거야 한다. static struct PyModuleDef moduledef = { PyModuleDef_HEAD_INIT, \u0026quot;lib\u0026quot;, /* name of module */ NULL, /* module documentation, may be NULL */ -1, /* size of per-interpreter state of the module, or -1 if the module keeps state in global variables.\n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
+	"content": "  C언어를 파이썬 모듈화 할 때 파이썬 2, 3버전 호환 가능한 매크로 \n Python extending with C \n Python extending with C class wrapping \n python 2버전 배포시 서브 모듈 설정하기 \n 오픈소스에 contribution 하기 \n 파이썬 배포 할 때 파일을 포함하는 방법 \n "
 },
 {
 	"uri": "https://kontlk.github.io/index/",
