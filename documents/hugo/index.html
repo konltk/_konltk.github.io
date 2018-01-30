@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
 
-<title>Installing konltk :: KoNLTK and KoNLP</title>
+<title>hugo :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
     
   </head>
-  <body data-url="/contents/installing-konltk/">
+  <body data-url="/documents/hugo/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -78,13 +78,13 @@
             <li data-nav-id="/" class="dd-item">
             <a href="/"><i class="fa fa-fw fa-home"></i></a>
             </li>
-    <li data-nav-id="/contents/" class="dd-item parent alwaysopen">
+    <li data-nav-id="/contents/" class="dd-item alwaysopen">
       <a href="/contents/">
         <span>contents</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/contents/installing-konltk/" class="dd-item active">
+      <li data-nav-id="/contents/installing-konltk/" class="dd-item">
         <a href="/contents/installing-konltk/">
           <span>Installing konltk</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -96,9 +96,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/documents/" class="dd-item">
+    <li data-nav-id="/documents/" class="dd-item parent">
       <a href="/documents/">
-        <span>documents</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span>documents</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
       <li data-nav-id="/documents/extending-python3-c/" class="dd-item">
@@ -116,7 +117,7 @@
           <span>Python extending with C class wrapping</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/documents/hugo/" class="dd-item">
+      <li data-nav-id="/documents/hugo/" class="dd-item active">
         <a href="/documents/hugo/">
           <span>hugo</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -224,7 +225,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/contents/Installing%20konltk.md" target="blank">
+      <a class="github-link" href="https://github.com/konltk/konltk.github.io/edit/master/web/content/documents/hugo.md" target="blank">
         <i class="fa fa-code-fork"></i>
         Edit page
       </a>
@@ -244,7 +245,7 @@
 
 
 
- <a href='/'>KoNLTK: Korean Natural Language ToolKit</a> > <a href='/contents/'>contents</a> > Installing konltk
+ <a href='/'>KoNLTK: Korean Natural Language ToolKit</a> > <a href='/documents/'>documents</a> > hugo
 
  
 
@@ -259,16 +260,13 @@
         <div class="wrapper">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#hugo의-몇몇-사용법">hugo의 몇몇 사용법</a></li>
+<li><a href="#hugo의-이미지-삽입하기">hugo의 이미지 삽입하기</a>
 <ul>
-<li><a href="#코드-다운받기">코드 다운받기</a>
-<ul>
-<li><a href="#명령어로-코드를-다운받는-방법">명령어로 코드를 다운받는 방법</a></li>
-<li><a href="#github페이지로-들어가서-코드를-다운받는-방법">Github페이지로 들어가서 코드를 다운받는 방법</a></li>
+<li><a href="#마크다운-이미지-삽입">마크다운 이미지 삽입</a></li>
+<li><a href="#hugo에서-이미지-삽입">hugo에서 이미지 삽입</a></li>
 </ul></li>
-<li><a href="#설치하기">설치하기</a></li>
-<li><a href="#사용하기전">사용하기전</a></li>
-</ul></li>
+<li><a href="#css-override하기">css override하기</a></li>
 </ul>
 </nav>
         </div>
@@ -280,7 +278,7 @@
 
 <div id="body-inner">
   
-    <h1>Installing konltk</h1>
+    <h1>hugo</h1>
   
 
 
@@ -290,38 +288,56 @@
     
     
 
-<p>Installing konltk
-konltk는 맥을 제외한 리눅스 계열에서 사용이 가능합니다.</p>
+<h1 id="hugo의-몇몇-사용법">hugo의 몇몇 사용법</h1>
 
-<h2 id="코드-다운받기">코드 다운받기</h2>
+<h1 id="hugo의-이미지-삽입하기">hugo의 이미지 삽입하기</h1>
 
-<h3 id="명령어로-코드를-다운받는-방법">명령어로 코드를 다운받는 방법</h3>
+<h2 id="마크다운-이미지-삽입">마크다운 이미지 삽입</h2>
 
-<pre><code>git clone https://github.com/konltk/konltk
+<pre><code>![이미지 설명](이미지 위치)
 </code></pre>
 
-<h3 id="github페이지로-들어가서-코드를-다운받는-방법">Github페이지로 들어가서 코드를 다운받는 방법</h3>
+<h2 id="hugo에서-이미지-삽입">hugo에서 이미지 삽입</h2>
 
-<p><a href="https://github.com/konltk/konltk">konltk github 주소</a>에 접속하여 코드를 다운 받습니다.
-<img src="http://www.konltk.org/static/installing/1.png" alt="konltk" /></p>
+<p>이미지를 사용하기 위해서 이미지를 static 폴더에 위치를 하고 이미리 링크를 걸때 고정적인 위치를 링크하면 된다.</p>
 
-<h2 id="설치하기">설치하기</h2>
-
-<p>설치는 터미널의 명령어로 진행을 합니다.
-설치전 python-dev(파이썬 3.xx 버전을 사용시 python3-dev)이 설치가 되어 있어야 합니다.</p>
-
-<p>코드를 다운 받은 후(Github 페이지에서 다운을 받았으면 unzip도 해야합니다) 가장 최상위 폴더로 이동을 합니다.
-이동 후 <code>sudo python setup.py install</code>(파이썬 3.xx 버전을 사용시 <code>sudo python3 setup.py install</code>) 명령어를 통해서 설치를 진행합니다.</p>
-
-<pre><code>$ cd konltk
-konltk$ sudo python setup.py install
+<pre><code>github.io
+|--...
+|--...
+|--static
+|  |--a.png
+|--...
+|--web
+|  |--docs
+|  |--...
 </code></pre>
 
-<h2 id="사용하기전">사용하기전</h2>
+<p>위와 같이 디렉토리구조가 되어 있으면 이미지를 최상위 폴더의 <code>static</code> 폴더안에 위치하며, 이미지 링크를 <code>![image test](/static/a.png)</code> 고정 위치를 사용하면 된다.</p>
 
-<p>설치하고 나서 바로 사용하실경우 <code>source /etc/profile.d</code> 명령어를 터미널에서 실행을 한 후 사용하시면 문제없이 사용이 가능합니다.
-이 명령어는 피씨를 재부팅을 하면 다시 하실 필요 없습니다.
-다만 재부팅을 하지 않을 경우는 사용할 터미널에서 위의 명령어를 실행 후 사용해야합니다.</p>
+<h1 id="css-override하기">css override하기</h1>
+
+<p><a href="https://docdock.netlify.com/">docdock theme</a></p>
+
+<p>custom css를 사용하기 위해서 html에 css를 link하는 작업을 우선 해야한다.</p>
+
+<pre><code>github.io
+|--...
+|--web
+|  |--layouts
+|    |--partials
+|      |--custom-head.html
+</code></pre>
+
+<p><code>web/layouts/partials/custom-head.html</code> 파일에 자신이 만들 css파일을 <code>link</code>를 한다.</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/custom.css&quot;&gt;
+</code></pre>
+
+<p><code>/css/custom.css</code>
+```
+h1 {
+    text-transform: none;
+}</p>
 
 
     
@@ -333,8 +349,8 @@ konltk$ sudo python setup.py install
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/contents/" title="contents"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/contents/konltk-main/" title="konltk main" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/documents/python-extending-with-c-class-wrapping/" title="Python extending with C class wrapping"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" title="python 2버전 배포시 서브 모듈 설정하기" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

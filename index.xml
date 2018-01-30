@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Korean Natural Language Toolkit on KoNLTK and KoNLP</title>
+    <title>KoNLTK: Korean Natural Language ToolKit on KoNLTK and KoNLP</title>
     <link>https://kontlk.github.io/</link>
-    <description>Recent content in Korean Natural Language Toolkit on KoNLTK and KoNLP</description>
+    <description>Recent content in KoNLTK: Korean Natural Language ToolKit on KoNLTK and KoNLP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
@@ -100,6 +100,18 @@ Create module using language c c언어로 된 코드를 파이썬에서 로드�
       <description>intro 가끔 c로 작성한 코드가 python으로 작성한 코드보다 효율이 좋을때가 있습니다. 이럴때는 파이썬에서도 c로 작성한 코드를 사용할 수 있게 확장을 할 수 있습니다. 이 문서에서는 c로 작성된 코드를 사용하여서 파이썬에서 ‘class’로 사용하기 위해서 wrapping을 하는 방법을 정리한 것입니다.
 c에서는 함수부분만 정의 나머지 작업은 python 내에서 구현 python extending with c 방식으로 c로 주요 함수만 구현 python에서 제공하는 python c extending을 이용하여서 주요 함수를 c로 구현을 한다.
 static PyObject* wordcount(PyObject* self, PyObject* args){ int is_add = 0, n_uniqwords, n_words; char* input, *output_file = OUTPUT; PyObject *dlist = PyDict_New(); PyObject *result_list = PyList_New(0); int i; FILE* temp_output_file; WORDCNT_STR Text={0}, *wp=&amp;amp;Text; if(!</description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://kontlk.github.io/documents/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kontlk.github.io/documents/hugo/</guid>
+      <description>hugo의 몇몇 사용법 hugo의 이미지 삽입하기 마크다운 이미지 삽입 ![이미지 설명](이미지 위치)  hugo에서 이미지 삽입 이미지를 사용하기 위해서 이미지를 static 폴더에 위치를 하고 이미리 링크를 걸때 고정적인 위치를 링크하면 된다.
+github.io |--... |--... |--static | |--a.png |--... |--web | |--docs | |--...  위와 같이 디렉토리구조가 되어 있으면 이미지를 최상위 폴더의 static 폴더안에 위치하며, 이미지 링크를 ![image test](/static/a.png) 고정 위치를 사용하면 된다.
+css override하기 docdock theme
+custom css를 사용하기 위해서 html에 css를 link하는 작업을 우선 해야한다.</description>
     </item>
     
     <item>
