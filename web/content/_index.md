@@ -1,5 +1,5 @@
 +++
-title = "Korean Natural Language Toolkit"
+title = "KoNLTK: Korean Natural Language ToolKit"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
 
