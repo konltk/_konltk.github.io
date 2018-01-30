@@ -5,7 +5,7 @@ date = "2017-04-24T18:36:24+02:00"
 
 +++
 
-# Korean Natural Language Toolkit
+# KoNLTK: Korean Natural Language ToolKit
 한국어 자연어 처리 tool kit.
 
 Linux에서 사용이 가능합니다.

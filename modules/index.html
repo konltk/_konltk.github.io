@@ -286,7 +286,19 @@
 <ul>
 </ul><li>
 	<a href="/modules/konltk/tokenzier/" >konltk.tokenzier package</a></li>
-<p></p>
+<p>konltk tokenzier module
+konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &gt;&gt;&gt; from konltk.tokenizer.ngram import Ngram &gt;&gt;&gt; n = ngram.Ngram() &gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}  class konltk.tokenizer.ngram.Ngram
+ngram(text, n)
+Parameters:
+- text(string or list array): n-gram 할 문자열 혹은 list array
+- n(int): n-gram의 n
+Return: n-gram된 dictionary
+Return Type: dictionary
+word_len()
+Return: 나뉘어진 단어의 수
+Return Type: int
+total_len()
+Return: 모든 단어의 수</p>
 <ul>
 </ul>
 </ul>

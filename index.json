@@ -25,7 +25,7 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  konltk \n konltk.detector package \n  konltk.tag package \n  konltk.tokenzier package \n    "
+	"content": "  konltk \n konltk.detector package \n  konltk.tag package \n  konltk.tokenzier package konltk tokenzier module konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.tokenizer.ngram import Ngram \u0026gt;\u0026gt;\u0026gt; n = ngram.Ngram() \u0026gt;\u0026gt;\u0026gt; n.ngram(\u0026quot;abcd\u0026quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1} class konltk.tokenizer.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary word_len() Return: 나뉘어진 단어의 수 Return Type: int total_len() Return: 모든 단어의 수\n    "
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/",
@@ -53,7 +53,7 @@
 	"title": "KoNLTK: Korean Natural Language ToolKit",
 	"tags": [],
 	"description": "",
-	"content": " Korean Natural Language Toolkit 한국어 자연어 처리 tool kit.\nLinux에서 사용이 가능합니다.\nMain features  형태소 분석 명사 추출 n gram  Some Sample import konlp.  "
+	"content": " KoNLTK: Korean Natural Language ToolKit 한국어 자연어 처리 tool kit.\nLinux에서 사용이 가능합니다.\nMain features  형태소 분석 명사 추출 n gram  Some Sample import konlp.  "
 },
 {
 	"uri": "https://kontlk.github.io/_footer/",
