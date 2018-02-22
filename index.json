@@ -25,7 +25,7 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  konltk \n konltk.detector package \n  konltk.tag package \n  konltk.tokenzier package konltk tokenzier module konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module \u0026gt;\u0026gt;\u0026gt; from konltk.tokenizer.ngram import Ngram \u0026gt;\u0026gt;\u0026gt; n = ngram.Ngram() \u0026gt;\u0026gt;\u0026gt; n.ngram(\u0026quot;abcd\u0026quot;, 2) {('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1} class konltk.tokenizer.ngram.Ngram ngram(text, n) Parameters: - text(string or list array): n-gram 할 문자열 혹은 list array - n(int): n-gram의 n Return: n-gram된 dictionary Return Type: dictionary word_len() Return: 나뉘어진 단어의 수 Return Type: int total_len() Return: 모든 단어의 수\n    "
+	"content": "  konltk \n konltk.detector package \n  konltk.tag package \n  konltk.tokenzier package \n    "
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/",
@@ -95,7 +95,7 @@
 	"title": "Credits",
 	"tags": [],
 	"description": "contributors and packages used by hugo-theme-docdock",
-	"content": " github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @YoungHunCho 18 commits   @hyunyoung2 2 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services\u0026hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester. clipboard.js - copy text to clipboard highlight.js - Javascript syntax highlighter modernizr - A JavaScript toolkit that allows web developers to use new CSS3 and HTML5 features while maintaining a fine level of control over browsers that don\u0026rsquo;t support reveal-js - The HTML Presentation Framework  Tooling  Netlify - Continuous deployement and hosting of this documentation Hugo    "
+	"content": " github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @YoungHunCho 28 commits   @hyunyoung2 2 commits   Other contributors  @hyunyoung2 supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services\u0026hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester. clipboard.js - copy text to clipboard highlight.js - Javascript syntax highlighter modernizr - A JavaScript toolkit that allows web developers to use new CSS3 and HTML5 features while maintaining a fine level of control over browsers that don\u0026rsquo;t support reveal-js - The HTML Presentation Framework  Tooling  Netlify - Continuous deployement and hosting of this documentation Hugo    "
 },
 {
 	"uri": "https://kontlk.github.io/documents/extending-python3-c/",
@@ -179,7 +179,7 @@
 	"title": "hugo",
 	"tags": [],
 	"description": "",
-	"content": " hugo의 몇몇 사용법 hugo의 이미지 삽입하기 마크다운 이미지 삽입 ![이미지 설명](이미지 위치)  hugo에서 이미지 삽입 이미지를 사용하기 위해서 이미지를 static 폴더에 위치를 하고 이미리 링크를 걸때 고정적인 위치를 링크하면 된다.\ngithub.io |--... |--... |--static | |--a.png |--... |--web | |--docs | |--...  위와 같이 디렉토리구조가 되어 있으면 이미지를 최상위 폴더의 static 폴더안에 위치하며, 이미지 링크를 ![image test](/static/a.png) 고정 위치를 사용하면 된다.\ncss override하기 docdock theme\ncustom css를 사용하기 위해서 html에 css를 link하는 작업을 우선 해야한다.\ngithub.io |--... |--web | |--layouts | |--partials | |--custom-head.html  web/layouts/partials/custom-head.html 파일에 자신이 만들 css파일을 link를 한다.\n\u0026lt;link rel=\u0026quot;stylesheet\u0026quot; href=\u0026quot;/css/custom.css\u0026quot;\u0026gt;  /css/custom.css ``` h1 { text-transform: none; }\n"
+	"content": " hugo의 몇몇 사용법 hugo의 이미지 삽입하기 마크다운 이미지 삽입 ![이미지 설명](이미지 위치)  hugo에서 이미지 삽입 이미지를 사용하기 위해서 이미지를 static 폴더에 위치를 하고 이미리 링크를 걸때 고정적인 위치를 링크하면 된다.\ngithub.io |--... |--... |--static | |--a.png |--... |--web | |--docs | |--...  위와 같이 디렉토리구조가 되어 있으면 이미지를 최상위 폴더의 static 폴더안에 위치하며, 이미지 링크를 ![image test](/static/a.png) 고정 위치를 사용하면 된다.\ncss override하기 docdock theme\ncustom css를 사용하기 위해서 html에 css를 link하는 작업을 우선 해야한다.\ngithub.io |--... |--web | |--layouts | |--partials | |--custom-head.html  web/layouts/partials/custom-head.html 파일에 자신이 만들 css파일을 link를 한다.\n\u0026lt;link rel=\u0026quot;stylesheet\u0026quot; href=\u0026quot;/css/custom.css\u0026quot;\u0026gt;  /css/custom.css\nh1 { text-transform: none; }  "
 },
 {
 	"uri": "https://kontlk.github.io/contents/konltk-main/",
