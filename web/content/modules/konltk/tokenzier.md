@@ -16,25 +16,25 @@ konltk tokenzier module
 ```
 
 {{% panel %}}
-**class** konltk.tokenizer.ngram.**Ngram**<br>
-*ngram(text, n)*<br>
-Parameters:<br>
-- text(string or list array): n-gram 할 문자열 혹은 list array<br>
-- n(int): n-gram의 n<br>
-*Return:* n-gram된 dictionary<br>
-*Return Type:* dictionary<br>
+**class** konltk.tokenizer.ngram.**Ngram**  
+&emsp;**ngram(text, n)**  
+&emsp;&emsp;Parameters:  
+&emsp;&emsp;&emsp;- text(string or list array): n-gram 할 문자열 혹은 list array  
+&emsp;&emsp;&emsp;- n(int): n-gram의 n  
+&emsp;&emsp;*Return:* n-gram된 dictionary  
+&emsp;&emsp;*Return Type:* dictionary  
 
-*word_len()*<br>
-*Return:* 나뉘어진 단어의 수<br>
-*Return Type:* int<br>
+&emsp;&emsp;**word_len()**  
+&emsp;&emsp;*Return:* 나뉘어진 단어의 수  
+&emsp;&emsp;*Return Type:* int  
     
-*total_len()*<br>
-*Return:* 모든 단어의 수<br>
-*Return Type:* int<br>
+&emsp;&emsp;**total_len()**  
+&emsp;&emsp;*Return:* 모든 단어의 수  
+&emsp;&emsp;*Return Type:* int  
 
-*probabillity*<br>
-*Return:* 각 단어의 빈도 확률<br>
-*Return Type:* dictionary<br>
+&emsp;&emsp;**probabillity**  
+&emsp;&emsp;*Return:* 각 단어의 빈도 확률  
+&emsp;&emsp;*Return Type:* dictionary  
 {{% /panel %}}
 
 ### konltk.tokenizer.wordcount module
@@ -45,10 +45,10 @@ Parameters:<br>
 [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
 ```
 {{% panel %}}
-**class** konltk.tokenizer.wordcount.**WordCount**<br>
-*wordcount(text)*<br>
-Parameters:<br>
-- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수<br>
-*Return:* 단어와 수가 튜플로 이루어진 list<br>
-*Return Type:* list<br>
+**class** konltk.tokenizer.wordcount.**WordCount**  
+&emsp;**wordcount(text)**  
+&emsp;&emsp;Parameters:  
+&emsp;&emsp;&emsp;- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수  
+&emsp;&emsp;*Return:* 단어와 수가 튜플로 이루어진 list  
+&emsp;&emsp;*Return Type:* list  
 {{% /panel %}}
