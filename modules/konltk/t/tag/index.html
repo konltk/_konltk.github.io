@@ -259,9 +259,9 @@
     
     
 
-<p>konltk pos module</p>
+<p>konltk tag module</p>
 
-<h2 id="konltk-pos-package">konltk.pos package</h2>
+<h2 id="konltk-tag-package">konltk.tag package</h2>
 
 <h3 id="module-contents">Module contents</h3>
 
@@ -271,7 +271,7 @@
 
 <h3 id="konltk-tag-index-module">konltk.tag.index module</h3>
 
-<pre><code class="language-python">from konltk.pos.index import KltIndex
+<pre><code class="language-python">from konltk.tag.index import KltIndex
 
 idx = KltIndex()
 rc = idx.dic_init()
@@ -282,21 +282,21 @@ index_list = idx.index(&quot;나는 학교에 간다&quot;)
 	
 	<div class="panel-body"><p><strong>class</strong> konltk.tag.index.<strong>KltIndex</strong><br />
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.<br />
-&emsp;<strong>dic_init(path)</strong><br />
+&emsp;<strong>dic_init(path)</strong><a id="konltk.tag.index.KltIndex.dic_init"></a><br />
 &emsp;&emsp;사전을 설정하는 함수입니다.<br />
 &emsp;&emsp;Parameters:<br />
 &emsp;&emsp;&emsp;- path(string): 설정할 사전의 위치<br />
 &emsp;&emsp;<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.<br />
 &emsp;&emsp;<em>Return Type:</em> int</p>
 
-<p>&emsp;<strong>index(data)</strong><br />
+<p>&emsp;<strong>index(data)</strong><a id="konltk.tag.index.KltIndex.index"></a><br />
 &emsp;&emsp;이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.<br />
 &emsp;&emsp;Parameters:<br />
 &emsp;&emsp;&emsp;- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path<br />
 &emsp;&emsp;<em>Return:</em> (원본, 명사 리스트) 튜플로 이루어진 리스트<br />
 &emsp;&emsp;<em>Return Type:</em> list</p>
 
-<p>&emsp;<strong>noun_comp(data)</strong><br />
+<p>&emsp;<strong>noun_comp(data)</strong><a id="konltk.tag.index.KltIndex.noun_comp"></a><br />
 &emsp;&emsp;이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.<br />
 &emsp;&emsp;Parameters:<br />
 &emsp;&emsp;&emsp;- data(string): 분해하고 싶은 복합명사
@@ -314,15 +314,16 @@ index_list = idx.index(&quot;나는 학교에 간다&quot;)
 
 <p><div class="panel panel-primary">
 	
-	<div class="panel-body"><p><strong>class</strong> konltk.tag.kma.<strong>KltKam</strong><br />
+	<div class="panel-body"><p><strong>class</strong> konltk.tag.kma.<strong>KltKma</strong><br />
 형태소 분석기<br />
-&emsp;<strong>dic_init(path)</strong><br />
+&emsp;<strong>dic_init(path)</strong><a id="konltk.tag.kma.KltKma.dic_init"></a><br />
 &emsp;&emsp;사전을 설정하는 함수입니다.<br />
 &emsp;&emsp;Parameters:<br />
 &emsp;&emsp;&emsp;- path(string): 설정할 사전의 위치<br />
 &emsp;&emsp;<em>Return:</em> 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.<br />
-&emsp;&emsp;<em>Return Type:</em> int<br />
-&emsp;<strong>morpha(data)</strong><br />
+&emsp;&emsp;<em>Return Type:</em> int</p>
+
+<p>&emsp;<strong>morpha(data)</strong><a id="konltk.tag.kma.KltKma.morpha"></a><br />
 &emsp;&emsp;이 함수를 사용하기전에 <code>dic_init</code> 함수를 사용하여서 사전을 설정을 해야합니다.<br />
 &emsp;&emsp;Parameters:<br />
 &emsp;&emsp;&emsp;- data(string): 형태소 분석을 할 문자열<br />
