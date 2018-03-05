@@ -23,7 +23,15 @@
   </url>
   
   <url>
+    <loc>https://kontlk.github.io/modules/konltk/d/</loc>
+  </url>
+  
+  <url>
     <loc>https://kontlk.github.io/modules/konltk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kontlk.github.io/modules/konltk/t/</loc>
   </url>
   
   <url>
@@ -124,15 +132,15 @@
   </url>
   
   <url>
-    <loc>https://kontlk.github.io/modules/konltk/detector/</loc>
+    <loc>https://kontlk.github.io/modules/konltk/d/detector/</loc>
   </url>
   
   <url>
-    <loc>https://kontlk.github.io/modules/konltk/tag/</loc>
+    <loc>https://kontlk.github.io/modules/konltk/t/tag/</loc>
   </url>
   
   <url>
-    <loc>https://kontlk.github.io/modules/konltk/tokenzier/</loc>
+    <loc>https://kontlk.github.io/modules/konltk/t/tokenzier/</loc>
   </url>
   
   <url>

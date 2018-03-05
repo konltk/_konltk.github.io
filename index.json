@@ -25,11 +25,25 @@
 	"title": "modules",
 	"tags": [],
 	"description": "",
-	"content": "  konltk \n konltk.detector package \n  konltk.tag package \n  konltk.tokenzier package \n    "
+	"content": "  konltk \n d \n konltk.detector package \n t \n konltk.tag package \n konltk.tokenzier package \n   "
+},
+{
+	"uri": "https://kontlk.github.io/modules/konltk/d/",
+	"title": "d",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://kontlk.github.io/modules/konltk/",
 	"title": "konltk",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://kontlk.github.io/modules/konltk/t/",
+	"title": "t",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -182,21 +196,21 @@
 	"content": "konltk main\n"
 },
 {
-	"uri": "https://kontlk.github.io/modules/konltk/detector/",
+	"uri": "https://kontlk.github.io/modules/konltk/d/detector/",
 	"title": "konltk.detector package",
 	"tags": [],
 	"description": "",
 	"content": " konltk detector module\nkonltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.\nSubmodules konltk.detector.detector module class konltk.detector.detector.Detect\n\u0026emsp;detect(text, max)\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- text(string): 문자 인코딩을 확일한 텍스트 혹은 파일의 path\n\u0026emsp;\u0026emsp;\u0026emsp;- max(int): 문자열 혹은 파일에서 앞에서 max만큼의 문자를 확인을 합니다. max의 수가 커질수록 정확도는 향상이 되지만 속도는 더 오래 걸릴 수 있습니다.\n\u0026emsp;\u0026emsp;Return: \u0026ldquo;NONE\u0026rdquo;, \u0026ldquo;EUCKR\u0026rdquo;, \u0026ldquo;UTF8\u0026rdquo;, \u0026ldquo;UTF16BE\u0026rdquo;, \u0026ldquo;UTF16LE\u0026rdquo; 이 중 하나를 얻습니다.\n\u0026emsp;\u0026emsp;Return Type: string\n  "
 },
 {
-	"uri": "https://kontlk.github.io/modules/konltk/tag/",
+	"uri": "https://kontlk.github.io/modules/konltk/t/tag/",
 	"title": "konltk.tag package",
 	"tags": [],
 	"description": "",
 	"content": " konltk pos module\nkonltk.pos package Module contents \u0026hellip;.\nSubModules konltk.tag.index module from konltk.pos.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(\u0026quot;나는 학교에 간다\u0026quot;)  class konltk.tag.index.KltIndex\n주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.\n\u0026emsp;dic_init(path)\n\u0026emsp;\u0026emsp;사전을 설정하는 함수입니다.\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- path(string): 설정할 사전의 위치\n\u0026emsp;\u0026emsp;Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.\n\u0026emsp;\u0026emsp;Return Type: int\n\u0026emsp;index(data)\n\u0026emsp;\u0026emsp;이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- data(string): 명사를 추출하고 싶은 문자열이나 혹은 파일의 path\n\u0026emsp;\u0026emsp;Return: (원본, 명사 리스트) 튜플로 이루어진 리스트\n\u0026emsp;\u0026emsp;Return Type: list\n\u0026emsp;noun_comp(data)\n\u0026emsp;\u0026emsp;이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- data(string): 분해하고 싶은 복합명사 \u0026emsp;\u0026emsp;Return: 분해된 명사들의 list \u0026emsp;\u0026emsp;Return Type: list\n  konltk.tag.kma module ....  class konltk.tag.kma.KltKam\n형태소 분석기\n\u0026emsp;dic_init(path)\n\u0026emsp;\u0026emsp;사전을 설정하는 함수입니다.\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- path(string): 설정할 사전의 위치\n\u0026emsp;\u0026emsp;Return: 잘 설정이 되었으면 0, 아니면 1이 리턴이 됩니다.\n\u0026emsp;\u0026emsp;Return Type: int\n\u0026emsp;morpha(data)\n\u0026emsp;\u0026emsp;이 함수를 사용하기전에 dic_init 함수를 사용하여서 사전을 설정을 해야합니다.\n\u0026emsp;\u0026emsp;Parameters:\n\u0026emsp;\u0026emsp;\u0026emsp;- data(string): 형태소 분석을 할 문자열\n\u0026emsp;\u0026emsp;Return: 튜플들로 이루어진 리스트\n\u0026emsp;\u0026emsp;Return Type: list\n  "
 },
 {
-	"uri": "https://kontlk.github.io/modules/konltk/tokenzier/",
+	"uri": "https://kontlk.github.io/modules/konltk/t/tokenzier/",
 	"title": "konltk.tokenzier package",
 	"tags": [],
 	"description": "",

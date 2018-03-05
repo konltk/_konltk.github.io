@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.31.1" />
-<title>404 Page not found :: KoNLTK and KoNLP</title>
+<title>konltk.tokenzier package :: KoNLTK and KoNLP</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
 
     
   </head>
-  <body data-url="">
+  <body data-url="/modules/konltk/t/tokenzier/">
     
       <header>
   <div class="logo">
@@ -49,7 +49,10 @@
 
   
 <div id="navigation">
-</div>
+<a class="nav nav-prev" href="/modules/konltk/t/tag/" title="konltk.tag package"> Prev</a>
+        
+    <a class="nav nav-next" href="/modules/konltk/t/tag/" title="konltk.tag package" style="margin-right: 0px;">Next</a>
+        </div>
   </div>
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
 </header>
@@ -126,13 +129,13 @@
         <span>index</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/modules/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/" class="dd-item parent alwaysopen">
       <a href="/modules/">
         <span>modules</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/modules/konltk/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/" class="dd-item parent alwaysopen">
       <a href="/modules/konltk/">
         <span>konltk</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -151,7 +154,7 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/modules/konltk/t/" class="dd-item alwaysopen">
+    <li data-nav-id="/modules/konltk/t/" class="dd-item parent alwaysopen">
       <a href="/modules/konltk/t/">
         <span>t</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -162,7 +165,7 @@
           <span>konltk.tag package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/modules/konltk/t/tokenzier/" class="dd-item">
+      <li data-nav-id="/modules/konltk/t/tokenzier/" class="dd-item active">
         <a href="/modules/konltk/t/tokenzier/">
           <span>konltk.tokenzier package</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -229,7 +232,7 @@
   -- 
    t</option>
       <option value="/modules/konltk/t/tag/" >--- konltk.tag package</option>
-      <option value="/modules/konltk/t/tokenzier/" >--- konltk.tokenzier package</option>
+      <option value="/modules/konltk/t/tokenzier/"  selected>--- konltk.tokenzier package</option>
 
 
 
@@ -250,16 +253,76 @@
         <script type="text/javascript" src="/js/search.js"></script>
     </aside>
     <article>
-    <h1>404 Page not found</h1>
+    <h1>konltk.tokenzier package</h1>
     
     
-	<h1>Error</h1>
-	<p>
-	</p>
-	<p>Woops. Looks like this page doesn&#39;t exist.</p>
-	<p></p>
-	<p><a href="https://kontlk.github.io/">Go to homepage</a></p>
-	<p><img src="/images/gopher-404.jpg" style="width:50%"></img></p>    
+    
+    
+
+<p>konltk tokenzier module</p>
+
+<h2 id="konltk-tokenizer-package">konltk.tokenizer package</h2>
+
+<h3 id="module-contents">Module contents</h3>
+
+<h3 id="submodules">SubModules</h3>
+
+<h3 id="konltk-tokenizer-ngram-module">konltk.tokenizer.ngram module</h3>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.tokenizer.ngram import Ngram
+&gt;&gt;&gt; n = ngram.Ngram()
+&gt;&gt;&gt; n.ngram(&quot;abcd&quot;, 2)
+{('a', 'b'): 1, ('b', 'c'): 1, ('c', 'd'): 1}
+</code></pre>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body"><p><strong>class</strong> konltk.tokenizer.ngram.<strong>Ngram</strong><br />
+&emsp;<strong>ngram(text, n)</strong><br />
+&emsp;&emsp;Parameters:<br />
+&emsp;&emsp;&emsp;- text(string or list array): n-gram 할 문자열 혹은 list array<br />
+&emsp;&emsp;&emsp;- n(int): n-gram의 n<br />
+&emsp;&emsp;<em>Return:</em> n-gram된 dictionary<br />
+&emsp;&emsp;<em>Return Type:</em> dictionary</p>
+
+<p>&emsp;&emsp;<strong>word_len()</strong><br />
+&emsp;&emsp;<em>Return:</em> 나뉘어진 단어의 수<br />
+&emsp;&emsp;<em>Return Type:</em> int</p>
+
+<p>&emsp;&emsp;<strong>total_len()</strong><br />
+&emsp;&emsp;<em>Return:</em> 모든 단어의 수<br />
+&emsp;&emsp;<em>Return Type:</em> int</p>
+
+<p>&emsp;&emsp;<strong>probabillity</strong><br />
+&emsp;&emsp;<em>Return:</em> 각 단어의 빈도 확률<br />
+&emsp;&emsp;<em>Return Type:</em> dictionary</p>
+</div>
+	
+</div>
+
+
+<h3 id="konltk-tokenizer-wordcount-module">konltk.tokenizer.wordcount module</h3>
+
+<pre><code class="language-python">&gt;&gt;&gt; from konltk.tokenizer.wordcount import WordCount
+&gt;&gt;&gt; wc = wordcount.WordCount()
+&gt;&gt;&gt; wc.wordcount(&quot;a b c d ef&quot;)
+[('a', 1), ('b', 1), ('c', 1), ('d', 1), ('ef', 1)]
+</code></pre>
+
+<p><div class="panel panel-primary">
+	
+	<div class="panel-body"><p><strong>class</strong> konltk.tokenizer.wordcount.<strong>WordCount</strong><br />
+&emsp;<strong>wordcount(text)</strong><br />
+&emsp;&emsp;Parameters:<br />
+&emsp;&emsp;&emsp;- text(string or list array): whitespace 기준으로 나뉘는 단어들의 수<br />
+&emsp;&emsp;<em>Return:</em> 단어와 수가 튜플로 이루어진 list<br />
+&emsp;&emsp;<em>Return Type:</em> list</p>
+</div>
+	
+</div>
+</p>
+
+
     
     
         </article>
@@ -271,13 +334,16 @@
 	
 
   	<div class="github-link">
-  		<a href="https://github.com/konltk/konltk.github.io/edit/master/web/content/" target="blank"><i class="fa fa-code-fork"></i>
+  		<a href="https://github.com/konltk/konltk.github.io/edit/master/web/content/modules/konltk/t/tokenzier.md" target="blank"><i class="fa fa-code-fork"></i>
         Edit page</a>
     </div>
   </aside>
   <aside class="chevrons">
     <div id="navigation">
-</div>
+<a class="nav nav-prev" href="/modules/konltk/t/tag/" title="konltk.tag package"> Prev</a>
+        
+    <a class="nav nav-next" href="/modules/konltk/t/tag/" title="konltk.tag package" style="margin-right: 0px;">Next</a>
+        </div>
   </aside>
   </section>
 </section>
@@ -312,5 +378,3 @@
     
   </body>
 </html>
-
-

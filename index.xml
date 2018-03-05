@@ -125,10 +125,10 @@ custom css를 사용하기 위해서 html에 css를 link하는 작업을 우선 
     
     <item>
       <title>konltk.detector package</title>
-      <link>https://kontlk.github.io/modules/konltk/detector/</link>
+      <link>https://kontlk.github.io/modules/konltk/d/detector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/modules/konltk/detector/</guid>
+      <guid>https://kontlk.github.io/modules/konltk/d/detector/</guid>
       <description>konltk detector module
 konltk.detector package Module contents 이 모듈에는 파일 혹은 문자열의 문자 인코딩을 확인을 할 수 있는 class가 포함되어 있습니다.
 Submodules konltk.detector.detector module class konltk.detector.detector.Detect
@@ -141,10 +141,10 @@ Submodules konltk.detector.detector module class konltk.detector.detector.Detect
     
     <item>
       <title>konltk.tag package</title>
-      <link>https://kontlk.github.io/modules/konltk/tag/</link>
+      <link>https://kontlk.github.io/modules/konltk/t/tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/modules/konltk/tag/</guid>
+      <guid>https://kontlk.github.io/modules/konltk/t/tag/</guid>
       <description>konltk pos module
 konltk.pos package Module contents &amp;hellip;.
 SubModules konltk.tag.index module from konltk.pos.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(&amp;quot;나는 학교에 간다&amp;quot;)  class konltk.tag.index.KltIndex
@@ -163,10 +163,10 @@ SubModules konltk.tag.index module from konltk.pos.index import KltIndex idx = K
     
     <item>
       <title>konltk.tokenzier package</title>
-      <link>https://kontlk.github.io/modules/konltk/tokenzier/</link>
+      <link>https://kontlk.github.io/modules/konltk/t/tokenzier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kontlk.github.io/modules/konltk/tokenzier/</guid>
+      <guid>https://kontlk.github.io/modules/konltk/t/tokenzier/</guid>
       <description>konltk tokenzier module
 konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &amp;gt;&amp;gt;&amp;gt; from konltk.tokenizer.ngram import Ngram &amp;gt;&amp;gt;&amp;gt; n = ngram.Ngram() &amp;gt;&amp;gt;&amp;gt; n.ngram(&amp;quot;abcd&amp;quot;, 2) {(&#39;a&#39;, &#39;b&#39;): 1, (&#39;b&#39;, &#39;c&#39;): 1, (&#39;c&#39;, &#39;d&#39;): 1}  class konltk.tokenizer.ngram.Ngram
 &amp;emsp;ngram(text, n)
