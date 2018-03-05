@@ -159,10 +159,9 @@ header {
     font-weight: bold;
     padding-right: 16px;
     padding-left: 16px; }
-  header .logo p {
-    font-size: 2.0rem;
+  header .logo p{
     margin: 0;
-  }
+    font-size: 2.0rem; }
   header > section {
     overflow: hidden;
     white-space: nowrap;
