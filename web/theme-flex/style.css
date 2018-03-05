@@ -155,10 +155,11 @@ header {
   padding: 0px; }
   header .logo {
     text-align: center;
-    color: white;
+    color: black;
     font-weight: bold;
     padding-right: 16px;
-    padding-left: 16px; }
+    padding-left: 16px; 
+    }
   header > section {
     overflow: hidden;
     white-space: nowrap;
@@ -667,3 +668,6 @@ article table th {
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */
+header .logo p {
+  font-size: 2.0rem;
+}
