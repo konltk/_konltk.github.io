@@ -672,3 +672,7 @@ article table th {
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */
+
+footer div center a{
+  color: white;
+}
