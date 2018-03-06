@@ -6,4 +6,4 @@ alwaysopen=true
 weight = 30
 +++
 
-{{%children depth="3" description="false" %}}
+{{% children depth="3" showhidden="true"%}}
