@@ -758,6 +758,8 @@ article h2, article h3, article h4, article h5, article h6 {
 
   header #navigation {
     margin: 0rem;
+    border-top: 0px;
+    border-bottom: 0px:
     display: flex;
     flex-direction: row;
     align-items: stretch; }
