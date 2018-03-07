@@ -42,7 +42,7 @@
 {{- end -}}
 
 <!-- {{ partial "next-prev-page.html" . }} -->
-<dic id="navigation">
+<div id="navigation">
 {{- if not $.Site.Params.disableNavChevron -}}
   {{- with ($.Scratch.Get "prevPage") -}}
     <a class="nav nav-prev" href="{{.URL}}" title="{{.Title}}"> Prev</a>
@@ -51,4 +51,4 @@
     <a class="nav nav-next" href="{{.URL}}" title="{{.Title}}" style="margin-right: 0px;">Next</a>
   {{- end }}
 {{- end -}}
-</dic>
+</div>
