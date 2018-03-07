@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>KoNLTK: Korean Natural Language ToolKit on KoNLTK and KoNLP</title>
+    <title>KoNLTK: Korean Natural Language ToolKit on KoNLTK</title>
     <link>https://kontlk.github.io/</link>
-    <description>Recent content in KoNLTK: Korean Natural Language ToolKit on KoNLTK and KoNLP</description>
+    <description>Recent content in KoNLTK: Korean Natural Language ToolKit on KoNLTK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
@@ -147,7 +147,7 @@ Submodules konltk.detector.detector module class konltk.detector.detector.Detect
       <guid>https://kontlk.github.io/modules/konltk/t/tag/</guid>
       <description>konltk tag module
 konltk.tag package Module contents &amp;hellip;.
-SubModules konltk.tag.index module from konltk.tag.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(&amp;quot;나는 학교에 간다&amp;quot;)  class konltk.tag.index.KltIndex
+SubModules konltk.tag.index module from konltk.tag.index import KltIndex idx = KltIndex() rc = idx.dic_init() index_list = idx.index(&amp;#34;나는 학교에 간다&amp;#34;) class konltk.tag.index.KltIndex
 주어진 텍스트에서 명사만 추출하는 명사 추출기입니다.
 &amp;emsp;dic_init(path)
 &amp;emsp;&amp;emsp;사전을 설정하는 함수입니다.
@@ -168,7 +168,7 @@ SubModules konltk.tag.index module from konltk.tag.index import KltIndex idx = K
       
       <guid>https://kontlk.github.io/modules/konltk/t/tokenzier/</guid>
       <description>konltk tokenzier module
-konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &amp;gt;&amp;gt;&amp;gt; from konltk.tokenizer.ngram import Ngram &amp;gt;&amp;gt;&amp;gt; n = ngram.Ngram() &amp;gt;&amp;gt;&amp;gt; n.ngram(&amp;quot;abcd&amp;quot;, 2) {(&#39;a&#39;, &#39;b&#39;): 1, (&#39;b&#39;, &#39;c&#39;): 1, (&#39;c&#39;, &#39;d&#39;): 1}  class konltk.tokenizer.ngram.Ngram
+konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram module &amp;gt;&amp;gt;&amp;gt; from konltk.tokenizer.ngram import Ngram &amp;gt;&amp;gt;&amp;gt; n = ngram.Ngram() &amp;gt;&amp;gt;&amp;gt; n.ngram(&amp;#34;abcd&amp;#34;, 2) {(&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;): 1, (&amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;): 1, (&amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;): 1} class konltk.tokenizer.ngram.Ngram
 &amp;emsp;ngram(text, n)
 &amp;emsp;&amp;emsp;Parameters:
 &amp;emsp;&amp;emsp;&amp;emsp;- text(string or list array): n-gram 할 문자열 혹은 list array
@@ -190,7 +190,7 @@ konltk.tokenizer package Module contents SubModules konltk.tokenizer.ngram modul
       <guid>https://kontlk.github.io/documents/python-2%EB%B2%84%EC%A0%84-%EB%B0%B0%ED%8F%AC%EC%8B%9C-%EC%84%9C%EB%B8%8C-%EB%AA%A8%EB%93%88-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
       <description>python 2버전 배포시 서브 모듈 설정하기 python 서브모듈 파이썬에서는 폴더별로 서브모듈이 나뉘어진다.
 foo |--tmp | |--__init__.py | |--tmp.py | |--foo.py  위와 같이 파일구조로 되어있다면 실제로 파이썬에서는
-import foo.tmp.tmp  디렉토리 구조로서 서브모듈을 접근이 가능하다.
+import foo.tmp.tmp 디렉토리 구조로서 서브모듈을 접근이 가능하다.
 python extending with c 서브모듈 설정 서브모듈을 설정하기 위해서 우선 c code의 InitModule을 할 때 서브 모듈명을 명시를 해야한다. Py_InitModule(&amp;quot;foo.tmp.tmp&amp;quot;, methods, &amp;quot;&amp;quot;) 서브 모듈명은 자신이 사용하고 싶은 모듈명을 명시하면 된다.
 파이썬3버전에서는 위의 단계만하여도 실제로 사용하는데에 있어서 문제가 없다.</description>
     </item>
