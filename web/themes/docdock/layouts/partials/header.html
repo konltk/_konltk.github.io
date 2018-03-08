@@ -1,14 +1,3 @@
-{{ $header := print "_header." .Lang }}
-	{{ range where .Site.Pages "Source.BaseFileName" $header }}
-	{{ .Content }} 
-	{{else}}
-  {{ if .Site.GetPage "page" "_header.md" }}
-    {{(.Site.GetPage "page" "_header.md").Content}}
-  {{else}}
-    <a class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
-  {{end}}
-{{end}}
-
 {{- $currentNode := . -}}
 
 {{- template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode -}}
@@ -41,8 +30,25 @@
     {{- end -}}
 {{- end -}}
 
+<!-- ㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ -->
+
+{{ $header := print "_header." .Lang }}
+	{{ range where .Site.Pages "Source.BaseFileName" $header }}
+	{{ .Content }} 
+	{{else}}
+  {{ if .Site.GetPage "page" "_header.md" }}
+    <a href='/'>
+    {{(.Site.GetPage "page" "_header.md").Content}}
+    </a>
+  {{else}}
+    <a class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
+  {{end}}
+{{end}}
+
+
+
 <!-- {{ partial "next-prev-page.html" . }} -->
-<div id="navigation">
+<!-- <div id="head-next-prev">
 {{- if not $.Site.Params.disableNavChevron -}}
   {{- with ($.Scratch.Get "prevPage") -}}
     <a class="nav nav-prev" href="{{.URL}}" title="{{.Title}}"> Prev</a>
@@ -51,4 +57,4 @@
     <a class="nav nav-next" href="{{.URL}}" title="{{.Title}}" style="margin-right: 0px;">Next</a>
   {{- end }}
 {{- end -}}
-</div>
+</div> -->

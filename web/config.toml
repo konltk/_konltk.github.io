@@ -48,24 +48,41 @@ home = [ "HTML", "RSS", "JSON"]
 
 # For initial setting 
 [[menu.shortcuts]]
-pre = "<h3>More</h3>"
-name = "<i class='fa fa-github'></i> <label>Github repo</label>"
-identifier = "ds"
-url = "https://github.com/vjeantet/hugo-theme-docdock"
+name = "<i class=''></i> <label>News</label>"
+url = "/"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-cloud-download'></i> <label>Download</label>"
-url = "https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip"
+name = "<i class=''></i> <label>Installing</label>"
+url = "/contents/installing-konltk/"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-bookmark'></i> <label>Hugo Documentation</label>"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 20
+name = "<i class=''></i> <label>Installing Data</label>"
+url = "/"
+weight = 12
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-bullhorn'></i> <label>Credits</label>"
-url = "/credits"
-weight = 30
+name = "<i class=''></i> <label>Contribute</label>"
+url = "/"
+weight = 13
+
+[[menu.shortcuts]]
+name = "<i class=''></i> <label>FAQ</label>"
+url = "/"
+weight = 14
+
+[[menu.shortcuts]]
+name = "<i class=''></i> <label>Wiki</label>"
+url = "/"
+weight = 15
+
+[[menu.shortcuts]]
+name = "<i class=''></i> <label>API</label>"
+url = "/"
+weight = 16
+
+[[menu.shortcuts]]
+name = "<i class=''></i> <label>HOW TO</label>"
+url = "/"
+weight = 17

@@ -756,10 +756,14 @@ article h2, article h3, article h4, article h5, article h6 {
     border-bottom-color: rgb(52,101,164);
   }
 
-  header #navigation {
+  header .logo a p{
+    font-size: 1.3rem;
+  }
+
+  /* header #head-next-prev {
     margin: 0rem;
     border-top: 0px;
     border-bottom: 0px;
     display: flex;
     flex-direction: row;
-    align-items: stretch; }
+    align-items: stretch; } */
