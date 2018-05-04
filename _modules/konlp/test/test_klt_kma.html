@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>konlp.test.test_klt_kma &mdash; konlp 0.0.8-alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0.8-alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="konlp 0.0.8-alpha documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../../../index.html">konlp 0.0.8-alpha documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for konlp.test.test_klt_kma</h1><div class="highlight"><pre>
+<span class="c1"># -*- coding:utf8 -*-</span>
+<span class="c1"># Copyright (C) 2017 - 0000 KoNLTK project</span>
+<span class="c1">#</span>
+<span class="c1"># Klt 형태소 분석기 for Korean Natural Language Toolkit</span>
+<span class="c1">#</span>
+<span class="c1"># Author: Younghun Cho &lt;cyh905@gmail.com&gt;</span>
+<span class="c1">#         Hyunyoung Lee &lt;hyun02.engineer@gmail.com&gt;</span>
+<span class="c1">#         Seungshik Kang &lt;sskang@kookmin.ac.kr&gt;</span>
+<span class="c1"># URL: &lt;https://www.konltk.org&gt;</span>
+<span class="c1"># For license information, see LICENSE.TXT</span>
+<span class="c1"># ========================================================</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">konlp.kma.klt</span> <span class="kn">import</span> <span class="n">klt</span>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="input_list"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_klt_kma.input_list">[docs]</a><span class="k">def</span> <span class="nf">input_list</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;안녕하세요. 국민대학교 자연어처리 연구실입니다.&quot;</span></div>
+
+<div class="viewcode-block" id="test_morphs"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_klt_kma.test_morphs">[docs]</a><span class="k">def</span> <span class="nf">test_morphs</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">klt</span><span class="o">.</span><span class="n">KltKma</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">k</span><span class="o">.</span><span class="n">morphs</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;안녕&#39;</span><span class="p">,</span> <span class="s1">&#39;하&#39;</span><span class="p">,</span> <span class="s1">&#39;세요&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;국민대학교&#39;</span><span class="p">,</span> <span class="s1">&#39;자연어처리&#39;</span><span class="p">,</span> <span class="s1">&#39;연구실&#39;</span><span class="p">,</span> <span class="s1">&#39;이&#39;</span><span class="p">,</span> <span class="s1">&#39;습니다&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="test_nouns"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_klt_kma.test_nouns">[docs]</a><span class="k">def</span> <span class="nf">test_nouns</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">klt</span><span class="o">.</span><span class="n">KltKma</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">k</span><span class="o">.</span><span class="n">nouns</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;안녕&#39;</span><span class="p">,</span> <span class="s1">&#39;국민대학교&#39;</span><span class="p">,</span> <span class="s1">&#39;자연어처리&#39;</span><span class="p">,</span> <span class="s1">&#39;연구실&#39;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="test_analyze"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_klt_kma.test_analyze">[docs]</a><span class="k">def</span> <span class="nf">test_analyze</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">klt</span><span class="o">.</span><span class="n">KltKma</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">k</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">&#39;안녕하세요&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;안녕&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;하&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;세요&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">)]),</span> <span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">)]),</span> <span class="p">(</span><span class="s1">&#39;국민대학교&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;국민대학교&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">)]),</span> <span class="p">(</span><span class="s1">&#39;자연어처리&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;자연어처리&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">)]),</span> <span class="p">(</span><span class="s1">&#39;연구실입니다&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;연구실&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;이&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;습니다&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">)]),</span> <span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">)])]</span></div>
+
+<div class="viewcode-block" id="test_noun_comp"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_klt_kma.test_noun_comp">[docs]</a><span class="k">def</span> <span class="nf">test_noun_comp</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">klt</span><span class="o">.</span><span class="n">KltKma</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">k</span><span class="o">.</span><span class="n">noun_comp</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;안녕하세요.&#39;</span><span class="p">,</span> <span class="s1">&#39;국민대학교&#39;</span><span class="p">,</span> <span class="s1">&#39;자연어처리&#39;</span><span class="p">,</span> <span class="s1">&#39;연구실입니다.&#39;</span><span class="p">]</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../../../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Enter search terms or a module, class or function name.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../../../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../../../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, ngh.
+      Last updated on May 04, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

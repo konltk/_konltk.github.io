@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>konlp.test.test_kconv &mdash; konlp 0.0.8-alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0.8-alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="konlp 0.0.8-alpha documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../../../index.html">konlp 0.0.8-alpha documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for konlp.test.test_kconv</h1><div class="highlight"><pre>
+<span class="c1"># -*- coding:utf8 -*-</span>
+<span class="c1"># Copyright (C) 2017 - 0000 KoNLTK project</span>
+<span class="c1">#</span>
+<span class="c1"># Korean Natural Language Toolkit: korean converter</span>
+<span class="c1">#</span>
+<span class="c1"># Author: GyuHyeon Nam &lt;ngh3053@gmail.com&gt;</span>
+<span class="c1">#         Seungshik Kang &lt;sskang@kookmin.ac.kr&gt;</span>
+<span class="c1"># URL: &lt;https://www.konltk.org&gt;</span>
+<span class="c1"># For license information, see LICENSE.TXT</span>
+<span class="c1"># ========================================================</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">konlp.misc</span> <span class="kn">import</span> <span class="n">kconv</span>
+
+
+<span class="n">TEMP_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;files/temp.txt&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="file_diff"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.file_diff">[docs]</a><span class="k">def</span> <span class="nf">file_diff</span><span class="p">(</span><span class="n">dir1</span><span class="p">,</span> <span class="n">dir2</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dir1</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">dir2</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">f1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="o">==</span> <span class="n">f2</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="string"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.string">[docs]</a><span class="k">def</span> <span class="nf">string</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;안녕하세요. 국민대학교 자연어처리 연구실입니다.&quot;</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.euckr">[docs]</a><span class="k">def</span> <span class="nf">euckr</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">b</span><span class="s1">&#39;</span><span class="se">\xbe\xc8\xb3\xe7\xc7\xcf\xbc\xbc\xbf\xe4</span><span class="s1">. </span><span class="se">\xb1\xb9\xb9\xce\xb4\xeb\xc7\xd0\xb1\xb3</span><span class="s1"> </span><span class="se">\xc0\xda\xbf\xac\xbe\xee\xc3\xb3\xb8\xae</span><span class="s1"> </span><span class="se">\xbf\xac\xb1\xb8\xbd\xc7\xc0\xd4\xb4\xcf\xb4\xd9</span><span class="s1">.&#39;</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf8">[docs]</a><span class="k">def</span> <span class="nf">utf8</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">b</span><span class="s1">&#39;</span><span class="se">\xec\x95\x88\xeb\x85\x95\xed\x95\x98\xec\x84\xb8\xec\x9a\x94</span><span class="s1">. </span><span class="se">\xea\xb5\xad\xeb\xaf\xbc\xeb\x8c\x80\xed\x95\x99\xea\xb5\x90</span><span class="s1"> </span><span class="se">\xec\x9e\x90\xec\x97\xb0\xec\x96\xb4\xec\xb2\x98\xeb\xa6\xac</span><span class="s1"> </span><span class="se">\xec\x97\xb0\xea\xb5\xac\xec\x8b\xa4\xec\x9e\x85\xeb\x8b\x88\xeb\x8b\xa4</span><span class="s1">.&#39;</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf16le">[docs]</a><span class="k">def</span> <span class="nf">utf16le</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">b</span><span class="s1">&#39;H</span><span class="se">\xc5</span><span class="s1">U</span><span class="se">\xb1</span><span class="s1">X</span><span class="se">\xd5</span><span class="s1">8</span><span class="se">\xc1\x94\xc6</span><span class="s1">.</span><span class="se">\x00</span><span class="s1"> </span><span class="se">\x00</span><span class="s1">m</span><span class="se">\xad\xfc\xbb\x00\xb3</span><span class="s1">Y</span><span class="se">\xd5</span><span class="s1">P</span><span class="se">\xad</span><span class="s1"> </span><span class="se">\x00\x90\xc7\xf0\xc5\xb4\xc5\x98\xcc\xac\xb9</span><span class="s1"> </span><span class="se">\x00\xf0\xc5</span><span class="s1">l</span><span class="se">\xad\xe4\xc2\x85\xc7\xc8\xb2\xe4\xb2</span><span class="s1">.</span><span class="se">\x00</span><span class="s1">&#39;</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf16be">[docs]</a><span class="k">def</span> <span class="nf">utf16be</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">b</span><span class="s1">&#39;</span><span class="se">\xc5</span><span class="s1">H</span><span class="se">\xb1</span><span class="s1">U</span><span class="se">\xd5</span><span class="s1">X</span><span class="se">\xc1</span><span class="s1">8</span><span class="se">\xc6\x94\x00</span><span class="s1">.</span><span class="se">\x00</span><span class="s1"> </span><span class="se">\xad</span><span class="s1">m</span><span class="se">\xbb\xfc\xb3\x00\xd5</span><span class="s1">Y</span><span class="se">\xad</span><span class="s1">P</span><span class="se">\x00</span><span class="s1"> </span><span class="se">\xc7\x90\xc5\xf0\xc5\xb4\xcc\x98\xb9\xac\x00</span><span class="s1"> </span><span class="se">\xc5\xf0\xad</span><span class="s1">l</span><span class="se">\xc2\xe4\xc7\x85\xb2\xc8\xb2\xe4\x00</span><span class="s1">.&#39;</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="euckr_dir"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.euckr_dir">[docs]</a><span class="k">def</span> <span class="nf">euckr_dir</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;files/euckr.txt&#39;</span><span class="p">)</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf8_dir"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf8_dir">[docs]</a><span class="k">def</span> <span class="nf">utf8_dir</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;files/utf8.txt&#39;</span><span class="p">)</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf16le_dir"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf16le_dir">[docs]</a><span class="k">def</span> <span class="nf">utf16le_dir</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;files/utf16le.txt&#39;</span><span class="p">)</span></div>
+
+<span class="nd">@pytest.fixture</span>
+<div class="viewcode-block" id="utf16be_dir"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.utf16be_dir">[docs]</a><span class="k">def</span> <span class="nf">utf16be_dir</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;files/utf16be.txt&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="test_str_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_str_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_str_euckr</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">euckr</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">euckr</span></div>
+
+<div class="viewcode-block" id="test_str_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_str_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_str_utf8</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">utf8</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf8</span></div>
+
+<div class="viewcode-block" id="test_str_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_str_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_str_utf16le</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">utf16le</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16le</span></div>
+
+<div class="viewcode-block" id="test_str_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_str_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_str_utf16be</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">utf16be</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16be</span></div>
+
+<div class="viewcode-block" id="test_euckr_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_euckr_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_euckr_utf8</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="n">utf8</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf8</span></div>
+
+<div class="viewcode-block" id="test_euckr_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_euckr_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_euckr_utf16le</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="n">utf16le</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16le</span></div>
+
+<div class="viewcode-block" id="test_euckr_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_euckr_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_euckr_utf16be</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="n">utf16be</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">euckr</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16be</span></div>
+
+<div class="viewcode-block" id="test_utf8_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf8_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_utf8_euckr</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="n">euckr</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">euckr</span></div>
+
+<div class="viewcode-block" id="test_utf8_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf8_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_utf8_utf16le</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="n">utf16le</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16le</span></div>
+
+<div class="viewcode-block" id="test_utf8_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf8_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_utf8_utf16be</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="n">utf16be</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf8</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16be</span></div>
+
+<div class="viewcode-block" id="test_utf16le_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16le_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_utf16le_euckr</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="n">euckr</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">euckr</span></div>
+
+<div class="viewcode-block" id="test_utf16le_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16le_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_utf16le_utf8</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="n">utf8</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf8</span></div>
+
+<div class="viewcode-block" id="test_utf16le_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16le_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_utf16le_utf16be</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="n">utf16be</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16le</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16be</span></div>
+
+<div class="viewcode-block" id="test_utf16be_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16be_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_utf16be_euckr</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="n">euckr</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">euckr</span></div>
+
+<div class="viewcode-block" id="test_utf16be_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16be_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_utf16be_utf8</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="n">utf8</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf8</span></div>
+
+<div class="viewcode-block" id="test_utf16be_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_utf16be_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_utf16be_utf16le</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="n">utf16le</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">kconv</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">utf16be</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">utf16le</span></div>
+
+
+<div class="viewcode-block" id="test_file_euckr_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_euckr_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_file_euckr_utf8</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8bom&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_euckr_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_euckr_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_file_euckr_utf16le</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_euckr_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_euckr_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_file_euckr_utf16be</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">euckr_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf8_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf8_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf8_euckr</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf8_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf8_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf8_utf16le</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf8_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf8_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf8_utf16be</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf8_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16be_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16be_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16be_euckr</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16be_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16be_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16be_utf8</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8bom&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16be_utf16le"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16be_utf16le">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16be_utf16le</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16be_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16le_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16le_euckr"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16le_euckr">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16le_euckr</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;euckr&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">euckr_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16le_utf8"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16le_utf8">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16le_utf8</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8bom&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf8_dir</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="test_file_utf16le_utf16be"><a class="viewcode-back" href="../../../konlp.test.html#konlp.test.test_kconv.test_file_utf16le_utf16be">[docs]</a><span class="k">def</span> <span class="nf">test_file_utf16le_utf16be</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">):</span>
+    <span class="n">kconv</span><span class="o">.</span><span class="n">convert_file</span><span class="p">(</span><span class="n">utf16le_dir</span><span class="p">,</span> <span class="n">TEMP_DIR</span><span class="p">,</span> <span class="s2">&quot;utf16le&quot;</span><span class="p">,</span> <span class="s2">&quot;utf16be&quot;</span><span class="p">)</span>
+    <span class="n">file_diff</span><span class="p">(</span><span class="n">TEMP_DIR</span><span class="p">,</span> <span class="n">utf16be_dir</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../../../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Enter search terms or a module, class or function name.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../../../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../../../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, ngh.
+      Last updated on May 04, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

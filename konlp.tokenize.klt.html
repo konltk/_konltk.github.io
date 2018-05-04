@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>KoNLTK: Korean Natural Language ToolKit &mdash; konlp 0.0.8-alpha documentation</title>
+    <title>konlp.tokenize.klt package &mdash; konlp 0.0.8-alpha documentation</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,13 +23,13 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="konlp 0.0.8-alpha documentation" href="#" /> 
+    <link rel="top" title="konlp 0.0.8-alpha documentation" href="index.html" /> 
   </head>
   <body role="document">
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="#">konlp 0.0.8-alpha documentation</a></div>
+          href="index.html">konlp 0.0.8-alpha documentation</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |
@@ -47,28 +47,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="konltk-korean-natural-language-toolkit">
-<h1>KoNLTK: Korean Natural Language ToolKit<a class="headerlink" href="#konltk-korean-natural-language-toolkit" title="Permalink to this headline">¶</a></h1>
-<p>KoNLTK는 python언어를 이용하여 언어 데이터 작업을 하기위한 좋은 플랫폼입니다.
-pos-tagging, auto spacing 등 텍스트 처리, 가공 라이브러리 세트에 대한 사용하기 쉬운 인터페이스가 제공됩니다.</p>
-<p>KoNLTK는 전산 언어학의 주제와 함께 프로그래밍 기초를 소개하는 실제 안내서와 포괄적 인 API 문서로 언어 학자, 엔지니어, 학생, 교육자, 연구원 및 업계 사용자 모두에게 적합합니다. NLTK는 Linux에서 사용할 수 있습니다. 무엇보다 NLTK는 무료 오픈 소스 커뮤니티 중심 프로젝트입니다.</p>
-<div class="section" id="some-simple-things-you-can-do-with-konlp">
-<h2>Some simple things you can do with konlp<a class="headerlink" href="#some-simple-things-you-can-do-with-konlp" title="Permalink to this headline">¶</a></h2>
-<p>Morphological analysis:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">konlp.kma.klt</span> <span class="kn">import</span> <span class="n">klt</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="n">klt</span><span class="o">.</span><span class="n">KltKma</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">simple_txt</span> <span class="o">=</span> <span class="s2">&quot;안녕하세요. 국민대학교 자연어처리 연구실입니다.&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">simple_txt</span><span class="p">)</span>
-<span class="go">[(&#39;안녕하세요&#39;, [(&#39;안녕&#39;, &#39;N&#39;), (&#39;하&#39;, &#39;t&#39;), (&#39;세요&#39;, &#39;e&#39;)]), (&#39;.&#39;, [(&#39;.&#39;, &#39;q&#39;)]),</span>
-<span class="go">(&#39;국민대학교&#39;, [(&#39;국민대학교&#39;, &#39;N&#39;)]), (&#39;자연어처리&#39;, [(&#39;자연어처리&#39;, &#39;N&#39;)]), (&#39;연구실입니다&#39;,</span>
-<span class="go">[(&#39;연구실&#39;, &#39;N&#39;), (&#39;이&#39;, &#39;c&#39;), (&#39;습니다&#39;, &#39;e&#39;)]), (&#39;.&#39;, [(&#39;.&#39;, &#39;q&#39;)])]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span><span class="o">.</span><span class="n">morphs</span><span class="p">(</span><span class="n">simple_txt</span><span class="p">)</span>
-<span class="go">[&#39;안녕&#39;, &#39;하&#39;, &#39;세요&#39;, &#39;.&#39;, &#39;국민대학교&#39;, &#39;자연어처리&#39;, &#39;연구실&#39;, &#39;이&#39;, &#39;습니다&#39;, &#39;.&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span><span class="o">.</span><span class="n">nouns</span><span class="p">(</span><span class="n">simple_txt</span><span class="p">)</span>
-<span class="go">[&#39;안녕&#39;, &#39;국민대학교&#39;, &#39;자연어처리&#39;, &#39;연구실&#39;]</span>
-</pre></div>
+  <div class="section" id="konlp-tokenize-klt-package">
+<h1>konlp.tokenize.klt package<a class="headerlink" href="#konlp-tokenize-klt-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>Automatic word spacing:</p>
+<div class="section" id="module-konlp.tokenize.klt.autospace">
+<span id="konlp-tokenize-klt-autospace-module"></span><h2>konlp.tokenize.klt.autospace module<a class="headerlink" href="#module-konlp.tokenize.klt.autospace" title="Permalink to this headline">¶</a></h2>
+<p>Klt Tokenizer</p>
+<dl class="class">
+<dt id="konlp.tokenize.klt.autospace.KltAsp">
+<em class="property">class </em><code class="descclassname">konlp.tokenize.klt.autospace.</code><code class="descname">KltAsp</code><span class="sig-paren">(</span><em>dic_path=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/konlp/tokenize/klt/autospace.html#KltAsp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#konlp.tokenize.klt.autospace.KltAsp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>국민대학교 강승식 교수님의 자동 띄어쓰기 기능입니다.
+한글 문장이 주어지면 자동 띄어쓰기를 진행 후,
+공백(white-space) 기준으로 tokenize를 합니다.</p>
+<p class="rubric">Example</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">konlp.tokenize</span> <span class="kn">import</span> <span class="n">KltAsp</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="n">KltAsp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">k</span><span class="o">.</span><span class="n">asp</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;국민대학교자연어처리연구실&quot;</span><span class="p">)</span>
@@ -79,15 +73,56 @@ pos-tagging, auto spacing 등 텍스트 처리, 가공 라이브러리 세트에
 <span class="go">[&#39;국민대학교&#39;, &#39;자연어처리&#39;, &#39;연구실&#39;]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+<dl class="method">
+<dt id="konlp.tokenize.klt.autospace.KltAsp.asp">
+<code class="descname">asp</code><span class="sig-paren">(</span><em>text</em>, <em>split=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/konlp/tokenize/klt/autospace.html#KltAsp.asp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#konlp.tokenize.klt.autospace.KltAsp.asp" title="Permalink to this definition">¶</a></dt>
+<dd><p>국민대학교 강승식 교수님의 자동 띄어쓰기 기능입니다.
+한글 문장이 주어지면 자동 띄어쓰기를 진행 후,
+공백(white-space) 기준으로 tokenize를 합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>string</strong> (<em>str</em>) &#8211; 띄어쓰기를 할 문장</li>
+<li><strong>dic_path</strong> (<em>str</em>) &#8211; 사전 폴더의 위치</li>
+<li><strong>split</strong> (<em>bool</em>) &#8211; 결과를 split할지 결정 하는 변수</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">tokenize된 list
+string: 만약 split이 <a href="#id1"><span class="problematic" id="id2">`</span></a>Flase`이면 한 문장</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="konlp.tokenize.klt.autospace.KltAsp.dic_init">
+<code class="descname">dic_init</code><span class="sig-paren">(</span><em>dic_path=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/konlp/tokenize/klt/autospace.html#KltAsp.dic_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#konlp.tokenize.klt.autospace.KltAsp.dic_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>사전을 초기화하는 함수입니다.
+만약 초기화가 안된다면 사전을 다시 load를 하여서 초기화를 해야합니다.
+사전이 초기화가 안되어 있다면 자동 띄어쓰기가 작동이 안됩니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dic_path</strong> (<em>str</em>) &#8211; 사전 위치</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-konlp.tokenize.klt">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-konlp.tokenize.klt" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -126,7 +161,7 @@ pos-tagging, auto spacing 등 텍스트 처리, 가공 라이브러리 세트에
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/index.txt"
+              <a href="_sources/konlp.tokenize.klt.txt"
                 rel="nofollow">Show Source</a>
           </div>
         </div>

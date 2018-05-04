@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>konlp.chunk package &mdash; konlp 0.0.8-alpha documentation</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.8-alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="konlp 0.0.8-alpha documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">konlp 0.0.8-alpha documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="konlp-chunk-package">
+<h1>konlp.chunk package<a class="headerlink" href="#konlp-chunk-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-konlp.chunk.api">
+<span id="konlp-chunk-api-module"></span><h2>konlp.chunk.api module<a class="headerlink" href="#module-konlp.chunk.api" title="Permalink to this headline">¶</a></h2>
+<p>Korean Natural Language Toolkit chunker interface</p>
+<dl class="class">
+<dt id="konlp.chunk.api.ChunkParserI">
+<em class="property">class </em><code class="descclassname">konlp.chunk.api.</code><code class="descname">ChunkParserI</code><a class="reference internal" href="_modules/konlp/chunk/api.html#ChunkParserI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#konlp.chunk.api.ChunkParserI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="konlp.parse.html#konlp.parse.api.ParserI" title="konlp.parse.api.ParserI"><code class="xref py py-class docutils literal"><span class="pre">konlp.parse.api.ParserI</span></code></a></p>
+<p>ChunkParser Interface</p>
+<dl class="method">
+<dt id="konlp.chunk.api.ChunkParserI.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>tokens</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/konlp/chunk/api.html#ChunkParserI.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#konlp.chunk.api.ChunkParserI.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the best chunk structure for the given tokens
+and return a tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tokens</strong> (<em>list(tuple(str, str</em>) &#8211; The list of (word, tag) tokens to be chunked.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Chunk structure</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Tree</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">NotImplementedError</span></code> &#8211;
+If not implement this method on a class that extends this class</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-konlp.chunk">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-konlp.chunk" title="Permalink to this headline">¶</a></h2>
+<p>we are preparing this module</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Enter search terms or a module, class or function name.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/konlp.chunk.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, ngh.
+      Last updated on May 04, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
